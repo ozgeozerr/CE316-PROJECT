@@ -24,39 +24,33 @@ namespace BerkazyHalka
         }
 
         private void button3_Click(object sender, EventArgs e)
+{
+    using (OpenFileDialog openFileDialog = new OpenFileDialog())
+    {
+        openFileDialog.Filter = "Java Projects (*.java)|*.java|All Files (*.*)|*.*";
+        openFileDialog.FilterIndex = 1;
+
+        openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+
+        if (openFileDialog.ShowDialog() == DialogResult.OK)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            try
             {
-                openFileDialog.Filter = "Java Projects (*.java)|*.java|All Files (*.*)|*.*";
-                openFileDialog.FilterIndex = 1;
+                string javaProjectFilePath = openFileDialog.FileName;
+                string[] lines = File.ReadAllLines(javaProjectFilePath);
 
-                //Baþlangýç directory
-                openFileDialog.InitialDirectory = @"Your\Java\Projects\Directory";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        // pathi oku aktar
-                        string javaProjectFilePath = openFileDialog.FileName;
-                        string[] lines = File.ReadAllLines(javaProjectFilePath);
-
-                        // text boxa yazdýr
-                        myText.Text = string.Join(Environment.NewLine, lines);
-
-                        // run butonunu çalýþýr vaziyete sok
-                        button2.Enabled = true;
-                        // path ismini tage storeladým
-                        button2.Tag = javaProjectFilePath;
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error loading the file: " + ex.Message);
-                    }
-                }
+                myText.Text = string.Join(Environment.NewLine, lines);
+                button2.Enabled = true;
+                button2.Tag = javaProjectFilePath;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading the file: " + ex.Message);
             }
         }
+    }
+}
+
 
 
         private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
