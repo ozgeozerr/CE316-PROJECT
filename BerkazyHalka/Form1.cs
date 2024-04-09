@@ -16,6 +16,7 @@ namespace BerkazyHalka
 
         //Ahmet deneme
         //Mete deneme
+        //berkay deneme
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
