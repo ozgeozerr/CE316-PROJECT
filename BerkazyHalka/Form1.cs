@@ -8,9 +8,11 @@ namespace BerkazyHalka
 {
     public partial class Form1 : Form
     {
+        public static Form1 instance;
         public Form1()
         {
             InitializeComponent();
+            instance = this;
         }
 
 
@@ -28,32 +30,32 @@ namespace BerkazyHalka
         }
 
         private void button3_Click(object sender, EventArgs e)
-{
-    using (OpenFileDialog openFileDialog = new OpenFileDialog())
-    {
-        openFileDialog.Filter = "Java Projects (*.java)|*.java|All Files (*.*)|*.*";
-        openFileDialog.FilterIndex = 1;
-
-        openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-
-        if (openFileDialog.ShowDialog() == DialogResult.OK)
         {
-            try
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string javaProjectFilePath = openFileDialog.FileName;
-                string[] lines = File.ReadAllLines(javaProjectFilePath);
+                openFileDialog.Filter = "Java Projects (*.java)|*.java|All Files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
 
-                myText.Text = string.Join(Environment.NewLine, lines);
-                button2.Enabled = true;
-                button2.Tag = javaProjectFilePath;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading the file: " + ex.Message);
+                openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string javaProjectFilePath = openFileDialog.FileName;
+                        string[] lines = File.ReadAllLines(javaProjectFilePath);
+
+                        myText.Text = string.Join(Environment.NewLine, lines);
+                        button2.Enabled = true;
+                        button2.Tag = javaProjectFilePath;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error loading the file: " + ex.Message);
+                    }
+                }
             }
         }
-    }
-}
 
 
 
@@ -166,6 +168,18 @@ namespace BerkazyHalka
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoToMain_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void myText_TextChanged(object sender, EventArgs e)
         {
 
         }

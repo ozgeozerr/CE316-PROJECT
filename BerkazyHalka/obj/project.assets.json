@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Berky\\source\\repos\\BerkazyHalka\\BerkazyHalka\\BerkazyHalka.csproj",
+      "projectUniqueName": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
       "projectName": "BerkazyHalka",
-      "projectPath": "C:\\Users\\Berky\\source\\repos\\BerkazyHalka\\BerkazyHalka\\BerkazyHalka.csproj",
+      "projectPath": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
       "packagesPath": "C:\\Users\\Berky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Berky\\source\\repos\\BerkazyHalka\\BerkazyHalka\\obj\\",
+      "outputPath": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
