@@ -33,3 +33,4 @@ C:\Users\Berky\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.
 C:\Users\Berky\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.0-windows\ref\BerkazyHalka.dll
 C:\Users\Berky\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form2.resources
 C:\Users\Berky\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form3.resources
+C:\Users\Berky\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form4.resources
