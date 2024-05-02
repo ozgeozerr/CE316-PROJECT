@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace BerkazyHalka
 {
     
-    //deniyorum tekrar
+  
     public partial class Form4 : Form
     {
         public Form4()
@@ -30,3 +30,7 @@ namespace BerkazyHalka
         }
     }
 }
+
+
+
+//oldu mu?

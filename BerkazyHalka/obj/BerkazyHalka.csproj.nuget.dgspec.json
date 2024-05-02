@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {}
+    "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {
+    "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
+        "projectUniqueName": "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj",
         "projectName": "BerkazyHalka",
-        "projectPath": "C:\\Users\\ozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
+        "projectPath": "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj",
         "packagesPath": "C:\\Users\\ozerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozerr\\CE316-PROJECT\\BerkazyHalka\\obj\\",
+        "outputPath": "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ozerr\\AppData\\Roaming\\NuGet\\NuGet.Config",

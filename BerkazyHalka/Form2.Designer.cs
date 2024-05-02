@@ -65,9 +65,9 @@
             // 
             // treeView1
             // 
-            treeView1.Location = new Point(12, 116);
+            treeView1.Location = new Point(652, 116);
             treeView1.Name = "treeView1";
-            treeView1.Size = new Size(1488, 490);
+            treeView1.Size = new Size(356, 490);
             treeView1.TabIndex = 3;
             // 
             // openSelected
