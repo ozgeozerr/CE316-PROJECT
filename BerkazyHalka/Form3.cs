@@ -16,5 +16,10 @@ namespace BerkazyHalka
         {
             InitializeComponent();
         }
+
+        private void browseComp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

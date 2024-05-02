@@ -38,11 +38,14 @@
             textBox4 = new TextBox();
             saveConfig = new Button();
             createAssign = new Button();
+            browseComp = new Button();
+            browseSource = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(60, 105);
             label1.Name = "label1";
             label1.Size = new Size(130, 20);
@@ -52,6 +55,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = SystemColors.ButtonHighlight;
             label2.Location = new Point(60, 135);
             label2.Name = "label2";
             label2.Size = new Size(175, 20);
@@ -61,6 +65,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.ForeColor = SystemColors.ButtonHighlight;
             label3.Location = new Point(60, 168);
             label3.Name = "label3";
             label3.Size = new Size(102, 20);
@@ -70,6 +75,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.ForeColor = SystemColors.ButtonHighlight;
             label4.Location = new Point(60, 201);
             label4.Name = "label4";
             label4.Size = new Size(93, 20);
@@ -106,6 +112,7 @@
             // 
             // saveConfig
             // 
+            saveConfig.ForeColor = Color.Black;
             saveConfig.Location = new Point(52, 265);
             saveConfig.Name = "saveConfig";
             saveConfig.Size = new Size(183, 29);
@@ -115,6 +122,7 @@
             // 
             // createAssign
             // 
+            createAssign.ForeColor = Color.Black;
             createAssign.Location = new Point(52, 300);
             createAssign.Name = "createAssign";
             createAssign.Size = new Size(183, 29);
@@ -122,11 +130,33 @@
             createAssign.Text = "Create Assignment";
             createAssign.UseVisualStyleBackColor = true;
             // 
+            // browseComp
+            // 
+            browseComp.Location = new Point(480, 165);
+            browseComp.Name = "browseComp";
+            browseComp.Size = new Size(94, 29);
+            browseComp.TabIndex = 10;
+            browseComp.Text = "Browse";
+            browseComp.UseVisualStyleBackColor = true;
+            browseComp.Click += browseComp_Click;
+            // 
+            // browseSource
+            // 
+            browseSource.Location = new Point(480, 196);
+            browseSource.Name = "browseSource";
+            browseSource.Size = new Size(94, 29);
+            browseSource.TabIndex = 11;
+            browseSource.Text = "Browse";
+            browseSource.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(540, 390);
+            BackColor = Color.FromArgb(54, 75, 109);
+            ClientSize = new Size(598, 390);
+            Controls.Add(browseSource);
+            Controls.Add(browseComp);
             Controls.Add(createAssign);
             Controls.Add(saveConfig);
             Controls.Add(textBox4);
@@ -138,7 +168,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form3";
-            Text = "Form3";
+            Text = "Configuration";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -155,5 +185,7 @@
         private TextBox textBox4;
         private Button saveConfig;
         private Button createAssign;
+        private Button browseComp;
+        private Button browseSource;
     }
 }
