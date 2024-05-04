@@ -65,6 +65,7 @@
             // 
             // treeView1
             // 
+            treeView1.BackColor = SystemColors.MenuHighlight;
             treeView1.Location = new Point(652, 116);
             treeView1.Name = "treeView1";
             treeView1.Size = new Size(356, 490);
