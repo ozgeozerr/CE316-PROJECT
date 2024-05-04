@@ -23,6 +23,7 @@ namespace BerkazyHalka
         //Barça deneme
         //Bir daha deniyorum
         //trekrar deniyorum
+        // Ahmet Deneme
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
