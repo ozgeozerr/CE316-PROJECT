@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj": {}
+    "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj": {
+    "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj",
+        "projectUniqueName": "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj",
         "projectName": "BerkazyHalka",
-        "projectPath": "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\BerkazyHalka.csproj",
-        "packagesPath": "C:\\Users\\ozerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozerr\\OneDrive\\Masaüstü\\proje\\BerkazyHalka\\obj\\",
+        "projectPath": "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj",
+        "packagesPath": "C:\\Users\\adana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ozerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +44,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
