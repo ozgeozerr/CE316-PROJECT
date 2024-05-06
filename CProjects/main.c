@@ -3,6 +3,8 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    printf("Please Type:\n");
+    int x;
+    scanf("%d",&d);
     return 0;
 }
