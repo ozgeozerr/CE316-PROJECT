@@ -48,7 +48,7 @@ namespace BerkazyHalka
         {
             string compileCommand = $"gcc {cFilePath} -o output";
 
-            // Create a process to execute the compile command
+            // COMPILE
             Process compileProcess = new Process();
             compileProcess.StartInfo.FileName = "cmd.exe";
             compileProcess.StartInfo.Arguments = $"/c {compileCommand}";
@@ -57,24 +57,20 @@ namespace BerkazyHalka
             compileProcess.StartInfo.RedirectStandardError = true;
 
             compileProcess.Start();
-
-            // Wait for the process to finish
             compileProcess.WaitForExit();
 
-            // Check if compilation was successful
             if (compileProcess.ExitCode == 0)
             {
-                // Create a process to execute the compiled executable
+                // EXECUTE
                 Process executeProcess = new Process();
                 executeProcess.StartInfo.FileName = "output.exe";
                 executeProcess.StartInfo.UseShellExecute = false;
                 executeProcess.StartInfo.RedirectStandardInput = true;
                 executeProcess.StartInfo.RedirectStandardOutput = true;
 
-                // Start the process
                 executeProcess.Start();
 
-                // Pass input data to the process if provided
+                // PASS THE INPUT
                 if (!string.IsNullOrEmpty("Barca"))
                 {
                     executeProcess.StandardInput.WriteLine("Barca");
@@ -82,13 +78,11 @@ namespace BerkazyHalka
                     executeProcess.StandardInput.Close();
                 }
 
-                // Read output from the process
+                // CAPTURE OUPTUT
                 string cOutput = executeProcess.StandardOutput.ReadToEnd();
-
-                // Wait for the process to exit
                 executeProcess.WaitForExit();
 
-                // Display output in a message box
+                // DISPLAY OUTPUT
                 MessageBox.Show("Output: " + cOutput, "C Output (STUDENT)");
             }
             else
