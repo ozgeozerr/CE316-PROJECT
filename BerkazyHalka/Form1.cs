@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace BerkazyHalka
 {
@@ -11,6 +12,7 @@ namespace BerkazyHalka
         public static Form1 instance;
         public Form1()
         {
+            connectSql();
             InitializeComponent();
             instance = this;
         }
@@ -138,11 +140,22 @@ namespace BerkazyHalka
 
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        public void connectSql()
         {
-            ahmetsqltest form = new ahmetsqltest(); 
-            form.Show();
-            this.Hide();
+            string connectionPath = @"Data source=C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\Assign_Database.db;Version=3";
+            using (var connection = new SQLiteConnection(connectionPath))
+            {
+                try
+                {
+                    connection.Open();
+                    MessageBox.Show("Connection Sucess");
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Connection Error" + err.Message);
+                }
+            }
+
         }
     }
 }

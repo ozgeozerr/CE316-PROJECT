@@ -36,7 +36,6 @@ namespace BerkazyHalka
             button111 = new Button();
             myText = new RichTextBox();
             GoToMain = new Button();
-            button1 = new Button();
             SuspendLayout();
             // 
             // openFileDialog1
@@ -105,20 +104,14 @@ namespace BerkazyHalka
             // 
             // button1
             // 
-            button1.Location = new Point(1070, 74);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 12;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_2;
+            
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1606, 659);
-            Controls.Add(button1);
+            
             Controls.Add(GoToMain);
             Controls.Add(button2);
             Controls.Add(button11);
@@ -144,6 +137,5 @@ namespace BerkazyHalka
         private Button button111;
         private RichTextBox myText;
         private Button GoToMain;
-        private Button button1;
     }
 }
