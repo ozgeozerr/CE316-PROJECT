@@ -6,12 +6,9 @@
 
     class zipExtractor
     {
-        static void Extract()
+        public void Extract(string zipFilePath ,string extractPath)
         {
-            // Specify the path to the zip file and the directory where you want to extract its contents
-            string zipFilePath = @"C:\path\to\your\file.zip";
-            string extractPath = @"C:\path\to\extract\directory";
-
+           
             // Create the directory if it doesn't exist
             Directory.CreateDirectory(extractPath);
 
