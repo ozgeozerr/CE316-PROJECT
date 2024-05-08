@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BerkazyHalka
 {
-    public partial class Form3 : Form
+    public partial class Form_CreatingNewAssignment : Form
     {
-        public Form3()
+        public Form_CreatingNewAssignment()
         {
             InitializeComponent();
-        }
-
-        private void browseComp_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

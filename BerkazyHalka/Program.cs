@@ -12,6 +12,9 @@ namespace BerkazyHalka
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
+            //for trying the listview
+
         }
     }
 }

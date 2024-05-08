@@ -1,6 +1,6 @@
 ﻿namespace BerkazyHalka
 {
-    partial class Form2
+    partial class Form_HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,10 @@
             backgroundPanelForListView = new Panel();
             labelPastAssignments = new Label();
             createNewAssignmentButton = new Button();
+            viewTheAssignmentButton = new Button();
+            viewConfigurationsButton = new Button();
+            AssignmentNameColumn = new ColumnHeader();
+            DateColumn = new ColumnHeader();
             menuStrip1.SuspendLayout();
             backgroundPanelForListView.SuspendLayout();
             SuspendLayout();
@@ -68,7 +72,7 @@
             WelcomeText.BackColor = Color.FromArgb(36, 36, 36);
             WelcomeText.Font = new Font("Cambria", 16.8000011F, FontStyle.Italic, GraphicsUnit.Point, 0);
             WelcomeText.ForeColor = Color.White;
-            WelcomeText.Location = new Point(12, 45);
+            WelcomeText.Location = new Point(22, 73);
             WelcomeText.Name = "WelcomeText";
             WelcomeText.Size = new Size(300, 34);
             WelcomeText.TabIndex = 1;
@@ -78,7 +82,7 @@
             // 
             homeScreenInstructions.AutoSize = true;
             homeScreenInstructions.Font = new Font("Cambria", 12F);
-            homeScreenInstructions.Location = new Point(12, 103);
+            homeScreenInstructions.Location = new Point(12, 193);
             homeScreenInstructions.Name = "homeScreenInstructions";
             homeScreenInstructions.Size = new Size(333, 23);
             homeScreenInstructions.TabIndex = 2;
@@ -89,7 +93,7 @@
             // 
             homeScreenInstructions2.AutoSize = true;
             homeScreenInstructions2.Font = new Font("Cambria", 11F);
-            homeScreenInstructions2.Location = new Point(12, 142);
+            homeScreenInstructions2.Location = new Point(12, 233);
             homeScreenInstructions2.Name = "homeScreenInstructions2";
             homeScreenInstructions2.Size = new Size(458, 22);
             homeScreenInstructions2.TabIndex = 3;
@@ -99,9 +103,10 @@
             // listView1
             // 
             listView1.BackColor = Color.WhiteSmoke;
-            listView1.Location = new Point(18, 18);
+            listView1.Columns.AddRange(new ColumnHeader[] { AssignmentNameColumn, DateColumn });
+            listView1.Location = new Point(13, 20);
             listView1.Name = "listView1";
-            listView1.Size = new Size(497, 388);
+            listView1.Size = new Size(508, 384);
             listView1.TabIndex = 4;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
@@ -110,16 +115,16 @@
             // 
             backgroundPanelForListView.BackColor = Color.FromArgb(32, 32, 32);
             backgroundPanelForListView.Controls.Add(listView1);
-            backgroundPanelForListView.Location = new Point(595, 103);
+            backgroundPanelForListView.Location = new Point(609, 103);
             backgroundPanelForListView.Name = "backgroundPanelForListView";
-            backgroundPanelForListView.Size = new Size(532, 426);
+            backgroundPanelForListView.Size = new Size(532, 416);
             backgroundPanelForListView.TabIndex = 5;
             // 
             // labelPastAssignments
             // 
             labelPastAssignments.AutoSize = true;
             labelPastAssignments.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            labelPastAssignments.Location = new Point(773, 91);
+            labelPastAssignments.Location = new Point(784, 93);
             labelPastAssignments.Name = "labelPastAssignments";
             labelPastAssignments.Size = new Size(168, 27);
             labelPastAssignments.TabIndex = 6;
@@ -128,14 +133,49 @@
             // 
             // createNewAssignmentButton
             // 
+            createNewAssignmentButton.BackColor = Color.Thistle;
             createNewAssignmentButton.Font = new Font("Cambria", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
             createNewAssignmentButton.ForeColor = SystemColors.ActiveCaptionText;
-            createNewAssignmentButton.Location = new Point(12, 217);
+            createNewAssignmentButton.Location = new Point(12, 299);
             createNewAssignmentButton.Name = "createNewAssignmentButton";
-            createNewAssignmentButton.Size = new Size(133, 31);
+            createNewAssignmentButton.Size = new Size(216, 49);
             createNewAssignmentButton.TabIndex = 7;
             createNewAssignmentButton.Text = "Create New Assignment";
-            createNewAssignmentButton.UseVisualStyleBackColor = true;
+            createNewAssignmentButton.UseVisualStyleBackColor = false;
+            // 
+            // viewTheAssignmentButton
+            // 
+            viewTheAssignmentButton.BackColor = Color.Thistle;
+            viewTheAssignmentButton.Font = new Font("Cambria", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            viewTheAssignmentButton.ForeColor = SystemColors.ActiveCaptionText;
+            viewTheAssignmentButton.Location = new Point(747, 535);
+            viewTheAssignmentButton.Name = "viewTheAssignmentButton";
+            viewTheAssignmentButton.Size = new Size(240, 37);
+            viewTheAssignmentButton.TabIndex = 9;
+            viewTheAssignmentButton.Text = "View The Assignment";
+            viewTheAssignmentButton.UseVisualStyleBackColor = false;
+            // 
+            // viewConfigurationsButton
+            // 
+            viewConfigurationsButton.BackColor = Color.Thistle;
+            viewConfigurationsButton.Font = new Font("Cambria", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            viewConfigurationsButton.ForeColor = SystemColors.ActiveCaptionText;
+            viewConfigurationsButton.Location = new Point(12, 373);
+            viewConfigurationsButton.Name = "viewConfigurationsButton";
+            viewConfigurationsButton.Size = new Size(216, 48);
+            viewConfigurationsButton.TabIndex = 10;
+            viewConfigurationsButton.Text = "View Configurations";
+            viewConfigurationsButton.UseVisualStyleBackColor = false;
+            // 
+            // AssignmentNameColumn
+            // 
+            AssignmentNameColumn.Text = "Assignment Name";
+            AssignmentNameColumn.Width = 120;
+            // 
+            // DateColumn
+            // 
+            DateColumn.Text = "Date";
+            DateColumn.Width = 120;
             // 
             // Form2
             // 
@@ -143,8 +183,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1184, 593);
-            Controls.Add(createNewAssignmentButton);
+            Controls.Add(viewConfigurationsButton);
             Controls.Add(labelPastAssignments);
+            Controls.Add(viewTheAssignmentButton);
+            Controls.Add(createNewAssignmentButton);
             Controls.Add(backgroundPanelForListView);
             Controls.Add(homeScreenInstructions2);
             Controls.Add(homeScreenInstructions);
@@ -173,5 +215,9 @@
         private Panel backgroundPanelForListView;
         private Label labelPastAssignments;
         private Button createNewAssignmentButton;
+        private Button viewTheAssignmentButton;
+        private Button viewConfigurationsButton;
+        private ColumnHeader AssignmentNameColumn;
+        private ColumnHeader DateColumn;
     }
 }

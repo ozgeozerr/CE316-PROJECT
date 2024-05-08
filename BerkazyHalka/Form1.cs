@@ -128,7 +128,7 @@ namespace BerkazyHalka
 
         private void GoToMain_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form_HomePage form2 = new Form_HomePage();
             form2.Show();
             this.Hide();
         }

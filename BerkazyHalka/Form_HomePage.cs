@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace BerkazyHalka
 {
-    public partial class Form2 : Form
+    public partial class Form_HomePage : Form
     {
-        public static Form2 instance;
-        public Form2()
+        public static Form_HomePage instance;
+        public Form_HomePage()
         {
             InitializeComponent();
             instance = this;
+            ozgedeneme.AddItemsToListView(listView1);
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace BerkazyHalka
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void labelPastAssignments_Click(object sender, EventArgs e)

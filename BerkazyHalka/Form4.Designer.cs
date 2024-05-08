@@ -160,7 +160,7 @@
             Controls.Add(excText);
             Controls.Add(currentText);
             Name = "Form4";
-            Text = "Form4";
+            Text = "EasyAssign";
             ResumeLayout(false);
             PerformLayout();
         }
