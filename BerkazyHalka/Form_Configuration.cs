@@ -16,6 +16,7 @@ namespace BerkazyHalka
         {
             InitializeComponent();
         }
+        static String savedFilePath;
 
       
 
@@ -55,9 +56,43 @@ namespace BerkazyHalka
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form_HomePage form=new Form_HomePage();
+            Form_HomePage form = new Form_HomePage();
             form.Show();
             this.Hide();
         }
+
+        private void saveConfig_Click(object sender, EventArgs e)
+        {
+            // Prompt the user to select a file location
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog.Title = "Save Variable";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Get the file name selected by the user
+                    string fileName = saveFileDialog.FileName;
+
+                    // Write the variable value to the selected file
+                    File.WriteAllText(fileName, "adam");
+
+
+                    // Save the path of the saved file
+                    savedFilePath = fileName;
+
+                    MessageBox.Show("Variable saved successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving variable: " + ex.Message);
+                }
+            }
+            MessageBox.Show("aha bu çıktı:" + savedFilePath);
+        }
+
+        // Method to access the saved file path from outside the class
+
     }
 }

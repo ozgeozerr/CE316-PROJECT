@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj": {}
+    "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj": {
+    "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj",
+        "projectUniqueName": "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
         "projectName": "BerkazyHalka",
-        "projectPath": "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\BerkazyHalka.csproj",
-        "packagesPath": "C:\\Users\\adana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\BerkazyHalka\\obj\\",
+        "projectPath": "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
+        "packagesPath": "C:\\Users\\ozerr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\adana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ozerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,9 +45,9 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
-            "MySql.Data": {
+            "System.Data.SQLite": {
               "target": "Package",
-              "version": "[8.4.0, )"
+              "version": "[1.0.118, )"
             }
           },
           "imports": [

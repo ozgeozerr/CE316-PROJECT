@@ -91,6 +91,7 @@
             saveConfig.TabIndex = 8;
             saveConfig.Text = "Save Configuration";
             saveConfig.UseVisualStyleBackColor = false;
+            saveConfig.Click += saveConfig_Click;
             // 
             // menuStrip1
             // 
