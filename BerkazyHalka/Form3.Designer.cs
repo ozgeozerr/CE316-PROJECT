@@ -153,7 +153,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(54, 75, 109);
+            BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(598, 390);
             Controls.Add(browseSource);
             Controls.Add(browseComp);

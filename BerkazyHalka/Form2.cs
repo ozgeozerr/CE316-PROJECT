@@ -24,14 +24,22 @@ namespace BerkazyHalka
 
         }
 
-        private void newAssignmentButton_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Hide();
+
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void homeScreenInstructions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPastAssignments_Click(object sender, EventArgs e)
         {
 
         }

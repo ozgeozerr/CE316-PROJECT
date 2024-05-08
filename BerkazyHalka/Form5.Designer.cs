@@ -63,6 +63,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(640, 317);
             Controls.Add(selectTestStudent);
             Controls.Add(listBox1);

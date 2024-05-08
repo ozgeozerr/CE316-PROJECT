@@ -49,6 +49,7 @@
             // language
             // 
             language.AutoSize = true;
+            language.ForeColor = Color.White;
             language.Location = new Point(42, 96);
             language.Name = "language";
             language.Size = new Size(96, 24);
@@ -59,6 +60,7 @@
             // compileBox
             // 
             compileBox.AutoSize = true;
+            compileBox.ForeColor = Color.White;
             compileBox.Location = new Point(144, 96);
             compileBox.Name = "compileBox";
             compileBox.Size = new Size(87, 24);
@@ -70,6 +72,7 @@
             // syntaxBox
             // 
             syntaxBox.AutoSize = true;
+            syntaxBox.ForeColor = Color.White;
             syntaxBox.Location = new Point(237, 96);
             syntaxBox.Name = "syntaxBox";
             syntaxBox.Size = new Size(74, 24);
@@ -80,6 +83,7 @@
             // excOne
             // 
             excOne.AutoSize = true;
+            excOne.ForeColor = Color.White;
             excOne.Location = new Point(593, 56);
             excOne.Name = "excOne";
             excOne.Size = new Size(101, 24);
@@ -91,6 +95,7 @@
             // checkBox5
             // 
             checkBox5.AutoSize = true;
+            checkBox5.ForeColor = Color.White;
             checkBox5.Location = new Point(593, 86);
             checkBox5.Name = "checkBox5";
             checkBox5.Size = new Size(101, 24);
@@ -101,6 +106,7 @@
             // checkBox6
             // 
             checkBox6.AutoSize = true;
+            checkBox6.ForeColor = Color.White;
             checkBox6.Location = new Point(593, 116);
             checkBox6.Name = "checkBox6";
             checkBox6.Size = new Size(101, 24);
@@ -112,6 +118,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(851, 280);
             Controls.Add(checkBox6);
             Controls.Add(checkBox5);

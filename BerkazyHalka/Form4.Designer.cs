@@ -60,11 +60,13 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(55, 21);
+            label1.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(170, 18);
             label1.Name = "label1";
-            label1.Size = new Size(70, 20);
+            label1.Size = new Size(154, 23);
             label1.TabIndex = 2;
-            label1.Text = "Expected";
+            label1.Text = "Expected Output";
             // 
             // label2
             // 
@@ -77,7 +79,7 @@
             // 
             // selectAStudent
             // 
-            selectAStudent.Location = new Point(953, 43);
+            selectAStudent.Location = new Point(1047, 213);
             selectAStudent.Name = "selectAStudent";
             selectAStudent.Size = new Size(172, 29);
             selectAStudent.TabIndex = 4;
@@ -87,7 +89,7 @@
             // 
             // openTheResults
             // 
-            openTheResults.Location = new Point(953, 78);
+            openTheResults.Location = new Point(1047, 271);
             openTheResults.Name = "openTheResults";
             openTheResults.Size = new Size(172, 29);
             openTheResults.TabIndex = 5;
@@ -96,11 +98,11 @@
             // 
             // testAll
             // 
-            testAll.Location = new Point(953, 113);
+            testAll.Location = new Point(1047, 324);
             testAll.Name = "testAll";
             testAll.Size = new Size(172, 29);
             testAll.TabIndex = 6;
-            testAll.Text = "Test All The Student";
+            testAll.Text = "Test All The Students\r\n";
             testAll.UseVisualStyleBackColor = true;
             testAll.Click += button3_Click;
             // 
@@ -132,9 +134,11 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(55, 567);
             label3.Name = "label3";
-            label3.Size = new Size(46, 20);
+            label3.Size = new Size(61, 23);
             label3.TabIndex = 10;
             label3.Text = "Input:";
             // 
@@ -142,6 +146,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1287, 651);
             Controls.Add(label3);
             Controls.Add(saveInputText);
