@@ -52,5 +52,19 @@ namespace BerkazyHalka
         {
 
         }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            Form_CreatingNewAssignment form_CreatingNewAssignment = new Form_CreatingNewAssignment();
+            form_CreatingNewAssignment.Show();
+            this.Hide();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form_HomePage form=new Form_HomePage();
+            form.Show();
+            this.Hide();
+        }
     }
 }

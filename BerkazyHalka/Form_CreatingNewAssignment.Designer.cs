@@ -30,6 +30,8 @@
         {
             menuStrip1 = new MenuStrip();
             helpToolStripMenuItem = new ToolStripMenuItem();
+            nextButton = new Button();
+            backButton = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,12 +56,34 @@
             helpToolStripMenuItem.Size = new Size(57, 24);
             helpToolStripMenuItem.Text = "Help";
             // 
+            // nextButton
+            // 
+            nextButton.Location = new Point(490, 444);
+            nextButton.Name = "nextButton";
+            nextButton.Size = new Size(94, 29);
+            nextButton.TabIndex = 14;
+            nextButton.Text = "next";
+            nextButton.UseVisualStyleBackColor = true;
+            nextButton.Click += nextButton_Click;
+            // 
+            // backButton
+            // 
+            backButton.Location = new Point(361, 444);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(94, 29);
+            backButton.TabIndex = 15;
+            backButton.Text = "back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
+            // 
             // Form_CreatingNewAssignment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(869, 572);
+            Controls.Add(backButton);
+            Controls.Add(nextButton);
             Controls.Add(menuStrip1);
             Name = "Form_CreatingNewAssignment";
             Text = " ";
@@ -73,5 +97,7 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem helpToolStripMenuItem;
+        private Button nextButton;
+        private Button backButton;
     }
 }

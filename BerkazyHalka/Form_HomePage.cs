@@ -37,12 +37,19 @@ namespace BerkazyHalka
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void labelPastAssignments_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void createNewAssignmentButton_Click(object sender, EventArgs e)
+        {
+            Form_Configuration form = new Form_Configuration();
+            form.Show();
+            this.Hide();
         }
     }
 }

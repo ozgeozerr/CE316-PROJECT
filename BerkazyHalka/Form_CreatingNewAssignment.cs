@@ -16,5 +16,19 @@ namespace BerkazyHalka
         {
             InitializeComponent();
         }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4();
+            form.Show();
+            this.Hide();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form_Configuration form=new Form_Configuration(); 
+            form.Show();
+            this.Hide();
+        }
     }
 }

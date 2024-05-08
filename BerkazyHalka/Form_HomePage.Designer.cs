@@ -34,13 +34,13 @@
             homeScreenInstructions = new Label();
             homeScreenInstructions2 = new Label();
             listView1 = new ListView();
+            AssignmentNameColumn = new ColumnHeader();
+            DateColumn = new ColumnHeader();
             backgroundPanelForListView = new Panel();
             labelPastAssignments = new Label();
             createNewAssignmentButton = new Button();
             viewTheAssignmentButton = new Button();
             viewConfigurationsButton = new Button();
-            AssignmentNameColumn = new ColumnHeader();
-            DateColumn = new ColumnHeader();
             menuStrip1.SuspendLayout();
             backgroundPanelForListView.SuspendLayout();
             SuspendLayout();
@@ -111,6 +111,16 @@
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
+            // AssignmentNameColumn
+            // 
+            AssignmentNameColumn.Text = "Assignment Name";
+            AssignmentNameColumn.Width = 120;
+            // 
+            // DateColumn
+            // 
+            DateColumn.Text = "Date";
+            DateColumn.Width = 120;
+            // 
             // backgroundPanelForListView
             // 
             backgroundPanelForListView.BackColor = Color.FromArgb(32, 32, 32);
@@ -142,6 +152,7 @@
             createNewAssignmentButton.TabIndex = 7;
             createNewAssignmentButton.Text = "Create New Assignment";
             createNewAssignmentButton.UseVisualStyleBackColor = false;
+            createNewAssignmentButton.Click += createNewAssignmentButton_Click;
             // 
             // viewTheAssignmentButton
             // 
@@ -167,17 +178,7 @@
             viewConfigurationsButton.Text = "View Configurations";
             viewConfigurationsButton.UseVisualStyleBackColor = false;
             // 
-            // AssignmentNameColumn
-            // 
-            AssignmentNameColumn.Text = "Assignment Name";
-            AssignmentNameColumn.Width = 120;
-            // 
-            // DateColumn
-            // 
-            DateColumn.Text = "Date";
-            DateColumn.Width = 120;
-            // 
-            // Form2
+            // Form_HomePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -194,7 +195,7 @@
             Controls.Add(menuStrip1);
             ForeColor = SystemColors.ButtonFace;
             MainMenuStrip = menuStrip1;
-            Name = "Form2";
+            Name = "Form_HomePage";
             Text = "EasyAssign";
             Load += Form2_Load;
             menuStrip1.ResumeLayout(false);

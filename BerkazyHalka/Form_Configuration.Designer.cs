@@ -42,6 +42,8 @@
             openFileDialog2 = new OpenFileDialog();
             button1 = new Button();
             bindingSource1 = new BindingSource(components);
+            nextButton = new Button();
+            backButton = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
@@ -173,12 +175,34 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // nextButton
+            // 
+            nextButton.Location = new Point(249, 373);
+            nextButton.Name = "nextButton";
+            nextButton.Size = new Size(94, 29);
+            nextButton.TabIndex = 18;
+            nextButton.Text = "next";
+            nextButton.UseVisualStyleBackColor = true;
+            nextButton.Click += nextButton_Click;
+            // 
+            // backButton
+            // 
+            backButton.Location = new Point(79, 373);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(94, 29);
+            backButton.TabIndex = 19;
+            backButton.Text = "back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
+            // 
             // Form_Configuration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(664, 444);
+            Controls.Add(backButton);
+            Controls.Add(nextButton);
             Controls.Add(button1);
             Controls.Add(browseFiles_button);
             Controls.Add(textBox1);
@@ -215,5 +239,7 @@
         private OpenFileDialog openFileDialog2;
         private Button button1;
         private BindingSource bindingSource1;
+        private Button nextButton;
+        private Button backButton;
     }
 }
