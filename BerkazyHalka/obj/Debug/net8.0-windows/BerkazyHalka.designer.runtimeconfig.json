@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\adana\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\adana\\.nuget\\packages"
+      "C:\\Users\\ozerr\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ozerr\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
