@@ -35,12 +35,11 @@
             saveConfig = new Button();
             menuStrip1 = new MenuStrip();
             helpToolStripMenuItem = new ToolStripMenuItem();
-            selectProgrammingLanguage_combobox = new ComboBox();
             label1 = new Label();
             textBox1 = new TextBox();
             browseFiles_button = new Button();
             openFileDialog2 = new OpenFileDialog();
-            button1 = new Button();
+            browseButtonnn = new Button();
             bindingSource1 = new BindingSource(components);
             nextButton = new Button();
             backButton = new Button();
@@ -114,18 +113,6 @@
             helpToolStripMenuItem.Size = new Size(57, 24);
             helpToolStripMenuItem.Text = "Help";
             // 
-            // selectProgrammingLanguage_combobox
-            // 
-            selectProgrammingLanguage_combobox.BackColor = Color.Thistle;
-            selectProgrammingLanguage_combobox.Font = new Font("Cambria", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            selectProgrammingLanguage_combobox.FormattingEnabled = true;
-            selectProgrammingLanguage_combobox.Location = new Point(334, 156);
-            selectProgrammingLanguage_combobox.Name = "selectProgrammingLanguage_combobox";
-            selectProgrammingLanguage_combobox.Size = new Size(245, 28);
-            selectProgrammingLanguage_combobox.TabIndex = 13;
-            selectProgrammingLanguage_combobox.Text = "  Pick Programming Language";
-            selectProgrammingLanguage_combobox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -162,18 +149,18 @@
             // 
             openFileDialog2.FileName = "openFileDialog2";
             // 
-            // button1
+            // browseButtonnn
             // 
-            button1.BackColor = Color.Thistle;
-            button1.Font = new Font("Calisto MT", 10F);
-            button1.Location = new Point(334, 285);
-            button1.Name = "button1";
-            button1.Size = new Size(245, 29);
-            button1.TabIndex = 17;
-            button1.Text = "Browse Files";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            browseButtonnn.BackColor = Color.Thistle;
+            browseButtonnn.Font = new Font("Calisto MT", 10F);
+            browseButtonnn.Location = new Point(334, 285);
+            browseButtonnn.Name = "browseButtonnn";
+            browseButtonnn.Size = new Size(245, 29);
+            browseButtonnn.TabIndex = 17;
+            browseButtonnn.Text = "Browse Files";
+            browseButtonnn.TextAlign = ContentAlignment.MiddleLeft;
+            browseButtonnn.UseVisualStyleBackColor = false;
+            browseButtonnn.Click += button1_Click;
             // 
             // nextButton
             // 
@@ -203,11 +190,10 @@
             ClientSize = new Size(664, 444);
             Controls.Add(backButton);
             Controls.Add(nextButton);
-            Controls.Add(button1);
+            Controls.Add(browseButtonnn);
             Controls.Add(browseFiles_button);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Controls.Add(selectProgrammingLanguage_combobox);
             Controls.Add(menuStrip1);
             Controls.Add(saveConfig);
             Controls.Add(label4);
@@ -237,7 +223,7 @@
         private OpenFileDialog browseFiles_openFileDialog;
         private Button browseFiles_button;
         private OpenFileDialog openFileDialog2;
-        private Button button1;
+        private Button browseButtonnn;
         private BindingSource bindingSource1;
         private Button nextButton;
         private Button backButton;

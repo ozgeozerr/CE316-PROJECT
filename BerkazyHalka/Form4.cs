@@ -10,8 +10,8 @@ using System.Windows.Forms;
 
 namespace BerkazyHalka
 {
-    
-  
+
+
     public partial class Form4 : Form
     {
         public Form4()
@@ -25,6 +25,11 @@ namespace BerkazyHalka
         }
 
         private void selectAStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createManual_Click(object sender, EventArgs e)
         {
 
         }

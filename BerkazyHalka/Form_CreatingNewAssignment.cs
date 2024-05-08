@@ -26,9 +26,19 @@ namespace BerkazyHalka
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form_Configuration form=new Form_Configuration(); 
+            Form_Configuration form = new Form_Configuration();
             form.Show();
             this.Hide();
+        }
+
+        private void Form_CreatingNewAssignment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
