@@ -118,7 +118,7 @@ namespace BerkazyHalka
         {
             string javaFilePath = button2.Tag as string;
             compilerClass.javaProject(javaFilePath);
-                       
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -136,6 +136,13 @@ namespace BerkazyHalka
         private void myText_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            ahmetsqltest form = new ahmetsqltest(); 
+            form.Show();
+            this.Hide();
         }
     }
 }

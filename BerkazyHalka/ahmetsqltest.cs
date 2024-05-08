@@ -13,7 +13,27 @@ namespace BerkazyHalka
 {
     public partial class ahmetsqltest : Form
     {
-        string path = "Data source-.\\";
-        SQLiteConnection connection = new SQLiteConnection("");
+        public ahmetsqltest()
+        {
+            connectSql();
+            InitializeComponent();
+        }
+        private void connectSql()
+        {
+            string connectionPath = @"Data source=C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\Assign_Database.db;Version=3";
+            using (var connection = new SQLiteConnection(connectionPath))
+            {
+                try
+                {
+                    connection.Open();
+                    MessageBox.Show("Connection Sucess");
+                }
+                catch(Exception err) {
+                    MessageBox.Show("Connection Error"+err.Message);
+                }
+            }
+            
+        }
+        
     }
 }
