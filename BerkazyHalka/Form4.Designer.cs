@@ -39,6 +39,8 @@
             createManual = new Button();
             saveInputText = new TextBox();
             label3 = new Label();
+            zipButton = new Button();
+            exButton = new Button();
             SuspendLayout();
             // 
             // currentText
@@ -145,12 +147,34 @@
             label3.TabIndex = 10;
             label3.Text = "Input:";
             // 
+            // zipButton
+            // 
+            zipButton.Location = new Point(1060, 132);
+            zipButton.Name = "zipButton";
+            zipButton.Size = new Size(94, 29);
+            zipButton.TabIndex = 11;
+            zipButton.Text = "Zip Butonu";
+            zipButton.UseVisualStyleBackColor = true;
+            zipButton.Click += zipButton_Click;
+            // 
+            // exButton
+            // 
+            exButton.Location = new Point(1064, 175);
+            exButton.Name = "exButton";
+            exButton.Size = new Size(94, 29);
+            exButton.TabIndex = 12;
+            exButton.Text = "Extreact Button";
+            exButton.UseVisualStyleBackColor = true;
+            exButton.Click += exButton_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1287, 651);
+            Controls.Add(exButton);
+            Controls.Add(zipButton);
             Controls.Add(label3);
             Controls.Add(saveInputText);
             Controls.Add(createManual);
@@ -181,5 +205,7 @@
         private Button createManual;
         private TextBox saveInputText;
         private Label label3;
+        private Button zipButton;
+        private Button exButton;
     }
 }

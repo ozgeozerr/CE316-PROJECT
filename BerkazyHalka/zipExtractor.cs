@@ -10,7 +10,7 @@
         {
            
             // Create the directory if it doesn't exist
-            Directory.CreateDirectory(extractPath);
+           
 
             // Extract the zip file
             try

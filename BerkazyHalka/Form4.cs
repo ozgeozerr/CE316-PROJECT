@@ -18,7 +18,8 @@ namespace BerkazyHalka
         {
             InitializeComponent();
         }
-
+        String selectedFileForZipEx;
+        String extractPath;
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -32,6 +33,35 @@ namespace BerkazyHalka
         private void createManual_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void zipButton_Click(object sender, EventArgs e)
+        {
+           
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                selectedFileForZipEx = openFileDialog.FileName;
+                MessageBox.Show(selectedFileForZipEx);
+
+            }
+
+        }
+
+        private void exButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                string extractPath = folderBrowserDialog.SelectedPath;
+                MessageBox.Show(extractPath);
+
+                zipExtractor zipper = new zipExtractor();
+                zipper.Extract(selectedFileForZipEx, extractPath);
+            }
         }
     }
 }
