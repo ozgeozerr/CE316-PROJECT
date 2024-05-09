@@ -482,3 +482,21 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+# Removing Bullshit Errrors :8
+.vs/BerkazyHalka/DesignTimeBuild/.dtbcache.v2
+.vs/BerkazyHalka/v17/.futdcache.v2
+.vs/BerkazyHalka/v17/.suo
+
+.vs/ProjectEvaluation/berkazyhalka.metadata.v7.bin
+.vs/ProjectEvaluation/berkazyhalka.projects.v7.bin
+BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.dll
+BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.exe
+BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.pdb
+
+BerkazyHalka/obj/Debug/net8.0-windows/apphost.exe
+BerkazyHalka/obj/Debug/net8.0-windows/BerkazyHalka.csproj.GenerateResource.cache
+BerkazyHalka/obj/Debug/net8.0-windows/BerkazyHalka.dll
+BerkazyHalka/obj/Debug/net8.0-windows/BerkazyHalka.pdb
+
+
+
