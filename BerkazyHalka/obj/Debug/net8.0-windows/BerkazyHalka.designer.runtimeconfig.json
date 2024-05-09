@@ -12,9 +12,14 @@
       }
     ],
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\Berky\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Berky\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+=======
+      "C:\\Users\\adana\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\adana\\.nuget\\packages"
+>>>>>>> c748491d3d21496dbdcb06043e6ce5e332e277b1
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

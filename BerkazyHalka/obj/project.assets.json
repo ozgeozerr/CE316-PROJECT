@@ -1215,24 +1215,40 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Berky\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\adana\\.nuget\\packages\\": {}
+>>>>>>> c748491d3d21496dbdcb06043e6ce5e332e277b1
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
       "projectName": "BerkazyHalka",
       "projectPath": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
       "packagesPath": "C:\\Users\\Berky\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\adana\\OneDrive\\Masaüstü\\Ce-316 Project\\BerkazyHalka\\BerkazyHalka.csproj",
+      "projectName": "BerkazyHalka",
+      "projectPath": "C:\\Users\\adana\\OneDrive\\Masaüstü\\Ce-316 Project\\BerkazyHalka\\BerkazyHalka.csproj",
+      "packagesPath": "C:\\Users\\adana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adana\\OneDrive\\Masaüstü\\Ce-316 Project\\BerkazyHalka\\obj\\",
+>>>>>>> c748491d3d21496dbdcb06043e6ce5e332e277b1
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Berky\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\adana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> c748491d3d21496dbdcb06043e6ce5e332e277b1
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
