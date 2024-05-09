@@ -9,7 +9,7 @@ namespace BerkazyHalka
 {
     public partial class Form1 : Form
     {
-        public static string connectionPath = @"Data Source=assignment.db;Version=3;";
+        public static string connectionPath = @"Data Source=C:\Users\adana\OneDrive\Masaüstü\CE316-Project\Assign_Database\assignment.db;Version=3;";
 
 
 
