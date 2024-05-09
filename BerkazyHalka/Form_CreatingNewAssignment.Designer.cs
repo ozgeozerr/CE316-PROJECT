@@ -34,12 +34,14 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
+            textb_assignName = new TextBox();
             browseFile1 = new Button();
             browseFile = new Button();
             createNewConfig = new Button();
             saveAssignment = new Button();
             label5 = new Label();
+            textb_inputFolder = new TextBox();
+            textb_expectedFolder = new TextBox();
             SuspendLayout();
             // 
             // nextButton
@@ -106,18 +108,19 @@
             label4.TabIndex = 19;
             label4.Text = "Select a Folder for Inputs:";
             // 
-            // textBox1
+            // textb_assignName
             // 
-            textBox1.BackColor = Color.Thistle;
-            textBox1.Location = new Point(332, 67);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(204, 27);
-            textBox1.TabIndex = 20;
+            textb_assignName.BackColor = Color.Thistle;
+            textb_assignName.Location = new Point(332, 67);
+            textb_assignName.Name = "textb_assignName";
+            textb_assignName.Size = new Size(204, 27);
+            textb_assignName.TabIndex = 20;
+            textb_assignName.TextChanged += textBox1_TextChanged;
             // 
             // browseFile1
             // 
             browseFile1.BackColor = Color.Thistle;
-            browseFile1.Location = new Point(332, 136);
+            browseFile1.Location = new Point(551, 136);
             browseFile1.Name = "browseFile1";
             browseFile1.Size = new Size(204, 29);
             browseFile1.TabIndex = 21;
@@ -127,7 +130,7 @@
             // browseFile
             // 
             browseFile.BackColor = Color.Thistle;
-            browseFile.Location = new Point(332, 209);
+            browseFile.Location = new Point(551, 209);
             browseFile.Name = "browseFile";
             browseFile.Size = new Size(204, 29);
             browseFile.TabIndex = 22;
@@ -154,6 +157,7 @@
             saveAssignment.TabIndex = 24;
             saveAssignment.Text = "Save and Create the Assignment";
             saveAssignment.UseVisualStyleBackColor = false;
+            saveAssignment.Click += saveAssignment_Click;
             // 
             // label5
             // 
@@ -166,18 +170,36 @@
             label5.TabIndex = 26;
             label5.Text = "Create New Configuration:";
             // 
+            // textb_inputFolder
+            // 
+            textb_inputFolder.Location = new Point(332, 137);
+            textb_inputFolder.Name = "textb_inputFolder";
+            textb_inputFolder.Size = new Size(204, 27);
+            textb_inputFolder.TabIndex = 27;
+            textb_inputFolder.TextChanged += textb_inputFolder_TextChanged;
+            // 
+            // textb_expectedFolder
+            // 
+            textb_expectedFolder.Location = new Point(332, 211);
+            textb_expectedFolder.Name = "textb_expectedFolder";
+            textb_expectedFolder.Size = new Size(204, 27);
+            textb_expectedFolder.TabIndex = 28;
+            textb_expectedFolder.TextChanged += textb_expectedFolder_TextChanged;
+            // 
             // Form_CreatingNewAssignment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(833, 493);
+            Controls.Add(textb_expectedFolder);
+            Controls.Add(textb_inputFolder);
             Controls.Add(label5);
             Controls.Add(saveAssignment);
             Controls.Add(createNewConfig);
             Controls.Add(browseFile);
             Controls.Add(browseFile1);
-            Controls.Add(textBox1);
+            Controls.Add(textb_assignName);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -198,11 +220,13 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox textb_assignName;
         private Button browseFile1;
         private Button browseFile;
         private Button createNewConfig;
         private Button saveAssignment;
         private Label label5;
+        private TextBox textb_inputFolder;
+        private TextBox textb_expectedFolder;
     }
 }

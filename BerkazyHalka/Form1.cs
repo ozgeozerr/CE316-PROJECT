@@ -9,6 +9,10 @@ namespace BerkazyHalka
 {
     public partial class Form1 : Form
     {
+        public static string connectionPath = @"Data Source=assignment.db;Version=3;";
+
+
+
         public static Form1 instance;
         public Form1()
         {
@@ -140,9 +144,8 @@ namespace BerkazyHalka
 
         }
 
-        public void connectSql()
+        public static void connectSql()
         {
-            string connectionPath = @"Data source=C:\\Users\\adana\\OneDrive\\Masaüstü\\CE316-Project\\Assign_Database.db;Version=3";
             using (var connection = new SQLiteConnection(connectionPath))
             {
                 try
