@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BerkazyHalka")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9635b1bb53f3908446e47971483b9da63dd2486")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35fc59ab40fbf65ab6b6959f190e7b559ca5dd11")]
 [assembly: System.Reflection.AssemblyProductAttribute("BerkazyHalka")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BerkazyHalka")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

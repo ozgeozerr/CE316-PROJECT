@@ -149,3 +149,43 @@ C:\Users\ozerr\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.
 C:\Users\ozerr\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.dll
 C:\Users\ozerr\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.0-windows\refint\BerkazyHalka.dll
 C:\Users\ozerr\Source\Repos\ozgeozerr\CE316-PROJECT\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.pdb
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\BerkazyHalka.exe
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\BerkazyHalka.deps.json
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\BerkazyHalka.runtimeconfig.json
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\BerkazyHalka.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\BerkazyHalka.pdb
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\EntityFramework.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\System.Data.SQLite.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.csproj.AssemblyReference.cache
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form1.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form4.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form5.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form6.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form_Configuration.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form_CreatingNewAssignment.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form_HomePage.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Properties.Resources.resources
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.csproj.GenerateResource.cache
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.AssemblyInfoInputs.cache
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.AssemblyInfo.cs
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.csproj.CoreCompileInputs.cache
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.sourcelink.json
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyH.717F77AC.Up2Date
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\refint\BerkazyHalka.dll
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.pdb
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.genruntimeconfig.cache
+C:\Users\adana\OneDrive\Masaüstü\Ce-316 Project\BerkazyHalka\obj\Debug\net8.0-windows\ref\BerkazyHalka.dll
