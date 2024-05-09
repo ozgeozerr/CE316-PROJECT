@@ -62,7 +62,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(170, 18);
+            label1.Location = new Point(55, 9);
             label1.Name = "label1";
             label1.Size = new Size(154, 23);
             label1.TabIndex = 2;
@@ -71,9 +71,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(500, 21);
+            label2.Font = new Font("Segoe UI", 11F);
+            label2.ForeColor = Color.Transparent;
+            label2.Location = new Point(500, 7);
             label2.Name = "label2";
-            label2.Size = new Size(104, 20);
+            label2.Size = new Size(131, 25);
             label2.TabIndex = 3;
             label2.Text = "Student Result";
             // 
@@ -123,6 +125,7 @@
             createManual.TabIndex = 8;
             createManual.Text = "Or Create Manual Input";
             createManual.UseVisualStyleBackColor = true;
+            createManual.Click += createManual_Click;
             // 
             // saveInputText
             // 
