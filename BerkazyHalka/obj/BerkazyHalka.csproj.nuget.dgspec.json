@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {}
+    "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {
+    "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
+        "projectUniqueName": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
         "projectName": "BerkazyHalka",
-        "projectPath": "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
-        "packagesPath": "C:\\Users\\ozerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozerr\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\obj\\",
+        "projectPath": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\BerkazyHalka.csproj",
+        "packagesPath": "C:\\Users\\Berky\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Berky\\Source\\Repos\\ozgeozerr\\CE316-PROJECT\\BerkazyHalka\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ozerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Berky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
