@@ -489,14 +489,25 @@ $RECYCLE.BIN/
 
 .vs/ProjectEvaluation/berkazyhalka.metadata.v7.bin
 .vs/ProjectEvaluation/berkazyhalka.projects.v7.bin
+
 BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.dll
 BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.exe
 BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.pdb
+BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.AssemblyInfo.cs
+BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.AssemblyInfoInputs.cache
+BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.assets.cache
+BerkazyHalka/bin/Debug/net8.0-windows/BerkazyHalka.GeneratedMSBuildEditorConfig.editorconfig
+
 
 BerkazyHalka/obj/Debug/net8.0-windows/apphost.exe
 BerkazyHalka/obj/Debug/net8.0-windows/BerkazyHalka.csproj.GenerateResource.cache
 BerkazyHalka/obj/Debug/net8.0-windows/BerkazyHalka.dll
 BerkazyHalka/obj/Debug/net8.0-windows/BerkazyHalka.pdb
+BerkazyHalka/obj/BerkazyHalka.csproj.nuget.dgspec.json
+BerkazyHalka/obj/BerkazyHalka.csproj.nuget.g.props
+BerkazyHalka/obj/project.assets.json
+BerkazyHalka/obj/project.nuget.cache
+
 
 
 
