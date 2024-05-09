@@ -42,6 +42,8 @@
             label5 = new Label();
             textb_inputFolder = new TextBox();
             textb_expectedFolder = new TextBox();
+            saveInput = new Button();
+            saveOutput = new Button();
             SuspendLayout();
             // 
             // nextButton
@@ -126,6 +128,7 @@
             browseFile1.TabIndex = 21;
             browseFile1.Text = "Browse Files";
             browseFile1.UseVisualStyleBackColor = false;
+            browseFile1.Click += browseFile1_Click;
             // 
             // browseFile
             // 
@@ -136,6 +139,7 @@
             browseFile.TabIndex = 22;
             browseFile.Text = "Browse Files";
             browseFile.UseVisualStyleBackColor = false;
+            browseFile.Click += browseFile_Click;
             // 
             // createNewConfig
             // 
@@ -186,12 +190,34 @@
             textb_expectedFolder.TabIndex = 28;
             textb_expectedFolder.TextChanged += textb_expectedFolder_TextChanged;
             // 
+            // saveInput
+            // 
+            saveInput.Location = new Point(761, 135);
+            saveInput.Name = "saveInput";
+            saveInput.Size = new Size(94, 29);
+            saveInput.TabIndex = 29;
+            saveInput.Text = "Save";
+            saveInput.UseVisualStyleBackColor = true;
+            saveInput.Click += saveInput_Click;
+            // 
+            // saveOutput
+            // 
+            saveOutput.Location = new Point(761, 209);
+            saveOutput.Name = "saveOutput";
+            saveOutput.Size = new Size(94, 29);
+            saveOutput.TabIndex = 30;
+            saveOutput.Text = "Save";
+            saveOutput.UseVisualStyleBackColor = true;
+            saveOutput.Click += saveOutput_Click;
+            // 
             // Form_CreatingNewAssignment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(833, 493);
+            ClientSize = new Size(915, 493);
+            Controls.Add(saveOutput);
+            Controls.Add(saveInput);
             Controls.Add(textb_expectedFolder);
             Controls.Add(textb_inputFolder);
             Controls.Add(label5);
@@ -228,5 +254,7 @@
         private Label label5;
         private TextBox textb_inputFolder;
         private TextBox textb_expectedFolder;
+        private Button saveInput;
+        private Button saveOutput;
     }
 }

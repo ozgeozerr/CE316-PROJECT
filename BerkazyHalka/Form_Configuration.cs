@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BerkazyHalka
 {
@@ -18,26 +19,38 @@ namespace BerkazyHalka
         }
         static String savedFilePath;
 
-      
+        private String selectedFilePathForComplierPath;
+        private String selectedFilePathForSourceCode;
+        private String configName;
+        private String programminLanguage;
 
-        
+
+
         private void browseFiles_button_Click(object sender, EventArgs e)
         {
 
+            OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(openFileDialog2.FileName);
+                selectedFilePathForComplierPath = openFileDialog.FileName;
+                MessageBox.Show("File selected: " + selectedFilePathForComplierPath);
             }
+
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(openFileDialog2.FileName);
+                selectedFilePathForSourceCode = openFileDialog.FileName;
+                MessageBox.Show("File selected: " + selectedFilePathForSourceCode);
             }
 
         }
@@ -49,20 +62,22 @@ namespace BerkazyHalka
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            Form_CreatingNewAssignment form_CreatingNewAssignment = new Form_CreatingNewAssignment();
-            form_CreatingNewAssignment.Show();
+            Form4 form = new Form4();
+            form.Show();
             this.Hide();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form_HomePage form = new Form_HomePage();
+            Form_CreatingNewAssignment form = new Form_CreatingNewAssignment();
             form.Show();
             this.Hide();
         }
 
         private void saveConfig_Click(object sender, EventArgs e)
         {
+            configName = textBox1.Text;
+            MessageBox.Show(configName);
             // Prompt the user to select a file location
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
@@ -90,6 +105,12 @@ namespace BerkazyHalka
                 }
             }
             MessageBox.Show("aha bu çıktı:" + savedFilePath);
+        }
+
+        private void cbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            programminLanguage = cbo.SelectedItem?.ToString();
+            MessageBox.Show(programminLanguage);
         }
 
         // Method to access the saved file path from outside the class

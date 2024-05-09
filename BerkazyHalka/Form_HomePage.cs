@@ -47,7 +47,7 @@ namespace BerkazyHalka
 
         private void createNewAssignmentButton_Click(object sender, EventArgs e)
         {
-            Form_Configuration form = new Form_Configuration();
+            Form_CreatingNewAssignment form = new Form_CreatingNewAssignment();
             form.Show();
             this.Hide();
         }

@@ -17,17 +17,20 @@ namespace BerkazyHalka
         {
             InitializeComponent();
         }
+        private string selectedFilePath;
+        private string selectedFilePathForOutput;
+        private string assignmentName;
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            Form4 form = new Form4();
+            Form_Configuration form = new Form_Configuration();
             form.Show();
             this.Hide();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form_Configuration form = new Form_Configuration();
+            Form1 form = new Form1();
             form.Show();
             this.Hide();
         }
@@ -74,11 +77,50 @@ namespace BerkazyHalka
 
         private void saveAssignment_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(textb_assignName.Text);
             insertDatabase();
+
         }
 
         private void textb_expectedFolder_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void browseFile1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                selectedFilePath = openFileDialog.FileName;
+                MessageBox.Show("File selected: " + selectedFilePath);
+            }
+
+
+        }
+
+        private void saveInput_Click(object sender, EventArgs e)
+        {
+            textb_inputFolder.Text = selectedFilePath;
+        }
+
+        private void saveOutput_Click(object sender, EventArgs e)
+        {
+            textb_expectedFolder.Text = selectedFilePathForOutput;
+        }
+
+        private void browseFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                selectedFilePathForOutput = openFileDialog.FileName;
+                MessageBox.Show("File selected: " + selectedFilePathForOutput);
+            }
 
         }
     }

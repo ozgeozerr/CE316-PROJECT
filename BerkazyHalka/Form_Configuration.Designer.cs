@@ -43,6 +43,7 @@
             bindingSource1 = new BindingSource(components);
             nextButton = new Button();
             backButton = new Button();
+            cbo = new ComboBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
@@ -183,12 +184,23 @@
             backButton.UseVisualStyleBackColor = true;
             backButton.Click += backButton_Click;
             // 
+            // cbo
+            // 
+            cbo.FormattingEnabled = true;
+            cbo.Items.AddRange(new object[] { "C", "Java" });
+            cbo.Location = new Point(334, 156);
+            cbo.Name = "cbo";
+            cbo.Size = new Size(245, 28);
+            cbo.TabIndex = 20;
+            cbo.SelectedIndexChanged += cbo_SelectedIndexChanged;
+            // 
             // Form_Configuration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(664, 444);
+            Controls.Add(cbo);
             Controls.Add(backButton);
             Controls.Add(nextButton);
             Controls.Add(browseButtonnn);
@@ -228,5 +240,6 @@
         private BindingSource bindingSource1;
         private Button nextButton;
         private Button backButton;
+        private ComboBox cbo;
     }
 }
