@@ -44,6 +44,11 @@
             nextButton = new Button();
             backButton = new Button();
             cbo = new ComboBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
@@ -88,9 +93,9 @@
             saveConfig.ForeColor = Color.Black;
             saveConfig.Location = new Point(425, 351);
             saveConfig.Name = "saveConfig";
-            saveConfig.Size = new Size(154, 36);
+            saveConfig.Size = new Size(176, 36);
             saveConfig.TabIndex = 8;
-            saveConfig.Text = "Save Configuration";
+            saveConfig.Text = "Export Configuration";
             saveConfig.UseVisualStyleBackColor = false;
             saveConfig.Click += saveConfig_Click;
             // 
@@ -101,7 +106,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(664, 28);
+            menuStrip1.Size = new Size(868, 28);
             menuStrip1.TabIndex = 12;
             menuStrip1.Text = "helpMenuStrip";
             // 
@@ -138,9 +143,9 @@
             // 
             browseFiles_button.BackColor = Color.Thistle;
             browseFiles_button.Font = new Font("Calisto MT", 10F);
-            browseFiles_button.Location = new Point(334, 221);
+            browseFiles_button.Location = new Point(584, 215);
             browseFiles_button.Name = "browseFiles_button";
-            browseFiles_button.Size = new Size(245, 29);
+            browseFiles_button.Size = new Size(141, 29);
             browseFiles_button.TabIndex = 16;
             browseFiles_button.Text = "Browse Files";
             browseFiles_button.TextAlign = ContentAlignment.MiddleLeft;
@@ -155,9 +160,9 @@
             // 
             browseButtonnn.BackColor = Color.Thistle;
             browseButtonnn.Font = new Font("Calisto MT", 10F);
-            browseButtonnn.Location = new Point(334, 285);
+            browseButtonnn.Location = new Point(584, 279);
             browseButtonnn.Name = "browseButtonnn";
-            browseButtonnn.Size = new Size(245, 29);
+            browseButtonnn.Size = new Size(141, 29);
             browseButtonnn.TabIndex = 17;
             browseButtonnn.Text = "Browse Files";
             browseButtonnn.TextAlign = ContentAlignment.MiddleLeft;
@@ -194,12 +199,63 @@
             cbo.TabIndex = 20;
             cbo.SelectedIndexChanged += cbo_SelectedIndexChanged;
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(334, 217);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(244, 27);
+            textBox3.TabIndex = 21;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(334, 279);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(244, 27);
+            textBox4.TabIndex = 22;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(748, 215);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 23;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(748, 279);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 24;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(607, 351);
+            button3.Name = "button3";
+            button3.Size = new Size(165, 36);
+            button3.TabIndex = 25;
+            button3.Text = "add configuration";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form_Configuration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(664, 444);
+            ClientSize = new Size(868, 444);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
             Controls.Add(cbo);
             Controls.Add(backButton);
             Controls.Add(nextButton);
@@ -241,5 +297,10 @@
         private Button nextButton;
         private Button backButton;
         private ComboBox cbo;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

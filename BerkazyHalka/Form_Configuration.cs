@@ -113,6 +113,31 @@ namespace BerkazyHalka
             MessageBox.Show(programminLanguage);
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox3.Text = selectedFilePathForComplierPath;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = selectedFilePathForComplierPath;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         // Method to access the saved file path from outside the class
 
     }

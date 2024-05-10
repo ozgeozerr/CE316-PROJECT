@@ -13,6 +13,7 @@ namespace BerkazyHalka
 {
     public partial class Form_CreatingNewAssignment : Form
     {
+        DateTime currentDateTime = DateTime.Now;
         public Form_CreatingNewAssignment()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace BerkazyHalka
         {
             using (var connection = new SQLiteConnection(Form1.connectionPath))
             {
-                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}')", connection))
+                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder,date) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}','{currentDateTime}')", connection))
                 {
                     try
                     {
