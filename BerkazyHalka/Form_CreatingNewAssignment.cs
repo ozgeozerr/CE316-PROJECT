@@ -49,7 +49,7 @@ namespace BerkazyHalka
         {
             using (var connection = new SQLiteConnection(Form1.connectionPath))
             {
-                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder,date) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}','{currentDateTime}')", connection))
+                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder,date,configuration_id) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}','{currentDateTime}','{Form_Configuration.lastInsertedId}')", connection))
                 {
                     try
                     {
@@ -123,6 +123,12 @@ namespace BerkazyHalka
                 MessageBox.Show("File selected: " + selectedFilePathForOutput);
             }
 
+        }
+
+        private void createNewConfig_Click(object sender, EventArgs e)
+        {
+            Form_Configuration form = new Form_Configuration();
+            form.Show();
         }
     }
 }

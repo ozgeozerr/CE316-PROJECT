@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -135,9 +136,34 @@ namespace BerkazyHalka
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            insertDatabase();
+        }
+        public static int lastInsertedId;
+        private void insertDatabase()
+        {
+            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            {
+                using (var insertData = new SQLiteCommand($"INSERT INTO configuration(name,language_name,compiler_path,sourcecode) VALUES ('{textBox1.Text}', '{programminLanguage}','{textBox3.Text}','{textBox4.Text}');SELECT last_insert_rowid();", connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        insertData.ExecuteNonQuery();
+                        lastInsertedId = Convert.ToInt32(insertData.ExecuteScalar());
+                        MessageBox.Show("Added to SQL successfully!"+lastInsertedId);
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+                    }
+                }
+            }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         // Method to access the saved file path from outside the class
 
     }

@@ -151,6 +151,7 @@
             createNewConfig.Text = "Create New Configuration";
             createNewConfig.TextAlign = ContentAlignment.MiddleLeft;
             createNewConfig.UseVisualStyleBackColor = false;
+            createNewConfig.Click += createNewConfig_Click;
             // 
             // saveAssignment
             // 

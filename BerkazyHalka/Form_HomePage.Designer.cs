@@ -33,15 +33,15 @@
             WelcomeText = new Label();
             homeScreenInstructions = new Label();
             homeScreenInstructions2 = new Label();
-            listView1 = new ListView();
-            AssignmentNameColumn = new ColumnHeader();
-            DateColumn = new ColumnHeader();
-            backgroundPanelForListView = new Panel();
             labelPastAssignments = new Label();
             createNewAssignmentButton = new Button();
             viewTheAssignmentButton = new Button();
             viewConfigurationsButton = new Button();
+            dataGridView1 = new DataGridView();
+            backgroundPanelForListView = new Panel();
+            textBox1 = new TextBox();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             backgroundPanelForListView.SuspendLayout();
             SuspendLayout();
             // 
@@ -100,41 +100,11 @@
             homeScreenInstructions2.Text = "For further help, click on the 'Help' button at the top left.";
             homeScreenInstructions2.Click += label1_Click;
             // 
-            // listView1
-            // 
-            listView1.BackColor = Color.WhiteSmoke;
-            listView1.Columns.AddRange(new ColumnHeader[] { AssignmentNameColumn, DateColumn });
-            listView1.Location = new Point(13, 20);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(508, 384);
-            listView1.TabIndex = 4;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
-            // 
-            // AssignmentNameColumn
-            // 
-            AssignmentNameColumn.Text = "Assignment Name";
-            AssignmentNameColumn.Width = 120;
-            // 
-            // DateColumn
-            // 
-            DateColumn.Text = "Date";
-            DateColumn.Width = 120;
-            // 
-            // backgroundPanelForListView
-            // 
-            backgroundPanelForListView.BackColor = Color.FromArgb(32, 32, 32);
-            backgroundPanelForListView.Controls.Add(listView1);
-            backgroundPanelForListView.Location = new Point(609, 103);
-            backgroundPanelForListView.Name = "backgroundPanelForListView";
-            backgroundPanelForListView.Size = new Size(532, 416);
-            backgroundPanelForListView.TabIndex = 5;
-            // 
             // labelPastAssignments
             // 
             labelPastAssignments.AutoSize = true;
             labelPastAssignments.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            labelPastAssignments.Location = new Point(784, 93);
+            labelPastAssignments.Location = new Point(186, 7);
             labelPastAssignments.Name = "labelPastAssignments";
             labelPastAssignments.Size = new Size(168, 27);
             labelPastAssignments.TabIndex = 6;
@@ -177,6 +147,37 @@
             viewConfigurationsButton.TabIndex = 10;
             viewConfigurationsButton.Text = "View Configurations";
             viewConfigurationsButton.UseVisualStyleBackColor = false;
+            viewConfigurationsButton.Click += viewConfigurationsButton_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 114);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(529, 371);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // backgroundPanelForListView
+            // 
+            backgroundPanelForListView.BackColor = Color.FromArgb(32, 32, 32);
+            backgroundPanelForListView.Controls.Add(textBox1);
+            backgroundPanelForListView.Controls.Add(dataGridView1);
+            backgroundPanelForListView.Controls.Add(labelPastAssignments);
+            backgroundPanelForListView.Location = new Point(597, 31);
+            backgroundPanelForListView.Name = "backgroundPanelForListView";
+            backgroundPanelForListView.Size = new Size(544, 488);
+            backgroundPanelForListView.TabIndex = 5;
+            backgroundPanelForListView.Paint += backgroundPanelForListView_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(186, 81);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(221, 27);
+            textBox1.TabIndex = 7;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Form_HomePage
             // 
@@ -185,7 +186,6 @@
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1184, 593);
             Controls.Add(viewConfigurationsButton);
-            Controls.Add(labelPastAssignments);
             Controls.Add(viewTheAssignmentButton);
             Controls.Add(createNewAssignmentButton);
             Controls.Add(backgroundPanelForListView);
@@ -200,7 +200,9 @@
             Load += Form2_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             backgroundPanelForListView.ResumeLayout(false);
+            backgroundPanelForListView.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -212,13 +214,12 @@
         private Label WelcomeText;
         private Label homeScreenInstructions;
         private Label homeScreenInstructions2;
-        private ListView listView1;
-        private Panel backgroundPanelForListView;
         private Label labelPastAssignments;
         private Button createNewAssignmentButton;
         private Button viewTheAssignmentButton;
         private Button viewConfigurationsButton;
-        private ColumnHeader AssignmentNameColumn;
-        private ColumnHeader DateColumn;
+        private DataGridView dataGridView1;
+        private Panel backgroundPanelForListView;
+        private TextBox textBox1;
     }
 }

@@ -38,3 +38,4 @@ C:\Users\adana\OneDrive\Masaüstü\Project_Ce316\BerkazyHalka\obj\Debug\net8.0-w
 C:\Users\adana\OneDrive\Masaüstü\Project_Ce316\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.pdb
 C:\Users\adana\OneDrive\Masaüstü\Project_Ce316\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.genruntimeconfig.cache
 C:\Users\adana\OneDrive\Masaüstü\Project_Ce316\BerkazyHalka\obj\Debug\net8.0-windows\ref\BerkazyHalka.dll
+C:\Users\adana\OneDrive\Masaüstü\Project_Ce316\BerkazyHalka\obj\Debug\net8.0-windows\BerkazyHalka.Form_ConfigurationView.resources

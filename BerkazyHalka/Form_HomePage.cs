@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,8 @@ namespace BerkazyHalka
         {
             InitializeComponent();
             instance = this;
-            ozgedeneme.AddItemsToListView(listView1);
+            listAssignment();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -50,6 +52,68 @@ namespace BerkazyHalka
             Form_CreatingNewAssignment form = new Form_CreatingNewAssignment();
             form.Show();
             this.Hide();
+        }
+
+        private void viewConfigurationsButton_Click(object sender, EventArgs e)
+        {
+            Form_ConfigurationView form = new Form_ConfigurationView();
+            form.Show();
+            this.Hide();
+        }
+
+        private void backgroundPanelForListView_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        static DataTable dt_assign;
+        public void listAssignment()
+        {
+            dataGridView1.ReadOnly = true;
+            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            {
+                using (var readData = new SQLiteCommand("SELECT * FROM assignment", connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        dt_assign = new DataTable();
+                        using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(readData))
+                        {
+
+                            adapter.Fill(dt_assign);
+                        }
+                        if (dt_assign.Rows.Count > 0)
+                        {
+                            dataGridView1.DataSource = dt_assign;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found in the configuration table.");
+                        }
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+                    }
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = textBox1.Text.Trim();
+            if (dt_assign != null)
+            {
+                
+                DataView dv = dt_assign.DefaultView;
+                dv.RowFilter = $"name LIKE '%{searchText}%'";
+                dataGridView1.DataSource = dv.ToTable(); 
+            }
         }
     }
 }
