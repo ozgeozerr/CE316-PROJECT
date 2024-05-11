@@ -71,8 +71,8 @@ namespace BerkazyHalka
                         {
                             if (reader.Read())
                             {
-                                inputFile = reader["compiler_path"].ToString();
-                                outputFile = reader["language_name"].ToString();
+                                compilerPath = reader["compiler_path"].ToString();
+                                language = reader["language_name"].ToString();
                             }
                             else
                             {
@@ -133,9 +133,11 @@ namespace BerkazyHalka
                 }
             }
 
+            MessageBox.Show(inputFile + "\n"+outputFile + "\n"+compilerPath + "\n"+language + "\n"+studentCount);
+
             for (int i = 0;i<studentCount;i++)
             {
-                trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
+                MessageBox.Show(trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language)); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
             }
         }
 

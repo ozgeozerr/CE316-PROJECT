@@ -12,7 +12,8 @@ namespace BerkazyHalka
         {
             string[] inputsFromTeacher = File.ReadAllLines(inputFilePath);
             string[] expectedOutputs = File.ReadAllLines(expectedOutputFilePath);
-            string[] outputsFromStudent = null;
+            string[] outputsFromStudent = new string[inputsFromTeacher.Length];
+            string errorMsg = "This Student's File Could Not Be Compiled";
             int correct = 0;
 
             for (int i = 0; i < inputsFromTeacher.Length; i++)
@@ -21,17 +22,17 @@ namespace BerkazyHalka
                 {
                     outputsFromStudent[i] = compilerClass.javaProject(filePath, compilerPath, inputsFromTeacher[i]);
 
-                    if (outputsFromStudent[i].Equals("This Student's File Could Not Be Compiled"))
+                    if (outputsFromStudent[i].Equals(errorMsg))
                     {
-                        return "This Student's File Could Not Be Compiled";
+                        return errorMsg;
                     }
                 }else if(lang=="C" || lang == "c")
                 {
                     outputsFromStudent[i] = compilerClass.cProject(filePath, compilerPath, inputsFromTeacher[i]);
 
-                    if (outputsFromStudent[i].Equals("This Student's File Could Not Be Compiled"))
+                    if (outputsFromStudent[i].Equals(errorMsg))
                     {
-                        return "This Student's File Could Not Be Compiled";
+                        return errorMsg;
                     }
                 }
 
