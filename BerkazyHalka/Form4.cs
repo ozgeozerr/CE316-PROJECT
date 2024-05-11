@@ -133,9 +133,9 @@ namespace BerkazyHalka
                 }
             }
 
-            MessageBox.Show(inputFile + "\n"+outputFile + "\n"+compilerPath + "\n"+language + "\n"+studentCount);
+            MessageBox.Show(inputFile + "\n" + outputFile + "\n" + compilerPath + "\n" + language + "\n" + studentCount);
 
-            for (int i = 0;i<studentCount;i++)
+            for (int i = 0; i < studentCount; i++)
             {
                 MessageBox.Show(trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language)); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
             }
@@ -241,6 +241,10 @@ namespace BerkazyHalka
             }
         }
 
+        private void openTheResults_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -43,7 +43,7 @@ namespace BerkazyHalka
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            Form_HomePage form = new Form_HomePage();
             form.Show();
             this.Hide();
         }
@@ -94,6 +94,9 @@ namespace BerkazyHalka
             {
                 MessageBox.Show(textb_assignName.Text);
                  insertDatabase();
+                Form_HomePage form=new Form_HomePage();
+                form.Show();
+                this.Close();
             }
           
 

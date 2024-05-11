@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
             saveConfig = new Button();
             menuStrip1 = new MenuStrip();
             helpToolStripMenuItem = new ToolStripMenuItem();
@@ -39,15 +38,10 @@
             textBox1 = new TextBox();
             browseFiles_button = new Button();
             openFileDialog2 = new OpenFileDialog();
-            browseButtonnn = new Button();
             bindingSource1 = new BindingSource(components);
-            nextButton = new Button();
-            backButton = new Button();
             cbo = new ComboBox();
             textBox3 = new TextBox();
-            textBox4 = new TextBox();
             button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
@@ -75,27 +69,16 @@
             label3.TabIndex = 2;
             label3.Text = "Select Compiler Path:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(52, 285);
-            label4.Name = "label4";
-            label4.Size = new Size(176, 23);
-            label4.TabIndex = 3;
-            label4.Text = "Select Source Code:";
-            // 
             // saveConfig
             // 
             saveConfig.BackColor = Color.Thistle;
             saveConfig.Font = new Font("Cambria", 9F, FontStyle.Bold);
             saveConfig.ForeColor = Color.Black;
-            saveConfig.Location = new Point(425, 351);
+            saveConfig.Location = new Point(246, 351);
             saveConfig.Name = "saveConfig";
-            saveConfig.Size = new Size(176, 36);
+            saveConfig.Size = new Size(355, 36);
             saveConfig.TabIndex = 8;
-            saveConfig.Text = "Export Configuration";
+            saveConfig.Text = "Export Configuration (Coming Soon)";
             saveConfig.UseVisualStyleBackColor = false;
             saveConfig.Click += saveConfig_Click;
             // 
@@ -157,39 +140,6 @@
             // 
             openFileDialog2.FileName = "openFileDialog2";
             // 
-            // browseButtonnn
-            // 
-            browseButtonnn.BackColor = Color.Thistle;
-            browseButtonnn.Font = new Font("Calisto MT", 10F);
-            browseButtonnn.Location = new Point(584, 279);
-            browseButtonnn.Name = "browseButtonnn";
-            browseButtonnn.Size = new Size(141, 29);
-            browseButtonnn.TabIndex = 17;
-            browseButtonnn.Text = "Browse Files";
-            browseButtonnn.TextAlign = ContentAlignment.MiddleLeft;
-            browseButtonnn.UseVisualStyleBackColor = false;
-            browseButtonnn.Click += button1_Click;
-            // 
-            // nextButton
-            // 
-            nextButton.Location = new Point(249, 373);
-            nextButton.Name = "nextButton";
-            nextButton.Size = new Size(94, 29);
-            nextButton.TabIndex = 18;
-            nextButton.Text = "next";
-            nextButton.UseVisualStyleBackColor = true;
-            nextButton.Click += nextButton_Click;
-            // 
-            // backButton
-            // 
-            backButton.Location = new Point(79, 373);
-            backButton.Name = "backButton";
-            backButton.Size = new Size(94, 29);
-            backButton.TabIndex = 19;
-            backButton.Text = "back";
-            backButton.UseVisualStyleBackColor = true;
-            backButton.Click += backButton_Click;
-            // 
             // cbo
             // 
             cbo.FormattingEnabled = true;
@@ -208,33 +158,15 @@
             textBox3.TabIndex = 21;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(334, 279);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(244, 27);
-            textBox4.TabIndex = 22;
-            textBox4.TextChanged += textBox4_TextChanged;
-            // 
             // button1
             // 
             button1.Location = new Point(748, 215);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 23;
-            button1.Text = "button1";
+            button1.Text = "Save";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(748, 279);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 24;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -253,20 +185,14 @@
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(868, 444);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(cbo);
-            Controls.Add(backButton);
-            Controls.Add(nextButton);
-            Controls.Add(browseButtonnn);
             Controls.Add(browseFiles_button);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Controls.Add(saveConfig);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Name = "Form_Configuration";
@@ -282,7 +208,6 @@
         #endregion
         private Label label2;
         private Label label3;
-        private Label label4;
         private TextBox textBox2;
         private Button saveConfig;
         private MenuStrip menuStrip1;
@@ -293,15 +218,10 @@
         private OpenFileDialog browseFiles_openFileDialog;
         private Button browseFiles_button;
         private OpenFileDialog openFileDialog2;
-        private Button browseButtonnn;
         private BindingSource bindingSource1;
-        private Button nextButton;
-        private Button backButton;
         private ComboBox cbo;
         private TextBox textBox3;
-        private TextBox textBox4;
         private Button button1;
-        private Button button2;
         private Button button3;
     }
 }

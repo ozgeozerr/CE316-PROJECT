@@ -35,10 +35,6 @@
             selectAStudent = new Button();
             openTheResults = new Button();
             testAll = new Button();
-            saveInpuıt = new Button();
-            createManual = new Button();
-            saveInputText = new TextBox();
-            label3 = new Label();
             zipButton = new Button();
             exButton = new Button();
             button1 = new Button();
@@ -50,7 +46,7 @@
             // 
             currentText.Location = new Point(500, 44);
             currentText.Name = "currentText";
-            currentText.Size = new Size(447, 514);
+            currentText.Size = new Size(447, 203);
             currentText.TabIndex = 0;
             currentText.Text = "";
             // 
@@ -67,7 +63,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(55, 9);
+            label1.Location = new Point(500, 6);
             label1.Name = "label1";
             label1.Size = new Size(154, 23);
             label1.TabIndex = 2;
@@ -78,7 +74,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(500, 7);
+            label2.Location = new Point(55, 5);
             label2.Name = "label2";
             label2.Size = new Size(131, 25);
             label2.TabIndex = 3;
@@ -88,7 +84,7 @@
             // 
             selectAStudent.Location = new Point(1037, 148);
             selectAStudent.Name = "selectAStudent";
-            selectAStudent.Size = new Size(172, 29);
+            selectAStudent.Size = new Size(188, 29);
             selectAStudent.TabIndex = 4;
             selectAStudent.Text = "Choose Students";
             selectAStudent.UseVisualStyleBackColor = true;
@@ -98,65 +94,29 @@
             // 
             openTheResults.Location = new Point(1037, 183);
             openTheResults.Name = "openTheResults";
-            openTheResults.Size = new Size(172, 29);
+            openTheResults.Size = new Size(188, 29);
             openTheResults.TabIndex = 5;
-            openTheResults.Text = "Open The Result";
+            openTheResults.Text = "Open The Result(Coming soon)";
             openTheResults.UseVisualStyleBackColor = true;
+            openTheResults.Click += openTheResults_Click;
             // 
             // testAll
             // 
             testAll.Location = new Point(1037, 218);
             testAll.Name = "testAll";
-            testAll.Size = new Size(172, 29);
+            testAll.Size = new Size(188, 29);
             testAll.TabIndex = 6;
             testAll.Text = "Test All The Students\r\n";
             testAll.UseVisualStyleBackColor = true;
             testAll.Click += testAll_Click;
             // 
-            // saveInpuıt
-            // 
-            saveInpuıt.Location = new Point(351, 564);
-            saveInpuıt.Name = "saveInpuıt";
-            saveInpuıt.Size = new Size(94, 29);
-            saveInpuıt.TabIndex = 7;
-            saveInpuıt.Text = "Save Input";
-            saveInpuıt.UseVisualStyleBackColor = true;
-            // 
-            // createManual
-            // 
-            createManual.Location = new Point(120, 599);
-            createManual.Name = "createManual";
-            createManual.Size = new Size(225, 29);
-            createManual.TabIndex = 8;
-            createManual.Text = "Or Create Manual Input";
-            createManual.UseVisualStyleBackColor = true;
-            createManual.Click += createManual_Click;
-            // 
-            // saveInputText
-            // 
-            saveInputText.Location = new Point(120, 564);
-            saveInputText.Name = "saveInputText";
-            saveInputText.Size = new Size(225, 27);
-            saveInputText.TabIndex = 9;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(55, 567);
-            label3.Name = "label3";
-            label3.Size = new Size(61, 23);
-            label3.TabIndex = 10;
-            label3.Text = "Input:";
-            // 
             // zipButton
             // 
             zipButton.Location = new Point(1037, 78);
             zipButton.Name = "zipButton";
-            zipButton.Size = new Size(94, 29);
+            zipButton.Size = new Size(188, 29);
             zipButton.TabIndex = 11;
-            zipButton.Text = "Zip Butonu";
+            zipButton.Text = "Coming soon";
             zipButton.UseVisualStyleBackColor = true;
             zipButton.Click += zipButton_Click;
             // 
@@ -164,7 +124,7 @@
             // 
             exButton.Location = new Point(1037, 113);
             exButton.Name = "exButton";
-            exButton.Size = new Size(94, 29);
+            exButton.Size = new Size(188, 29);
             exButton.TabIndex = 12;
             exButton.Text = "Extreact Button";
             exButton.UseVisualStyleBackColor = true;
@@ -174,19 +134,19 @@
             // 
             button1.Location = new Point(1037, 43);
             button1.Name = "button1";
-            button1.Size = new Size(117, 29);
+            button1.Size = new Size(188, 29);
             button1.TabIndex = 13;
-            button1.Text = "Berkaybutton";
+            button1.Text = "Coming soon";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(962, 280);
+            dataGridView1.Location = new Point(500, 280);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(384, 278);
+            dataGridView1.Size = new Size(837, 278);
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -195,15 +155,11 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1381, 674);
+            ClientSize = new Size(1410, 577);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(exButton);
             Controls.Add(zipButton);
-            Controls.Add(label3);
-            Controls.Add(saveInputText);
-            Controls.Add(createManual);
-            Controls.Add(saveInpuıt);
             Controls.Add(testAll);
             Controls.Add(openTheResults);
             Controls.Add(selectAStudent);
@@ -227,10 +183,6 @@
         private Button selectAStudent;
         private Button openTheResults;
         private Button testAll;
-        private Button saveInpuıt;
-        private Button createManual;
-        private TextBox saveInputText;
-        private Label label3;
         private Button zipButton;
         private Button exButton;
         private Button button1;
