@@ -144,6 +144,9 @@ namespace BerkazyHalka
 
 
             }
+            this.Close();
+            Form4 form = new Form4();
+            form.Show();
         }
         void UpdateStudentResult(int assignmentID, string message, string path)
         {
