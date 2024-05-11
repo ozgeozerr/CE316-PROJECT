@@ -46,7 +46,9 @@ namespace BerkazyHalka
 
         public static void cProject(string cFilePath)
         {
-            string compileCommand = $"gcc {cFilePath} -o output";
+            string compilerPath = @"C:\Users\barca\mingw64\bin\gcc.exe"; // Replace this with the actual path to your compiler
+            string compileCommand = $"{compilerPath} {cFilePath} -o output";
+            MessageBox.Show("Compile Command: " + compileCommand);
 
             // COMPILE
             Process compileProcess = new Process();
@@ -61,9 +63,12 @@ namespace BerkazyHalka
 
             if (compileProcess.ExitCode == 0)
             {
+                MessageBox.Show("Compilation successful!");
+
                 // EXECUTE
                 Process executeProcess = new Process();
                 executeProcess.StartInfo.FileName = "output.exe";
+                executeProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(cFilePath); // Set the working directory
                 executeProcess.StartInfo.UseShellExecute = false;
                 executeProcess.StartInfo.RedirectStandardInput = true;
                 executeProcess.StartInfo.RedirectStandardOutput = true;
@@ -78,7 +83,7 @@ namespace BerkazyHalka
                     executeProcess.StandardInput.Close();
                 }
 
-                // CAPTURE OUPTUT
+                // CAPTURE OUTPUT
                 string cOutput = executeProcess.StandardOutput.ReadToEnd();
                 executeProcess.WaitForExit();
 
@@ -87,9 +92,18 @@ namespace BerkazyHalka
             }
             else
             {
-                MessageBox.Show("Compilation failed: " + compileProcess.StandardError.ReadToEnd());
+                MessageBox.Show("Compilation failed:\n" + compileProcess.StandardError.ReadToEnd());
             }
         }
+
+        public static string tırnakEkleBoslukVarsa(string path)
+        {
+            return !string.IsNullOrWhiteSpace(path) ?
+                path.Contains(" ") && (!path.StartsWith("\"") && !path.EndsWith("\"")) ?
+                    "\"" + path + "\"" : path :
+                    string.Empty;
+        }
+
         //this function will be used 
         public static boolean compareOutputs(String lecturersOutput, String studentsOutput)
         {
