@@ -68,6 +68,7 @@ namespace BerkazyHalka
             DisplayFolderNames();
             listBox1.Items.Clear();
             fileName.Items.Clear();
+            path.Items.Clear();
 
             if (unzippedFiles.Any())
             {

@@ -104,20 +104,6 @@ namespace BerkazyHalka
                     string.Empty;
         }
 
-        //this function will be used 
-        public static boolean compareOutputs(String lecturersOutput, String studentsOutput)
-        {
-            // Trim the spaces to avoid inconsistencies
-            lecturersOutput = lecturersOutput.trim();
-            studentsOutput = studentsOutput.trim();
-
-            // Make the strings all lowercase to avoid inconsistencies
-            lecturersOutput = lecturersOutput.toLowerCase();
-            studentsOutput = studentsOutput.toLowerCase();
-
-            // Compare the strings
-            return studentsOutput.equals(lecturersOutput);
-        }
     }
 
 }
