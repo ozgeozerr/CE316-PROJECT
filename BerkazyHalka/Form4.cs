@@ -15,6 +15,7 @@ namespace BerkazyHalka
     {
         public Form4()
         {
+            MessageBox.Show("Result assing id:"+Form_HomePage.currentAssignID+"Config id:"+ Form_HomePage.currentConfigID);
             InitializeComponent();
         }
         String selectedFileForZipEx;

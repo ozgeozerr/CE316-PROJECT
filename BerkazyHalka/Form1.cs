@@ -124,9 +124,33 @@ namespace BerkazyHalka
         private void button2_Click_2(object sender, EventArgs e)
         {
             string javaFilePath = button2.Tag as string;
-            string javaCompilerPath = """C:\Users\barca\.jdks\openjdk-20.0.1\bin\java.exe""";
-            compilerClass.javaProject(javaFilePath, javaCompilerPath);
+            string selectedPath = GetCompilerPathById(Form_HomePage.currentConfigID);
+            // this is selected path
+            //MessageBox.Show(selectedPath);
+            compilerClass.javaProject(javaFilePath);
 
+        }
+        private string GetCompilerPathById(int configurationId)
+        {
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
+            {
+                string query = "SELECT compiler_path FROM configuration WHERE id = @id";
+                using (var command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", configurationId);
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        return result != null ? result.ToString() : null; // Return the compiler_path or null if not found
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error querying database: " + ex.Message);
+                        return null;
+                    }
+                }
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
