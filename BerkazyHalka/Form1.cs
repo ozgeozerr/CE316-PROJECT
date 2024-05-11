@@ -116,7 +116,7 @@ namespace BerkazyHalka
         {
             string cFilePath = button111.Tag as string;
             string cCompilerPath = """C:\Users\barca\mingw64\bin\gcc.exe""";
-            compilerClass.cProject(cFilePath, cCompilerPath);
+            compilerClass.cProject(cFilePath, cCompilerPath, "input");
         }
 
 
@@ -127,7 +127,6 @@ namespace BerkazyHalka
             string selectedPath = GetCompilerPathById(Form_HomePage.currentConfigID);
             // this is selected path
             //MessageBox.Show(selectedPath);
-            compilerClass.javaProject(javaFilePath);
 
         }
         private string GetCompilerPathById(int configurationId)
