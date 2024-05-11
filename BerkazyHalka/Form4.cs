@@ -26,6 +26,9 @@ namespace BerkazyHalka
 
         private void selectAStudent_Click(object sender, EventArgs e)
         {
+            Form_StudentsChoosingWindow form=new Form_StudentsChoosingWindow();
+            form.Show();
+            this.Hide();
 
         }
 

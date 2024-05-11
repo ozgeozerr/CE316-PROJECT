@@ -7,7 +7,7 @@ namespace BerkazyHalka
 {
     public class compilerClass
     {
-        public static string javaProject(string javaFilePath, string javaCompilerPath)
+        public static string javaProject(string javaFilePath, string javaCompilerPath, string input)
         {
             string javaPath = javaCompilerPath;
 
@@ -19,34 +19,49 @@ namespace BerkazyHalka
             compileProcess.Start();
             compileProcess.WaitForExit();
 
-            // EXECUTE
-            Process executeProcess = new Process();
-            executeProcess.StartInfo.FileName = javaPath;
-            executeProcess.StartInfo.Arguments = $"-classpath {Path.GetDirectoryName(javaFilePath)} {Path.GetFileNameWithoutExtension(javaFilePath)}";
-            executeProcess.StartInfo.UseShellExecute = false;
-            executeProcess.StartInfo.RedirectStandardInput = true;
-            executeProcess.StartInfo.RedirectStandardOutput = true;
-            executeProcess.Start();
+            if (compileProcess.ExitCode == 0 )
+            {
+                // EXECUTE
+                Process executeProcess = new Process();
+                executeProcess.StartInfo.FileName = javaPath;
+                executeProcess.StartInfo.Arguments = $"-classpath {Path.GetDirectoryName(javaFilePath)} {Path.GetFileNameWithoutExtension(javaFilePath)}";
+                executeProcess.StartInfo.UseShellExecute = false;
+                executeProcess.StartInfo.RedirectStandardInput = true;
+                executeProcess.StartInfo.RedirectStandardOutput = true;
+                executeProcess.Start();
 
-            // PASS THE INPUT
-            executeProcess.StandardInput.WriteLine("Barca");
-            executeProcess.StandardInput.Flush();
+                if (!string.IsNullOrEmpty(input))
+                {
+                    executeProcess.StandardInput.WriteLine(input);
+                    executeProcess.StandardInput.Flush();
+                    executeProcess.StandardInput.Close();
+                }
+                else
+                {
+                    return "EMPTY LINE";
+                }
 
-            // CAPTURE OUTPUT
-            string javaOutput = executeProcess.StandardOutput.ReadToEnd();
+                // CAPTURE OUTPUT
+                string javaOutput = executeProcess.StandardOutput.ReadToEnd();
 
-            executeProcess.WaitForExit();
+                executeProcess.WaitForExit();
 
-            // DISPLAY OUTPUT
-            MessageBox.Show("Output: "+javaOutput, "Java Output (STUDENT)");
+                // DISPLAY OUTPUT
+                MessageBox.Show("Output: " + javaOutput, "Java Output (STUDENT)");
 
-            compileProcess.Dispose();
-            executeProcess.Dispose();
+                compileProcess.Dispose();
+                executeProcess.Dispose();
 
-            return javaOutput;
+                return javaOutput;
+            }
+            else
+            {
+                MessageBox.Show("Compilation failed:\n" + compileProcess.StandardError.ReadToEnd());
+                return "This Student's File Could Not Be Compiled";
+            }
         }
 
-        public static string cProject(string cFilePath, string cCompilerPath)
+        public static string cProject(string cFilePath, string cCompilerPath, string input)
         {
             string compilerPath = cCompilerPath; // Replace this with the actual path to your compiler
             string compileCommand = $"{compilerPath} {cFilePath} -o output";
@@ -78,11 +93,14 @@ namespace BerkazyHalka
                 executeProcess.Start();
 
                 // PASS THE INPUT
-                if (!string.IsNullOrEmpty("Barca"))
+                if (!string.IsNullOrEmpty(input))
                 {
-                    executeProcess.StandardInput.WriteLine("Barca");
+                    executeProcess.StandardInput.WriteLine(input);
                     executeProcess.StandardInput.Flush();
-                    executeProcess.StandardInput.Close();
+                }
+                else
+                {
+                    return "EMPTY LINE";
                 }
 
                 // CAPTURE OUTPUT
@@ -96,9 +114,8 @@ namespace BerkazyHalka
             else
             {
                 MessageBox.Show("Compilation failed:\n" + compileProcess.StandardError.ReadToEnd());
-                return null;
+                return "This Student's File Could Not Be Compiled";
             }
-            return null;
         }
 
         public static string tırnakEkleBoslukVarsa(string path)
