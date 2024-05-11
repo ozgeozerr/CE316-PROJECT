@@ -43,6 +43,10 @@
             textBox3 = new TextBox();
             button1 = new Button();
             button3 = new Button();
+            label4 = new Label();
+            textBox4 = new TextBox();
+            browseButtonnn = new Button();
+            button2 = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
@@ -74,9 +78,9 @@
             saveConfig.BackColor = Color.Thistle;
             saveConfig.Font = new Font("Cambria", 9F, FontStyle.Bold);
             saveConfig.ForeColor = Color.Black;
-            saveConfig.Location = new Point(246, 351);
+            saveConfig.Location = new Point(320, 351);
             saveConfig.Name = "saveConfig";
-            saveConfig.Size = new Size(355, 36);
+            saveConfig.Size = new Size(281, 36);
             saveConfig.TabIndex = 8;
             saveConfig.Text = "Export Configuration (Coming Soon)";
             saveConfig.UseVisualStyleBackColor = false;
@@ -178,6 +182,48 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label4.ForeColor = SystemColors.ButtonHighlight;
+            label4.Location = new Point(52, 285);
+            label4.Name = "label4";
+            label4.Size = new Size(287, 23);
+            label4.TabIndex = 3;
+            label4.Text = "Confirm Selected Complier Path:";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(334, 279);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(244, 27);
+            textBox4.TabIndex = 22;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // browseButtonnn
+            // 
+            browseButtonnn.BackColor = Color.Thistle;
+            browseButtonnn.Font = new Font("Calisto MT", 10F);
+            browseButtonnn.Location = new Point(584, 279);
+            browseButtonnn.Name = "browseButtonnn";
+            browseButtonnn.Size = new Size(141, 29);
+            browseButtonnn.TabIndex = 17;
+            browseButtonnn.Text = "Browse Files";
+            browseButtonnn.TextAlign = ContentAlignment.MiddleLeft;
+            browseButtonnn.UseVisualStyleBackColor = false;
+            browseButtonnn.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(748, 279);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 24;
+            button2.Text = "Save";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form_Configuration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -185,14 +231,18 @@
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(868, 444);
             Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(cbo);
+            Controls.Add(browseButtonnn);
             Controls.Add(browseFiles_button);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Controls.Add(saveConfig);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Name = "Form_Configuration";
@@ -223,5 +273,9 @@
         private TextBox textBox3;
         private Button button1;
         private Button button3;
+        private Label label4;
+        private TextBox textBox4;
+        private Button browseButtonnn;
+        private Button button2;
     }
 }
