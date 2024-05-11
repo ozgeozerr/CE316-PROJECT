@@ -64,6 +64,7 @@
             okayButton.TabIndex = 2;
             okayButton.Text = "Okay";
             okayButton.UseVisualStyleBackColor = true;
+            okayButton.Click += okayButton_Click;
             // 
             // listBox1
             // 

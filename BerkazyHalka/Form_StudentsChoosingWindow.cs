@@ -53,7 +53,7 @@ namespace BerkazyHalka
                 {
                     unzippedFiles.Add(extractedFile);
                 }
-
+                extractedFoldersName.Add(folderName);
                 extractedFoldersPath.Add(extractPath);
 
             }
@@ -68,13 +68,15 @@ namespace BerkazyHalka
             DisplayFolderNames();
             listBox1.Items.Clear();
             fileName.Items.Clear();
+            path.Items.Clear();
+
 
             if (unzippedFiles.Any())
             {
                 foreach (string filePath in unzippedFiles)
                 {
                     string fileName2 = Path.GetFileName(filePath);
-                    string fileName3=Path.GetFullPath(filePath);
+                    string fileName3 = Path.GetFullPath(filePath);
 
                     listBox1.Items.Add(fileName2);
                     path.Items.Add(fileName3);
@@ -101,7 +103,7 @@ namespace BerkazyHalka
             foreach (string folderPath in extractedFoldersPath)
             {
                 string folderName = Path.GetFileName(folderPath);
-                extractedFoldersName.Add(folderName);
+              
                 MessageBox.Show($"Extracted folder name: {folderName}");
             }
         }
@@ -114,6 +116,13 @@ namespace BerkazyHalka
         private void path_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void okayButton_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4();
+            form.Show();
+            this.Hide();
         }
     }
 }
