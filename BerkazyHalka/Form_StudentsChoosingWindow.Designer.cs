@@ -33,6 +33,7 @@
             okayButton = new Button();
             listBox1 = new ListBox();
             fileName = new ListBox();
+            path = new ListBox();
             SuspendLayout();
             // 
             // chooseAllStudents
@@ -82,11 +83,21 @@
             fileName.TabIndex = 4;
             fileName.SelectedIndexChanged += fileName_SelectedIndexChanged;
             // 
+            // path
+            // 
+            path.FormattingEnabled = true;
+            path.Location = new Point(647, 29);
+            path.Name = "path";
+            path.Size = new Size(992, 344);
+            path.TabIndex = 5;
+            path.SelectedIndexChanged += path_SelectedIndexChanged;
+            // 
             // Form_StudentsChoosingWindow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1043, 450);
+            ClientSize = new Size(1673, 450);
+            Controls.Add(path);
             Controls.Add(fileName);
             Controls.Add(listBox1);
             Controls.Add(okayButton);
@@ -104,5 +115,6 @@
         private Button okayButton;
         private ListBox listBox1;
         private ListBox fileName;
+        private ListBox path;
     }
 }

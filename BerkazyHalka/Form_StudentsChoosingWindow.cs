@@ -55,7 +55,7 @@ namespace BerkazyHalka
                 }
 
                 extractedFoldersPath.Add(extractPath);
-               
+
             }
             catch (Exception ex)
             {
@@ -74,14 +74,16 @@ namespace BerkazyHalka
                 foreach (string filePath in unzippedFiles)
                 {
                     string fileName2 = Path.GetFileName(filePath);
-                    
+                    string fileName3=Path.GetFullPath(filePath);
+
                     listBox1.Items.Add(fileName2);
-                    
+                    path.Items.Add(fileName3);
+
                 }
-                foreach(String fileName2 in extractedFoldersName)
+                foreach (String fileName2 in extractedFoldersName)
 
                 {
-                     
+
                     fileName.Items.Add(fileName2);
 
                 }
@@ -91,7 +93,7 @@ namespace BerkazyHalka
                 MessageBox.Show("No files to display.");
             }
 
-            
+
         }
 
         private void DisplayFolderNames()
@@ -105,6 +107,11 @@ namespace BerkazyHalka
         }
 
         private void fileName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void path_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
