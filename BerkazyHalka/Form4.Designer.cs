@@ -87,7 +87,7 @@
             selectAStudent.Name = "selectAStudent";
             selectAStudent.Size = new Size(172, 29);
             selectAStudent.TabIndex = 4;
-            selectAStudent.Text = "Choose A Student";
+            selectAStudent.Text = "Choose Students";
             selectAStudent.UseVisualStyleBackColor = true;
             selectAStudent.Click += selectAStudent_Click;
             // 
