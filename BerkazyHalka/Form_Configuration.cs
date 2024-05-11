@@ -159,6 +159,7 @@ namespace BerkazyHalka
             {
 
                 insertDatabase();
+                this.Close();
             }
             
         }

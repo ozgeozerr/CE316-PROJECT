@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            nextButton = new Button();
-            backButton = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -44,27 +42,8 @@
             textb_expectedFolder = new TextBox();
             saveInput = new Button();
             saveOutput = new Button();
+            backButton = new Button();
             SuspendLayout();
-            // 
-            // nextButton
-            // 
-            nextButton.Location = new Point(148, 436);
-            nextButton.Name = "nextButton";
-            nextButton.Size = new Size(94, 29);
-            nextButton.TabIndex = 14;
-            nextButton.Text = "next";
-            nextButton.UseVisualStyleBackColor = true;
-            nextButton.Click += nextButton_Click;
-            // 
-            // backButton
-            // 
-            backButton.Location = new Point(28, 436);
-            backButton.Name = "backButton";
-            backButton.Size = new Size(94, 29);
-            backButton.TabIndex = 15;
-            backButton.Text = "back";
-            backButton.UseVisualStyleBackColor = true;
-            backButton.Click += backButton_Click;
             // 
             // label1
             // 
@@ -211,6 +190,16 @@
             saveOutput.UseVisualStyleBackColor = true;
             saveOutput.Click += saveOutput_Click;
             // 
+            // backButton
+            // 
+            backButton.Location = new Point(28, 436);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(94, 29);
+            backButton.TabIndex = 15;
+            backButton.Text = "back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
+            // 
             // Form_CreatingNewAssignment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -232,7 +221,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(backButton);
-            Controls.Add(nextButton);
             Name = "Form_CreatingNewAssignment";
             Text = " EasyAssign";
             Load += Form_CreatingNewAssignment_Load;
@@ -241,8 +229,6 @@
         }
 
         #endregion
-        private Button nextButton;
-        private Button backButton;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -257,5 +243,6 @@
         private TextBox textb_expectedFolder;
         private Button saveInput;
         private Button saveOutput;
+        private Button backButton;
     }
 }
