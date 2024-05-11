@@ -41,6 +41,9 @@
             label3 = new Label();
             zipButton = new Button();
             exButton = new Button();
+            button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // currentText
@@ -83,7 +86,7 @@
             // 
             // selectAStudent
             // 
-            selectAStudent.Location = new Point(1047, 213);
+            selectAStudent.Location = new Point(1037, 148);
             selectAStudent.Name = "selectAStudent";
             selectAStudent.Size = new Size(172, 29);
             selectAStudent.TabIndex = 4;
@@ -93,7 +96,7 @@
             // 
             // openTheResults
             // 
-            openTheResults.Location = new Point(1047, 271);
+            openTheResults.Location = new Point(1037, 183);
             openTheResults.Name = "openTheResults";
             openTheResults.Size = new Size(172, 29);
             openTheResults.TabIndex = 5;
@@ -102,7 +105,7 @@
             // 
             // testAll
             // 
-            testAll.Location = new Point(1047, 324);
+            testAll.Location = new Point(1037, 218);
             testAll.Name = "testAll";
             testAll.Size = new Size(172, 29);
             testAll.TabIndex = 6;
@@ -149,7 +152,7 @@
             // 
             // zipButton
             // 
-            zipButton.Location = new Point(1060, 132);
+            zipButton.Location = new Point(1037, 78);
             zipButton.Name = "zipButton";
             zipButton.Size = new Size(94, 29);
             zipButton.TabIndex = 11;
@@ -159,7 +162,7 @@
             // 
             // exButton
             // 
-            exButton.Location = new Point(1064, 175);
+            exButton.Location = new Point(1037, 113);
             exButton.Name = "exButton";
             exButton.Size = new Size(94, 29);
             exButton.TabIndex = 12;
@@ -167,12 +170,34 @@
             exButton.UseVisualStyleBackColor = true;
             exButton.Click += exButton_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(1037, 43);
+            button1.Name = "button1";
+            button1.Size = new Size(117, 29);
+            button1.TabIndex = 13;
+            button1.Text = "Berkaybutton";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(962, 280);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(384, 278);
+            dataGridView1.TabIndex = 14;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1287, 651);
+            ClientSize = new Size(1381, 674);
+            Controls.Add(dataGridView1);
+            Controls.Add(button1);
             Controls.Add(exButton);
             Controls.Add(zipButton);
             Controls.Add(label3);
@@ -188,6 +213,7 @@
             Controls.Add(currentText);
             Name = "Form4";
             Text = "EasyAssign";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -207,5 +233,7 @@
         private Label label3;
         private Button zipButton;
         private Button exButton;
+        private Button button1;
+        private DataGridView dataGridView1;
     }
 }

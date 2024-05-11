@@ -61,12 +61,11 @@ namespace BerkazyHalka
         {
             using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
-                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder,date,configuration_id) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}','{currentDateTime}','{Form_HomePage.currentConfigID}');SELECT last_insert_rowid();", connection))
+                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder,date,configuration_id) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}','{currentDateTime}','{Form_HomePage.currentConfigID}'); SELECT last_insert_rowid();", connection))
                 {
                     try
                     {
                         connection.Open();
-                        insertData.ExecuteNonQuery();
                         Form_HomePage.currentAssignID = Convert.ToInt32(insertData.ExecuteScalar());
                         MessageBox.Show("Added to SQL successfully!"+Form_HomePage.currentAssignID);
                     }
