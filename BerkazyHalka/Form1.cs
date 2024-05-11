@@ -127,7 +127,7 @@ namespace BerkazyHalka
             string selectedPath = GetCompilerPathById(Form_HomePage.currentConfigID);
             // this is selected path
             MessageBox.Show(selectedPath);
-            compilerClass.javaProject(javaFilePath);
+            compilerClass.javaProject(javaFilePath,selectedPath, "input");
 
         }
         private string GetCompilerPathById(int configurationId)
