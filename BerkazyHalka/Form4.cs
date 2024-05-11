@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -137,7 +138,34 @@ namespace BerkazyHalka
 
             for (int i = 0;i<studentCount;i++)
             {
-                MessageBox.Show(trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language)); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
+                String message;
+                message = trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
+                UpdateStudentResult(Form_HomePage.currentAssignID, message, studentFiles[i]);
+
+
+            }
+        }
+        void UpdateStudentResult(int assignmentID, string message, string path)
+        {
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
+            {
+                connection.Open();
+
+                using (var updateCommand = new SQLiteCommand("UPDATE student SET result = @result WHERE assignment_id = @assignmentID AND path = @path", connection))
+                {
+                    updateCommand.Parameters.AddWithValue("@result", message);
+                    updateCommand.Parameters.AddWithValue("@assignmentID", assignmentID);
+                    updateCommand.Parameters.AddWithValue("@path", path);
+
+                    try
+                    {
+                        updateCommand.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error updating student result: {ex.Message}");
+                    }
+                }
             }
         }
 
