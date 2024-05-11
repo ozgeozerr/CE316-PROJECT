@@ -148,9 +148,8 @@ namespace BerkazyHalka
                     try
                     {
                         connection.Open();
-                        insertData.ExecuteNonQuery();
                         lastInsertedId = Convert.ToInt32(insertData.ExecuteScalar());
-                        MessageBox.Show("Added to SQL successfully!"+lastInsertedId);
+                        MessageBox.Show("Added to SQL successfully!" + lastInsertedId);
                     }
                     catch (Exception err)
                     {
@@ -159,6 +158,7 @@ namespace BerkazyHalka
                 }
             }
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

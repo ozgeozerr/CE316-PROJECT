@@ -53,13 +53,25 @@ namespace BerkazyHalka
             form.Show();
             this.Hide();
         }
+        private Form_ConfigurationView configurationForm;
 
         private void viewConfigurationsButton_Click(object sender, EventArgs e)
         {
-            Form_ConfigurationView form = new Form_ConfigurationView();
-            form.Show();
-            this.Hide();
+            if (configurationForm == null || configurationForm.Visible == false)
+            {
+                configurationForm = new Form_ConfigurationView();
+                configurationForm.FormClosed += ConfigurationForm_FormClosed;
+                this.Enabled = false;
+                configurationForm.Show();
+            }
         }
+
+        private void ConfigurationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dataGridView1.Refresh();
+            this.Enabled = true;
+        }
+
 
         private void backgroundPanelForListView_Paint(object sender, PaintEventArgs e)
         {
