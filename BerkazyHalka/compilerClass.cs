@@ -105,18 +105,18 @@ namespace BerkazyHalka
         }
 
         //this function will be used 
-        public static boolean compareOutputs(String lecturersOutput, String studentsOutput)
+        public static bool CompareOutputs(string lecturersOutput, string studentsOutput)
         {
             // Trim the spaces to avoid inconsistencies
-            lecturersOutput = lecturersOutput.trim();
-            studentsOutput = studentsOutput.trim();
+            lecturersOutput = lecturersOutput.Trim();
+            studentsOutput = studentsOutput.Trim();
 
             // Make the strings all lowercase to avoid inconsistencies
-            lecturersOutput = lecturersOutput.toLowerCase();
-            studentsOutput = studentsOutput.toLowerCase();
+            lecturersOutput = lecturersOutput.ToLower();
+            studentsOutput = studentsOutput.ToLower();
 
             // Compare the strings
-            return studentsOutput.equals(lecturersOutput);
+            return studentsOutput.Equals(lecturersOutput);
         }
     }
 
