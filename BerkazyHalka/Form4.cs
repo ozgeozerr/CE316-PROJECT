@@ -24,17 +24,116 @@ namespace BerkazyHalka
         String extractPath;
         private void testAll_Click(object sender, EventArgs e)
         {
-            string inputFile = ""; //Ahmet Burayı Databaseden
-            string outputFile = ""; //Ahmet Burayı Databaseden
-            string compilerPath = ""; //Ahmet Burayı Databaseden
-            string language = ""; //Ahmet Burayı Databaseden
-            int studentCount = 99; //Ahmet Burayı Databaseden
-            string[] studentFiles = new string[studentCount];
-            for(int i = 0; i < studentCount; i++)
+            string inputFile = "";
+            string outputFile = "";
+            string compilerPath = "";
+            string language = "";
+            int studentCount = 99;
+
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
-                studentFiles[i] = ""; // Buraya Databasedeki Öğrenci Dosyaları Gelecek 
+                using (var readData = new SQLiteCommand("SELECT input_folder,expected_folder FROM assignment WHERE id = @currentAssignmentID", connection))
+                {
+                    readData.Parameters.AddWithValue("@currentAssignmentID", Form_HomePage.currentAssignID);
+
+                    try
+                    {
+                        connection.Open();
+                        using (SQLiteDataReader reader = readData.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                inputFile = reader["input_folder"].ToString();
+                                outputFile = reader["expected_folder"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No configuration found for the specified ID.");
+                            }
+                        }
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+                    }
+                }
             }
-            for(int i = 0;i<studentCount;i++)
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
+            {
+                using (var readData = new SQLiteCommand("SELECT compiler_path,language_name FROM configuration WHERE id = @currentConfigurationID", connection))
+                {
+                    readData.Parameters.AddWithValue("@currentConfigurationID", Form_HomePage.currentConfigID);
+
+                    try
+                    {
+                        connection.Open();
+                        using (SQLiteDataReader reader = readData.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                inputFile = reader["compiler_path"].ToString();
+                                outputFile = reader["language_name"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No configuration found for the specified ID.");
+                            }
+                        }
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+                    }
+                }
+            }
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
+            {
+                using (var command = new SQLiteCommand("SELECT COUNT(*) FROM student WHERE assignment_id = @currentAssignID", connection))
+                {
+                    command.Parameters.AddWithValue("@currentAssignID", Form_HomePage.currentAssignID);
+
+                    try
+                    {
+                        connection.Open();
+                        studentCount = Convert.ToInt32(command.ExecuteScalar());
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                }
+            }
+
+            string[] studentFiles = new string[studentCount];
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
+            {
+                using (var command = new SQLiteCommand("SELECT path FROM student WHERE assignment_id = @currentAssignID", connection))
+                {
+                    command.Parameters.AddWithValue("@currentAssignID", Form_HomePage.currentAssignID);
+
+                    try
+                    {
+                        connection.Open();
+                        using (var reader = command.ExecuteReader())
+                        {
+                            int i = 0;
+                            studentFiles = new string[studentCount]; // Initialize the array with the correct size
+
+                            while (reader.Read() && i < studentCount)
+                            {
+                                studentFiles[i] = reader["path"].ToString();
+                                i++;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                }
+            }
+
+            for (int i = 0;i<studentCount;i++)
             {
                 trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
             }
