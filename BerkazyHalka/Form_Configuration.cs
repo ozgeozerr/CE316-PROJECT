@@ -138,18 +138,17 @@ namespace BerkazyHalka
         {
             insertDatabase();
         }
-        public static int lastInsertedId;
         private void insertDatabase()
         {
-            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
                 using (var insertData = new SQLiteCommand($"INSERT INTO configuration(name,language_name,compiler_path,sourcecode) VALUES ('{textBox1.Text}', '{programminLanguage}','{textBox3.Text}','{textBox4.Text}');SELECT last_insert_rowid();", connection))
                 {
                     try
                     {
                         connection.Open();
-                        lastInsertedId = Convert.ToInt32(insertData.ExecuteScalar());
-                        MessageBox.Show("Added to SQL successfully!" + lastInsertedId);
+                        Form_HomePage.currentConfigID = Convert.ToInt32(insertData.ExecuteScalar());
+                        MessageBox.Show("Added to SQL successfully!" + Form_HomePage.currentConfigID);
                     }
                     catch (Exception err)
                     {

@@ -29,7 +29,7 @@ namespace BerkazyHalka
         static DataTable dt;
         public void listConfiguration()
         {
-            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
                 using (var readData = new SQLiteCommand("SELECT * FROM configuration", connection))
                 {
@@ -84,7 +84,7 @@ namespace BerkazyHalka
         }
         private void UpdateRowInDatabase(int id, string name, string languageName, string compilerPath, string sourceCode)
         {
-            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
                 string query = "UPDATE configuration SET name = @name, language_name = @languageName, compiler_path = @compilerPath, sourcecode = @sourceCode WHERE id = @id";
                 using (var command = new SQLiteCommand(query, connection))
@@ -134,7 +134,7 @@ namespace BerkazyHalka
         private DataTable GetUpdatedDataSource()
         {
             DataTable updatedData = new DataTable();
-            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
                 string query = "SELECT * FROM configuration";
                 using (var command = new SQLiteCommand(query, connection))
@@ -165,7 +165,7 @@ namespace BerkazyHalka
         }
         private void DeleteRowFromDatabase(int id)
         {
-            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
                 string query = "DELETE FROM configuration WHERE id = @id";
                 using (var command = new SQLiteCommand(query, connection))

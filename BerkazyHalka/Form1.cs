@@ -9,7 +9,7 @@ namespace BerkazyHalka
 {
     public partial class Form1 : Form
     {
-        public static string connectionPath = $"Data Source={Application.StartupPath}\\assignment.db;Version=3;";
+        
 
 
 
@@ -146,7 +146,7 @@ namespace BerkazyHalka
 
         public static void connectSql()
         {
-            using (var connection = new SQLiteConnection(connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
                 try
                 {

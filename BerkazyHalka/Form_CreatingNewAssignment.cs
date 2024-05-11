@@ -14,6 +14,7 @@ namespace BerkazyHalka
     public partial class Form_CreatingNewAssignment : Form
     {
         DateTime currentDateTime = DateTime.Now;
+        
         public Form_CreatingNewAssignment()
         {
             InitializeComponent();
@@ -47,15 +48,16 @@ namespace BerkazyHalka
         }
         private void insertDatabase()
         {
-            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
-                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder,date,configuration_id) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}','{currentDateTime}','{Form_Configuration.lastInsertedId}')", connection))
+                using (var insertData = new SQLiteCommand($"INSERT INTO assignment(name, input_folder, expected_folder,date,configuration_id) VALUES ('{textb_assignName.Text}', '{textb_inputFolder.Text}','{textb_expectedFolder.Text}','{currentDateTime}','{Form_HomePage.currentConfigID}');SELECT last_insert_rowid();", connection))
                 {
                     try
                     {
                         connection.Open();
                         insertData.ExecuteNonQuery();
-                        MessageBox.Show("Added to SQL successfully!");
+                        Form_HomePage.currentAssignID = Convert.ToInt32(insertData.ExecuteScalar());
+                        MessageBox.Show("Added to SQL successfully!"+Form_HomePage.currentAssignID);
                     }
                     catch (Exception err)
                     {

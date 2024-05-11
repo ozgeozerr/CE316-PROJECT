@@ -14,6 +14,9 @@ namespace BerkazyHalka
     public partial class Form_HomePage : Form
     {
         public static Form_HomePage instance;
+        public static int currentAssignID;
+        public static int currentConfigID;
+        public static string connectionPath = $"Data Source={Application.StartupPath}\\assignment.db;Version=3;";
         public Form_HomePage()
         {
             InitializeComponent();
@@ -86,7 +89,7 @@ namespace BerkazyHalka
         public void listAssignment()
         {
             dataGridView1.ReadOnly = true;
-            using (var connection = new SQLiteConnection(Form1.connectionPath))
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
                 using (var readData = new SQLiteCommand("SELECT * FROM assignment", connection))
                 {
