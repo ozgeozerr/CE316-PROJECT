@@ -11,7 +11,6 @@ using System.Windows.Forms;
 namespace BerkazyHalka
 {
 
-
     public partial class Form4 : Form
     {
         public Form4()

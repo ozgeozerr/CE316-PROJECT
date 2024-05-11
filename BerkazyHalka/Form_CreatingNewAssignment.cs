@@ -124,11 +124,22 @@ namespace BerkazyHalka
             }
 
         }
+        private Form_Configuration configurationForm;
 
         private void createNewConfig_Click(object sender, EventArgs e)
         {
-            Form_Configuration form = new Form_Configuration();
-            form.Show();
+            if (configurationForm == null || configurationForm.Visible == false)
+            {
+                configurationForm = new Form_Configuration();
+                configurationForm.FormClosed += ConfigurationForm_FormClosed;
+                this.Enabled = false;
+                configurationForm.Show();
+            }
+        }
+
+        private void ConfigurationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Enabled = true;
         }
     }
 }
