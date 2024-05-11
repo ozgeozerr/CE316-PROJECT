@@ -115,7 +115,8 @@ namespace BerkazyHalka
         private void button111_Click(object sender, EventArgs e)
         {
             string cFilePath = button111.Tag as string;
-            compilerClass.cProject(cFilePath);
+            string cCompilerPath = """C:\Users\barca\mingw64\bin\gcc.exe""";
+            compilerClass.cProject(cFilePath, cCompilerPath);
         }
 
 
