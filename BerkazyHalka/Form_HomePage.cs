@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
@@ -124,11 +125,56 @@ namespace BerkazyHalka
             string searchText = textBox1.Text.Trim();
             if (dt_assign != null)
             {
-                
+
                 DataView dv = dt_assign.DefaultView;
                 dv.RowFilter = $"name LIKE '%{searchText}%'";
-                dataGridView1.DataSource = dv.ToTable(); 
+                dataGridView1.DataSource = dv.ToTable();
+            }
+        }
+        private int GetConfigurationIdById(int assignId)
+        {
+            using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
+            {
+                string query = "SELECT configuration_id FROM assignment WHERE id = @id";
+                using (var command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", assignId);
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        return result != null && result != DBNull.Value ? Convert.ToInt32(result) : -1;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error querying database: " + ex.Message);
+                        return -1;
+                    }
+                }
+            }
+        }
+
+        private void viewTheAssignmentButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                int selectedId = Convert.ToInt32(selectedRow.Cells[0].Value);
+                Form_HomePage.currentAssignID = selectedId;
+                Form_HomePage.currentConfigID = GetConfigurationIdById(Form_HomePage.currentAssignID);
+
+                Form4 form = new Form4();
+                form.Show();
+                this.Hide();
+
+
+            }
+
+            else
+            {
+                MessageBox.Show("Please select a row to view assignment.");
             }
         }
     }
+
 }
