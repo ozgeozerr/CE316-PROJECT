@@ -22,9 +22,22 @@ namespace BerkazyHalka
         }
         String selectedFileForZipEx;
         String extractPath;
-        private void button3_Click(object sender, EventArgs e)
+        private void testAll_Click(object sender, EventArgs e)
         {
-
+            string inputFile = ""; //Ahmet Burayı Databaseden
+            string outputFile = ""; //Ahmet Burayı Databaseden
+            string compilerPath = ""; //Ahmet Burayı Databaseden
+            string language = ""; //Ahmet Burayı Databaseden
+            int studentCount = 99; //Ahmet Burayı Databaseden
+            string[] studentFiles = new string[studentCount];
+            for(int i = 0; i < studentCount; i++)
+            {
+                studentFiles[i] = ""; // Buraya Databasedeki Öğrenci Dosyaları Gelecek 
+            }
+            for(int i = 0;i<studentCount;i++)
+            {
+                trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
+            }
         }
 
         private void selectAStudent_Click(object sender, EventArgs e)

@@ -111,7 +111,7 @@
             testAll.TabIndex = 6;
             testAll.Text = "Test All The Students\r\n";
             testAll.UseVisualStyleBackColor = true;
-            testAll.Click += button3_Click;
+            testAll.Click += testAll_Click;
             // 
             // saveInpuıt
             // 
