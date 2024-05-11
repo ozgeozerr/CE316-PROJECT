@@ -10,8 +10,9 @@ namespace BerkazyHalka
     public partial class Form_StudentsChoosingWindow : Form
     {
         private List<string> unzippedFiles = new List<string>();
-        private List<string> extractedFolders = new List<string>();
         private List<string> extractedFoldersPath = new List<string>();
+        private List<string> extractedFoldersName = new List<string>();
+
 
         public Form_StudentsChoosingWindow()
         {
@@ -53,7 +54,7 @@ namespace BerkazyHalka
                     unzippedFiles.Add(extractedFile);
                 }
 
-                extractedFolders.Add(extractPath);
+                extractedFoldersPath.Add(extractPath);
                
             }
             catch (Exception ex)
@@ -64,6 +65,7 @@ namespace BerkazyHalka
 
         private void applyButton_Click(object sender, EventArgs e)
         {
+            DisplayFolderNames();
             listBox1.Items.Clear();
             fileName.Items.Clear();
 
@@ -76,11 +78,11 @@ namespace BerkazyHalka
                     listBox1.Items.Add(fileName2);
                     
                 }
-                foreach(String filePath in extractedFolders)
+                foreach(String fileName2 in extractedFoldersName)
 
                 {
-                    string fileFolder = Path.GetDirectoryName(filePath);
-                    fileName.Items.Add(fileFolder);
+                     
+                    fileName.Items.Add(fileName2);
 
                 }
             }
@@ -89,14 +91,15 @@ namespace BerkazyHalka
                 MessageBox.Show("No files to display.");
             }
 
-            DisplayFolderNames();
+            
         }
 
         private void DisplayFolderNames()
         {
-            foreach (string folderPath in extractedFolders)
+            foreach (string folderPath in extractedFoldersPath)
             {
                 string folderName = Path.GetFileName(folderPath);
+                extractedFoldersName.Add(folderName);
                 MessageBox.Show($"Extracted folder name: {folderName}");
             }
         }
