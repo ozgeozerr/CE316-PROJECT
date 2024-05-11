@@ -160,5 +160,12 @@ namespace BerkazyHalka
             }
 
         }
+
+        private void denemeForBerkay_Click(object sender, EventArgs e)
+        {
+            Form_StudentsChoosingWindow form2=new Form_StudentsChoosingWindow();
+            form2.Show();
+            this.Hide();
+        }
     }
 }

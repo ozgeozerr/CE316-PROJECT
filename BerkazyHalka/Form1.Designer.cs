@@ -36,6 +36,7 @@ namespace BerkazyHalka
             button111 = new Button();
             myText = new RichTextBox();
             GoToMain = new Button();
+            denemeForBerkay = new Button();
             SuspendLayout();
             // 
             // openFileDialog1
@@ -102,16 +103,22 @@ namespace BerkazyHalka
             GoToMain.UseVisualStyleBackColor = true;
             GoToMain.Click += GoToMain_Click;
             // 
-            // button1
+            // denemeForBerkay
             // 
-            
+            denemeForBerkay.Location = new Point(1032, 47);
+            denemeForBerkay.Name = "denemeForBerkay";
+            denemeForBerkay.Size = new Size(94, 29);
+            denemeForBerkay.TabIndex = 12;
+            denemeForBerkay.Text = "denemeBerkayİçin";
+            denemeForBerkay.UseVisualStyleBackColor = true;
+            denemeForBerkay.Click += denemeForBerkay_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1606, 659);
-            
+            Controls.Add(denemeForBerkay);
             Controls.Add(GoToMain);
             Controls.Add(button2);
             Controls.Add(button11);
@@ -137,5 +144,6 @@ namespace BerkazyHalka
         private Button button111;
         private RichTextBox myText;
         private Button GoToMain;
+        private Button denemeForBerkay;
     }
 }
