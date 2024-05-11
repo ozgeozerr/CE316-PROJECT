@@ -7,9 +7,9 @@ namespace BerkazyHalka
 {
     public class compilerClass
     {
-        public static void javaProject(string javaFilePath)
+        public static string javaProject(string javaFilePath, string javaCompilerPath)
         {
-            string javaPath = @"C:\Users\barca\.jdks\openjdk-20\bin\java.exe";
+            string javaPath = javaCompilerPath;
 
             // COMPILE
             Process compileProcess = new Process();
@@ -42,11 +42,13 @@ namespace BerkazyHalka
 
             compileProcess.Dispose();
             executeProcess.Dispose();
+
+            return javaOutput;
         }
 
-        public static void cProject(string cFilePath)
+        public static string cProject(string cFilePath, string cCompilerPath)
         {
-            string compilerPath = @"C:\Users\barca\mingw64\bin\gcc.exe"; // Replace this with the actual path to your compiler
+            string compilerPath = cCompilerPath; // Replace this with the actual path to your compiler
             string compileCommand = $"{compilerPath} {cFilePath} -o output";
             MessageBox.Show("Compile Command: " + compileCommand);
 
@@ -89,11 +91,14 @@ namespace BerkazyHalka
 
                 // DISPLAY OUTPUT
                 MessageBox.Show("Output: " + cOutput, "C Output (STUDENT)");
+                return cOutput;
             }
             else
             {
                 MessageBox.Show("Compilation failed:\n" + compileProcess.StandardError.ReadToEnd());
+                return null;
             }
+            return null;
         }
 
         public static string tırnakEkleBoslukVarsa(string path)
@@ -104,6 +109,20 @@ namespace BerkazyHalka
                     string.Empty;
         }
 
+        //this function will be used 
+        public static bool CompareOutputs(string lecturersOutput, string studentsOutput)
+        {
+            // Trim the spaces to avoid inconsistencies
+            lecturersOutput = lecturersOutput.Trim();
+            studentsOutput = studentsOutput.Trim();
+
+            // Make the strings all lowercase to avoid inconsistencies
+            lecturersOutput = lecturersOutput.ToLower();
+            studentsOutput = studentsOutput.ToLower();
+
+            // Compare the strings
+            return studentsOutput.Equals(lecturersOutput);
+        }
     }
 
 }
