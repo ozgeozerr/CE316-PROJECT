@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
+
 namespace BerkazyHalka
 {
     public partial class Form_Configuration : Form
@@ -24,6 +26,18 @@ namespace BerkazyHalka
         private String selectedFilePathForSourceCode;
         private String configName;
         private String programminLanguage;
+
+        private bool ValidateFields()
+        {
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(programminLanguage)
+                || string.IsNullOrEmpty(selectedFilePathForComplierPath) || string.IsNullOrEmpty(selectedFilePathForSourceCode))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
 
 
 
@@ -77,6 +91,11 @@ namespace BerkazyHalka
 
         private void saveConfig_Click(object sender, EventArgs e)
         {
+            if (!ValidateFields())
+            {
+                return;
+
+             }
             configName = textBox1.Text;
             MessageBox.Show(configName);
             // Prompt the user to select a file location
@@ -136,7 +155,12 @@ namespace BerkazyHalka
 
         private void button3_Click(object sender, EventArgs e)
         {
-            insertDatabase();
+            if (ValidateFields())
+            {
+
+                insertDatabase();
+            }
+            
         }
         private void insertDatabase()
         {

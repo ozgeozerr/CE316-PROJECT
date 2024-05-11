@@ -23,6 +23,17 @@ namespace BerkazyHalka
         private string selectedFilePathForOutput;
         private string assignmentName;
 
+        private bool ValidateInputs()
+        {
+            if (string.IsNullOrWhiteSpace(textb_assignName.Text)
+                || string.IsNullOrWhiteSpace(textb_inputFolder.Text)
+                || string.IsNullOrWhiteSpace(textb_expectedFolder.Text))
+            {
+                MessageBox.Show("Please fill in all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
         private void nextButton_Click(object sender, EventArgs e)
         {
             Form_Configuration form = new Form_Configuration();
@@ -80,8 +91,12 @@ namespace BerkazyHalka
 
         private void saveAssignment_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(textb_assignName.Text);
-            insertDatabase();
+            if (ValidateInputs())
+            {
+                MessageBox.Show(textb_assignName.Text);
+                 insertDatabase();
+            }
+          
 
         }
 
