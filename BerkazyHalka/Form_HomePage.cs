@@ -18,12 +18,19 @@ namespace BerkazyHalka
         public static int currentAssignID;
         public static int currentConfigID;
         public static string connectionPath = $"Data Source={Application.StartupPath}\\assignment.db;Version=3;";
-        public Form_HomePage()
+
+    public Form_HomePage()
         {
             InitializeComponent();
             instance = this;
             listAssignment();
-
+            string databaseFilePath = $"{Application.StartupPath}\\assignment.db";
+            FileAttributes attributes = File.GetAttributes(databaseFilePath);
+            if ((attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+            {
+                attributes &= ~FileAttributes.ReadOnly;
+                File.SetAttributes(databaseFilePath, attributes);
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
