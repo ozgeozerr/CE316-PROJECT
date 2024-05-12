@@ -56,7 +56,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(52, 156);
+            label2.Location = new Point(23, 156);
             label2.Name = "label2";
             label2.Size = new Size(276, 23);
             label2.TabIndex = 1;
@@ -67,7 +67,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(52, 221);
+            label3.Location = new Point(23, 221);
             label3.Name = "label3";
             label3.Size = new Size(192, 23);
             label3.TabIndex = 2;
@@ -78,9 +78,9 @@
             saveConfig.BackColor = Color.Thistle;
             saveConfig.Font = new Font("Cambria", 9F, FontStyle.Bold);
             saveConfig.ForeColor = Color.Black;
-            saveConfig.Location = new Point(320, 351);
+            saveConfig.Location = new Point(23, 351);
             saveConfig.Name = "saveConfig";
-            saveConfig.Size = new Size(281, 36);
+            saveConfig.Size = new Size(283, 36);
             saveConfig.TabIndex = 8;
             saveConfig.Text = "Export Configuration (Coming Soon)";
             saveConfig.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(52, 99);
+            label1.Location = new Point(23, 103);
             label1.Name = "label1";
             label1.Size = new Size(189, 23);
             label1.TabIndex = 14;
@@ -120,7 +120,7 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.Thistle;
+            textBox1.BackColor = Color.GhostWhite;
             textBox1.Location = new Point(334, 99);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(245, 27);
@@ -131,7 +131,7 @@
             // 
             browseFiles_button.BackColor = Color.Thistle;
             browseFiles_button.Font = new Font("Calisto MT", 10F);
-            browseFiles_button.Location = new Point(584, 215);
+            browseFiles_button.Location = new Point(601, 215);
             browseFiles_button.Name = "browseFiles_button";
             browseFiles_button.Size = new Size(141, 29);
             browseFiles_button.TabIndex = 16;
@@ -148,7 +148,7 @@
             // 
             cbo.FormattingEnabled = true;
             cbo.Items.AddRange(new object[] { "C", "Java" });
-            cbo.Location = new Point(334, 156);
+            cbo.Location = new Point(334, 151);
             cbo.Name = "cbo";
             cbo.Size = new Size(245, 28);
             cbo.TabIndex = 20;
@@ -164,22 +164,26 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(192, 192, 255);
             button1.Location = new Point(748, 215);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 23;
             button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
             // button3
             // 
-            button3.Location = new Point(607, 351);
+            button3.BackColor = Color.Teal;
+            button3.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(601, 351);
             button3.Name = "button3";
-            button3.Size = new Size(165, 36);
+            button3.Size = new Size(241, 36);
             button3.TabIndex = 25;
-            button3.Text = "add configuration";
-            button3.UseVisualStyleBackColor = true;
+            button3.Text = "Add Configuration";
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // label4
@@ -187,7 +191,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(52, 285);
+            label4.Location = new Point(23, 283);
             label4.Name = "label4";
             label4.Size = new Size(287, 23);
             label4.TabIndex = 3;
@@ -205,7 +209,7 @@
             // 
             browseButtonnn.BackColor = Color.Thistle;
             browseButtonnn.Font = new Font("Calisto MT", 10F);
-            browseButtonnn.Location = new Point(584, 279);
+            browseButtonnn.Location = new Point(601, 279);
             browseButtonnn.Name = "browseButtonnn";
             browseButtonnn.Size = new Size(141, 29);
             browseButtonnn.TabIndex = 17;
@@ -216,12 +220,13 @@
             // 
             // button2
             // 
+            button2.BackColor = Color.FromArgb(192, 192, 255);
             button2.Location = new Point(748, 279);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 24;
             button2.Text = "Save";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // Form_Configuration

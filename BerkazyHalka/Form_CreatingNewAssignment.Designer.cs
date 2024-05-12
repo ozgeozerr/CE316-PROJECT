@@ -91,7 +91,7 @@
             // 
             // textb_assignName
             // 
-            textb_assignName.BackColor = Color.Thistle;
+            textb_assignName.BackColor = Color.GhostWhite;
             textb_assignName.Location = new Point(332, 67);
             textb_assignName.Name = "textb_assignName";
             textb_assignName.Size = new Size(204, 27);
@@ -123,9 +123,10 @@
             // createNewConfig
             // 
             createNewConfig.BackColor = Color.Thistle;
-            createNewConfig.Location = new Point(332, 347);
+            createNewConfig.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            createNewConfig.Location = new Point(332, 346);
             createNewConfig.Name = "createNewConfig";
-            createNewConfig.Size = new Size(204, 29);
+            createNewConfig.Size = new Size(218, 29);
             createNewConfig.TabIndex = 23;
             createNewConfig.Text = "Create New Configuration";
             createNewConfig.TextAlign = ContentAlignment.MiddleLeft;
@@ -134,10 +135,12 @@
             // 
             // saveAssignment
             // 
-            saveAssignment.BackColor = Color.Thistle;
-            saveAssignment.Location = new Point(551, 436);
+            saveAssignment.BackColor = Color.Teal;
+            saveAssignment.Font = new Font("Cambria", 12F);
+            saveAssignment.ForeColor = Color.White;
+            saveAssignment.Location = new Point(332, 421);
             saveAssignment.Name = "saveAssignment";
-            saveAssignment.Size = new Size(255, 29);
+            saveAssignment.Size = new Size(312, 45);
             saveAssignment.TabIndex = 24;
             saveAssignment.Text = "Save and Create the Assignment";
             saveAssignment.UseVisualStyleBackColor = false;
@@ -172,32 +175,36 @@
             // 
             // saveInput
             // 
+            saveInput.BackColor = Color.FromArgb(192, 192, 255);
             saveInput.Location = new Point(761, 135);
             saveInput.Name = "saveInput";
             saveInput.Size = new Size(94, 29);
             saveInput.TabIndex = 29;
             saveInput.Text = "Save";
-            saveInput.UseVisualStyleBackColor = true;
+            saveInput.UseVisualStyleBackColor = false;
             saveInput.Click += saveInput_Click;
             // 
             // saveOutput
             // 
+            saveOutput.BackColor = Color.FromArgb(192, 192, 255);
             saveOutput.Location = new Point(761, 209);
             saveOutput.Name = "saveOutput";
             saveOutput.Size = new Size(94, 29);
             saveOutput.TabIndex = 30;
             saveOutput.Text = "Save";
-            saveOutput.UseVisualStyleBackColor = true;
+            saveOutput.UseVisualStyleBackColor = false;
             saveOutput.Click += saveOutput_Click;
             // 
             // backButton
             // 
-            backButton.Location = new Point(28, 436);
+            backButton.BackColor = Color.Black;
+            backButton.ForeColor = SystemColors.ButtonHighlight;
+            backButton.Location = new Point(12, 437);
             backButton.Name = "backButton";
             backButton.Size = new Size(94, 29);
             backButton.TabIndex = 15;
-            backButton.Text = "back";
-            backButton.UseVisualStyleBackColor = true;
+            backButton.Text = "Go Back";
+            backButton.UseVisualStyleBackColor = false;
             backButton.Click += backButton_Click;
             // 
             // Form_CreatingNewAssignment

@@ -175,6 +175,12 @@ namespace BerkazyHalka
                 MessageBox.Show("Please select a row to view assignment.");
             }
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+        }
     }
 
 }
