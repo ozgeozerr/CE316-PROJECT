@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>1) You are going to press create a new assignment button if you don't have any created ones or want to create a new one.
+1.1) Before pressing create a new assignment button, you can observe the configurations and created assignments.
+1.2) If you choose an assignment that is shown in the table by selecting the row and pressing create a new assignment button you can view that assignment.
+2) Now you need to fill some areas in order to create an assignment, but for finishing that task we need to create an assignment or use an existing one.
+2.1) When you press create configuration it pops up a new page that will make you create an configuration.
+2.3) After filling every space you are going to be directed at main page.
+3) As we talked about before you are going to select a row and after that press create a new assignment button.
+4) In this page we have some buttons;
+ 4.1) Choose Students:  This button pops up a new screen to select zip files and extract them, but in the new page after selecting the zip files (You can add more than one at the same time by choosing the files while pressing "ctrl" or "shift") you need to press apply to confirm and press okay to return back to the assignment.
+4.2) Test All Students: This button tests all the student files that are chosen for that assignment.
+4.3) You can see the results in the bottom left table.</value>
+  </data>
 </root>

@@ -28,55 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            richTextBox1 = new RichTextBox();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             SuspendLayout();
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.BackColor = Color.FromArgb(38, 38, 38);
+            richTextBox1.Font = new Font("Cambria", 14F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            richTextBox1.ForeColor = Color.White;
+            richTextBox1.Location = new Point(12, 72);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(907, 584);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
+            label1.Font = new Font("Cambria", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(24, 19);
+            label1.Location = new Point(292, 26);
             label1.Name = "label1";
-            label1.Size = new Size(72, 35);
-            label1.TabIndex = 0;
-            label1.Text = "FAQs";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(24, 87);
-            label2.Name = "label2";
-            label2.Size = new Size(280, 25);
-            label2.TabIndex = 1;
-            label2.Text = "How do I create an assignment?";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(24, 134);
-            label3.Name = "label3";
-            label3.Size = new Size(891, 25);
-            label3.TabIndex = 2;
-            label3.Text = "Click on the create a new assignment button and either create a new configuration or choose one of the ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(24, 173);
-            label4.Name = "label4";
-            label4.Size = new Size(133, 25);
-            label4.TabIndex = 3;
-            label4.Text = "previous ones.";
+            label1.Size = new Size(304, 33);
+            label1.TabIndex = 1;
+            label1.Text = "How to Use EasyAssign?";
             // 
             // Form2
             // 
@@ -84,10 +63,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(931, 668);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(richTextBox1);
             Name = "Form2";
             Text = "EasyAssign";
             ResumeLayout(false);
@@ -96,9 +73,7 @@
 
         #endregion
 
+        private RichTextBox richTextBox1;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
     }
 }
