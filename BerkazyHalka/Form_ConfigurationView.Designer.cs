@@ -37,6 +37,7 @@
             button3 = new Button();
             ımportButton = new Button();
             selectConfiguration = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView1.Location = new Point(12, 23);
+            dataGridView1.Location = new Point(12, 100);
             dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = SystemColors.Control;
@@ -70,7 +71,7 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView1.Size = new Size(1053, 504);
+            dataGridView1.Size = new Size(1053, 427);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -132,12 +133,21 @@
             selectConfiguration.UseVisualStyleBackColor = true;
             selectConfiguration.Click += selectConfiuration_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(349, 67);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(333, 27);
+            textBox1.TabIndex = 6;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // Form_ConfigurationView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1097, 620);
+            Controls.Add(textBox1);
             Controls.Add(selectConfiguration);
             Controls.Add(ımportButton);
             Controls.Add(button3);
@@ -148,6 +158,7 @@
             Text = "Form_ConfigurationView";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -158,5 +169,6 @@
         private Button button3;
         private Button ımportButton;
         private Button selectConfiguration;
+        private TextBox textBox1;
     }
 }

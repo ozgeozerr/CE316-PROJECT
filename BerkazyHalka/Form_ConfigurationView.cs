@@ -229,6 +229,18 @@ namespace BerkazyHalka
                 MessageBox.Show("Please select a row.");
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = textBox1.Text.Trim();
+            if (dt != null)
+            {
+
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = $"name LIKE '%{searchText}%'";
+                dataGridView1.DataSource = dv.ToTable();
+            }
+        }
     }
 
 }
