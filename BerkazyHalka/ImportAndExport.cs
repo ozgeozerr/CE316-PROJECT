@@ -12,9 +12,12 @@ namespace BerkazyHalka
     {
         public class Configuration
         {
-         
+            [JsonProperty("name")]
             public string Name { get; set; }
+            [JsonProperty("language_path")]
             public string LanguagePath { get; set; }
+
+            [JsonProperty("compiler_path")]
             public string CompilerPath { get; set; }
         }
 
@@ -33,17 +36,17 @@ namespace BerkazyHalka
                     {
                         string filePath = openFileDialog.FileName;
                         string jsonContent = File.ReadAllText(filePath);
-                        // Parse JSON content into Configuration object
+                     
                         Configuration config = JsonConvert.DeserializeObject<Configuration>(jsonContent);
 
-                        // Write properties to the console
+                     
                      
                         Console.WriteLine($"Name: {config.Name}");
                         Console.WriteLine($"LanguagePath: {config.LanguagePath}");
                         Console.WriteLine($"CompilerPath: {config.CompilerPath}");
 
-                        // Display JSON content in a message box
-                        MessageBox.Show(jsonContent, "JSON Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  
+                        
                         MessageBox.Show(config.Name);
                         MessageBox.Show(config.LanguagePath);
                         MessageBox.Show(config.CompilerPath);
