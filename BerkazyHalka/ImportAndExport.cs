@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace BerkazyHalka
 {
     internal class ImportAndExport
     {
-        public void ImportJsonFile()
+        public class Configuration
         {
+         
+            public string Name { get; set; }
+            public string LanguagePath { get; set; }
+            public string CompilerPath { get; set; }
+        }
+
+        public void ImportJsonFile() 
+        {
+
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -24,25 +33,32 @@ namespace BerkazyHalka
                     {
                         string filePath = openFileDialog.FileName;
                         string jsonContent = File.ReadAllText(filePath);
+                        // Parse JSON content into Configuration object
+                        Configuration config = JsonConvert.DeserializeObject<Configuration>(jsonContent);
 
-                        // Parse JSON content
-                        JObject json = JObject.Parse(jsonContent);
-                        string formattedJson = json.ToString();
+                        // Write properties to the console
+                     
+                        Console.WriteLine($"Name: {config.Name}");
+                        Console.WriteLine($"LanguagePath: {config.LanguagePath}");
+                        Console.WriteLine($"CompilerPath: {config.CompilerPath}");
 
                         // Display JSON content in a message box
-                        MessageBox.Show(formattedJson, "JSON Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(jsonContent, "JSON Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(config.Name);
+                        MessageBox.Show(config.LanguagePath);
+                        MessageBox.Show(config.CompilerPath);
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error reading file: " + ex.Message);
                     }
+
+
+
+
+
                 }
-
-
-
-
-
-            }
         }
     }
 }
+    }
