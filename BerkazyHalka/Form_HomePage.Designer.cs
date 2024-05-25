@@ -41,6 +41,7 @@
             viewConfigurationsButton = new Button();
             dataGridView1 = new DataGridView();
             backgroundPanelForListView = new Panel();
+            label1 = new Label();
             textBox1 = new TextBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -65,7 +66,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1184, 28);
+            menuStrip1.Size = new Size(1309, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "helpMenuStrip";
             // 
@@ -107,7 +108,7 @@
             // 
             labelPastAssignments.AutoSize = true;
             labelPastAssignments.Font = new Font("Cambria", 15F);
-            labelPastAssignments.Location = new Point(176, 21);
+            labelPastAssignments.Location = new Point(214, 10);
             labelPastAssignments.Name = "labelPastAssignments";
             labelPastAssignments.Size = new Size(184, 30);
             labelPastAssignments.TabIndex = 6;
@@ -132,7 +133,7 @@
             viewTheAssignmentButton.BackColor = Color.Teal;
             viewTheAssignmentButton.Font = new Font("Cambria", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
             viewTheAssignmentButton.ForeColor = Color.White;
-            viewTheAssignmentButton.Location = new Point(747, 535);
+            viewTheAssignmentButton.Location = new Point(784, 535);
             viewTheAssignmentButton.Name = "viewTheAssignmentButton";
             viewTheAssignmentButton.Size = new Size(240, 37);
             viewTheAssignmentButton.TabIndex = 9;
@@ -173,27 +174,38 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.Teal;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Size = new Size(545, 371);
+            dataGridView1.Size = new Size(599, 368);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // backgroundPanelForListView
             // 
             backgroundPanelForListView.BackColor = Color.FromArgb(32, 32, 32);
+            backgroundPanelForListView.Controls.Add(label1);
             backgroundPanelForListView.Controls.Add(textBox1);
             backgroundPanelForListView.Controls.Add(dataGridView1);
             backgroundPanelForListView.Controls.Add(labelPastAssignments);
             backgroundPanelForListView.Location = new Point(597, 31);
             backgroundPanelForListView.Name = "backgroundPanelForListView";
-            backgroundPanelForListView.Size = new Size(551, 488);
+            backgroundPanelForListView.Size = new Size(605, 488);
             backgroundPanelForListView.TabIndex = 5;
             backgroundPanelForListView.Paint += backgroundPanelForListView_Paint;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Cambria", 12F);
+            label1.Location = new Point(205, 55);
+            label1.Name = "label1";
+            label1.Size = new Size(207, 23);
+            label1.TabIndex = 8;
+            label1.Text = "Search For Assignment";
+            // 
             // textBox1
             // 
-            textBox1.Location = new Point(160, 68);
+            textBox1.Location = new Point(187, 81);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 27);
+            textBox1.Size = new Size(240, 27);
             textBox1.TabIndex = 7;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -202,7 +214,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1184, 593);
+            ClientSize = new Size(1309, 594);
             Controls.Add(viewConfigurationsButton);
             Controls.Add(viewTheAssignmentButton);
             Controls.Add(createNewAssignmentButton);
@@ -239,5 +251,6 @@
         private DataGridView dataGridView1;
         private Panel backgroundPanelForListView;
         private TextBox textBox1;
+        private Label label1;
     }
 }
