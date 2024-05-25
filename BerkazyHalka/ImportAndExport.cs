@@ -81,6 +81,44 @@ namespace BerkazyHalka
                 }
         }
 
+
+    }
+
+        public void ExportToJsonFile(Configuration config)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "JSON files (.json)|.json|All files (.)|.";
+                saveFileDialog.Title = "Save JSON File";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string filePath = saveFileDialog.FileName;
+                        string jsonContent = JsonConvert.SerializeObject(config, Formatting.Indented);
+                        File.WriteAllText(filePath, jsonContent);
+
+                       
+                        string importedJsonContent = File.ReadAllText(filePath);
+                        Configuration importedConfig = JsonConvert.DeserializeObject<Configuration>(importedJsonContent);
+
+                        Console.WriteLine($"Name: {importedConfig.Name}");
+                        Console.WriteLine($"Language: {importedConfig.Language}");
+                        Console.WriteLine($"CompilerPath: {importedConfig.CompilerPath}");
+
+                        MessageBox.Show(importedConfig.Name);
+                        MessageBox.Show(importedConfig.Language);
+                        MessageBox.Show(importedConfig.CompilerPath);
+
+                       
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error exporting file: " + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }
-    }
