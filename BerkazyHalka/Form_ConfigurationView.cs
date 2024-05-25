@@ -20,7 +20,7 @@ namespace BerkazyHalka
             listConfiguration();
             dataGridView1.KeyDown += dataGridView1_KeyDown;
 
-            
+
 
 
         }
@@ -207,6 +207,11 @@ namespace BerkazyHalka
                     MessageBox.Show("Please select a row to delete.");
                 }
             }
+        }
+
+        private void ımportButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

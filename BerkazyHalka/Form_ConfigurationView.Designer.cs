@@ -35,6 +35,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            ımportButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -110,12 +111,23 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // ımportButton
+            // 
+            ımportButton.Location = new Point(287, 544);
+            ımportButton.Name = "ımportButton";
+            ımportButton.Size = new Size(132, 37);
+            ımportButton.TabIndex = 4;
+            ımportButton.Text = "Import";
+            ımportButton.UseVisualStyleBackColor = true;
+            ımportButton.Click += ımportButton_Click;
+            // 
             // Form_ConfigurationView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1097, 620);
+            Controls.Add(ımportButton);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -132,5 +144,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button ımportButton;
     }
 }
