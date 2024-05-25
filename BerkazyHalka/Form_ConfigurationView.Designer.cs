@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             button1 = new Button();
             button2 = new Button();
@@ -39,38 +39,39 @@
             selectConfiguration = new Button();
             textBox1 = new TextBox();
             exportButton = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Control;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = SystemColors.Window;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             dataGridView1.Location = new Point(12, 100);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Control;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dataGridView1.Size = new Size(1053, 427);
             dataGridView1.TabIndex = 0;
@@ -95,7 +96,7 @@
             button2.Font = new Font("Segoe UI", 12F);
             button2.Location = new Point(144, 544);
             button2.Name = "button2";
-            button2.Size = new Size(110, 39);
+            button2.Size = new Size(110, 37);
             button2.TabIndex = 2;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = false;
@@ -106,9 +107,9 @@
             button3.BackColor = Color.Teal;
             button3.Font = new Font("Segoe UI", 12F);
             button3.ForeColor = SystemColors.ButtonFace;
-            button3.Location = new Point(961, 546);
+            button3.Location = new Point(958, 543);
             button3.Name = "button3";
-            button3.Size = new Size(104, 37);
+            button3.Size = new Size(107, 38);
             button3.TabIndex = 3;
             button3.Text = "Save";
             button3.UseVisualStyleBackColor = false;
@@ -116,27 +117,31 @@
             // 
             // ımportButton
             // 
-            ımportButton.Location = new Point(287, 544);
+            ımportButton.BackColor = Color.LightCyan;
+            ımportButton.Font = new Font("Segoe UI", 12F);
+            ımportButton.Location = new Point(288, 543);
             ımportButton.Name = "ımportButton";
-            ımportButton.Size = new Size(132, 37);
+            ımportButton.Size = new Size(132, 38);
             ımportButton.TabIndex = 4;
             ımportButton.Text = "Import";
-            ımportButton.UseVisualStyleBackColor = true;
+            ımportButton.UseVisualStyleBackColor = false;
             ımportButton.Click += ımportButton_Click;
             // 
             // selectConfiguration
             // 
-            selectConfiguration.Location = new Point(846, 544);
+            selectConfiguration.BackColor = Color.LightPink;
+            selectConfiguration.Font = new Font("Segoe UI", 11F);
+            selectConfiguration.Location = new Point(827, 545);
             selectConfiguration.Name = "selectConfiguration";
-            selectConfiguration.Size = new Size(109, 37);
+            selectConfiguration.Size = new Size(114, 38);
             selectConfiguration.TabIndex = 5;
             selectConfiguration.Text = "Select";
-            selectConfiguration.UseVisualStyleBackColor = true;
+            selectConfiguration.UseVisualStyleBackColor = false;
             selectConfiguration.Click += selectConfiuration_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(349, 67);
+            textBox1.Location = new Point(12, 53);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(333, 27);
             textBox1.TabIndex = 6;
@@ -144,13 +149,27 @@
             // 
             // exportButton
             // 
+            exportButton.BackColor = Color.FromArgb(128, 128, 255);
+            exportButton.Font = new Font("Segoe UI", 12F);
             exportButton.Location = new Point(442, 544);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(132, 37);
             exportButton.TabIndex = 7;
             exportButton.Text = "Export";
-            exportButton.UseVisualStyleBackColor = true;
+            exportButton.UseVisualStyleBackColor = false;
             exportButton.Click += exportButton_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Cambria", 11F);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(12, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(218, 22);
+            label1.TabIndex = 17;
+            label1.Text = "Search For Configurations";
+            label1.Click += label1_Click;
             // 
             // Form_ConfigurationView
             // 
@@ -158,6 +177,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1097, 620);
+            Controls.Add(label1);
             Controls.Add(exportButton);
             Controls.Add(textBox1);
             Controls.Add(selectConfiguration);
@@ -167,7 +187,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "Form_ConfigurationView";
-            Text = "Form_ConfigurationView";
+            Text = "EasyAssign";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -183,5 +203,6 @@
         private Button selectConfiguration;
         private TextBox textBox1;
         private Button exportButton;
+        private Label label1;
     }
 }
