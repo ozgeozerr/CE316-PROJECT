@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using Python.Runtime;
 
 public class barcaMythLab
 {
@@ -41,11 +40,7 @@ public class barcaMythLab
         executeProcess.Dispose();
     }
 
-    using System;
-using System.Diagnostics;
-using System.IO;
-
-public static string CompileAndExecuteCpp(string cppFilePath, string cppCompilerPath, string input)
+    public static string CompileAndExecuteCpp(string cppFilePath, string cppCompilerPath, string input)
 {
     string compilerPath = cppCompilerPath;
     string compileCommand = $"{compilerPath} {cppFilePath} -o output";
@@ -101,35 +96,6 @@ public static string CompileAndExecuteCpp(string cppFilePath, string cppCompiler
         Console.WriteLine("Compilation failed:\n" + compileProcess.StandardError.ReadToEnd());
         return "Compilation failed";
     }
-}
-static string RunPythonClass(string filePath, string inputParameter) // dont forget using Python.Runtime; 
-{
-    string output = "";
-
-    // Initialize Python engine
-    using (Py.GIL())
-    {
-        // Set Python path
-        dynamic sys = Py.Import("sys");
-        sys.path.append(Environment.CurrentDirectory);
-
-        // Import your Python module containing the class
-        dynamic module = Py.Import(System.IO.Path.GetFileNameWithoutExtension(filePath));
-
-        // Access the class
-        dynamic pythonClass = module.YourPythonClass;
-
-        // Instantiate the class
-        dynamic pythonInstance = pythonClass(inputParameter);
-
-        // Call methods or access attributes
-        pythonInstance.YourMethod();
-
-        // Get output
-        output = pythonInstance.YourAttribute;
-    }
-
-    return output;
 }
 
 }
