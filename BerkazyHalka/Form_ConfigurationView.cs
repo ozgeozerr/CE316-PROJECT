@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace BerkazyHalka
 {
@@ -211,7 +212,33 @@ namespace BerkazyHalka
 
         private void ımportButton_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
+                openFileDialog.Title = "Open JSON File";
 
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string filePath = openFileDialog.FileName;
+                        string jsonContent = File.ReadAllText(filePath);
+
+                        // Parse JSON content
+                        JObject json = JObject.Parse(jsonContent);
+                        string formattedJson = json.ToString();
+
+                        // Display JSON content in a message box
+                        MessageBox.Show(formattedJson, "JSON Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error reading file: " + ex.Message);
+                    }
+                }
+            }
         }
     }
+
 }
+    
