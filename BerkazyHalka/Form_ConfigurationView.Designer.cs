@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             button1 = new Button();
             button2 = new Button();
@@ -46,35 +47,38 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = SystemColors.Control;
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle13.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridView1.BackgroundColor = Color.FromArgb(38, 38, 38);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = SystemColors.Window;
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle14.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(33, 106);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = SystemColors.Control;
-            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle15.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle15.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView1.Size = new Size(1026, 427);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.Size = new Size(827, 427);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -83,7 +87,7 @@
             button1.BackColor = Color.Thistle;
             button1.Font = new Font("Cambria", 12F);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(319, 549);
+            button1.Location = new Point(317, 549);
             button1.Name = "button1";
             button1.Size = new Size(122, 38);
             button1.TabIndex = 1;
@@ -96,7 +100,7 @@
             button2.BackColor = Color.Thistle;
             button2.Font = new Font("Segoe UI", 12F);
             button2.ForeColor = Color.Black;
-            button2.Location = new Point(465, 549);
+            button2.Location = new Point(457, 548);
             button2.Name = "button2";
             button2.Size = new Size(122, 38);
             button2.TabIndex = 2;
@@ -109,7 +113,7 @@
             button3.BackColor = Color.FromArgb(192, 192, 255);
             button3.Font = new Font("Segoe UI", 12F);
             button3.ForeColor = Color.Black;
-            button3.Location = new Point(937, 614);
+            button3.Location = new Point(738, 604);
             button3.Name = "button3";
             button3.Size = new Size(122, 38);
             button3.TabIndex = 3;
@@ -122,7 +126,7 @@
             ımportButton.BackColor = Color.Thistle;
             ımportButton.Font = new Font("Segoe UI", 12F);
             ımportButton.ForeColor = Color.Black;
-            ımportButton.Location = new Point(610, 549);
+            ımportButton.Location = new Point(597, 548);
             ımportButton.Name = "ımportButton";
             ımportButton.Size = new Size(122, 38);
             ımportButton.TabIndex = 4;
@@ -135,7 +139,7 @@
             selectConfiguration.BackColor = Color.DarkSeaGreen;
             selectConfiguration.Font = new Font("Segoe UI", 12F);
             selectConfiguration.ForeColor = Color.Black;
-            selectConfiguration.Location = new Point(937, 548);
+            selectConfiguration.Location = new Point(178, 549);
             selectConfiguration.Name = "selectConfiguration";
             selectConfiguration.Size = new Size(122, 38);
             selectConfiguration.TabIndex = 5;
@@ -156,7 +160,7 @@
             exportButton.BackColor = Color.Thistle;
             exportButton.Font = new Font("Segoe UI", 12F);
             exportButton.ForeColor = Color.Black;
-            exportButton.Location = new Point(755, 549);
+            exportButton.Location = new Point(738, 548);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(122, 38);
             exportButton.TabIndex = 7;
@@ -194,7 +198,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1092, 679);
+            ClientSize = new Size(905, 679);
             Controls.Add(go_back2);
             Controls.Add(label1);
             Controls.Add(exportButton);
