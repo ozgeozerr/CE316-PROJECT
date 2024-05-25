@@ -78,22 +78,27 @@
             // 
             // selectAStudent
             // 
-            selectAStudent.Location = new Point(997, 44);
+            selectAStudent.BackColor = Color.Thistle;
+            selectAStudent.Font = new Font("Segoe UI", 12F);
+            selectAStudent.Location = new Point(978, 44);
             selectAStudent.Name = "selectAStudent";
-            selectAStudent.Size = new Size(188, 29);
+            selectAStudent.Size = new Size(207, 49);
             selectAStudent.TabIndex = 4;
             selectAStudent.Text = "Choose Students Zip";
-            selectAStudent.UseVisualStyleBackColor = true;
+            selectAStudent.UseVisualStyleBackColor = false;
             selectAStudent.Click += selectAStudent_Click;
             // 
             // testAll
             // 
-            testAll.Location = new Point(997, 79);
+            testAll.BackColor = Color.Teal;
+            testAll.Font = new Font("Segoe UI", 12F);
+            testAll.ForeColor = SystemColors.Control;
+            testAll.Location = new Point(978, 99);
             testAll.Name = "testAll";
-            testAll.Size = new Size(188, 29);
+            testAll.Size = new Size(207, 47);
             testAll.TabIndex = 6;
             testAll.Text = "Test All The Students\r\n";
-            testAll.UseVisualStyleBackColor = true;
+            testAll.UseVisualStyleBackColor = false;
             testAll.Click += testAll_Click;
             // 
             // dataGridView1

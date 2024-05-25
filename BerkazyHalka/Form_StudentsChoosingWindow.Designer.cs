@@ -38,32 +38,36 @@
             // 
             // chooseAllStudents
             // 
+            chooseAllStudents.BackColor = Color.Thistle;
             chooseAllStudents.Location = new Point(71, 391);
             chooseAllStudents.Name = "chooseAllStudents";
             chooseAllStudents.Size = new Size(188, 29);
             chooseAllStudents.TabIndex = 0;
             chooseAllStudents.Text = "Choose All Students";
-            chooseAllStudents.UseVisualStyleBackColor = true;
+            chooseAllStudents.UseVisualStyleBackColor = false;
             chooseAllStudents.Click += chooseAllStudents_Click;
             // 
             // applyButton
             // 
-            applyButton.Location = new Point(265, 391);
+            applyButton.BackColor = Color.Thistle;
+            applyButton.Location = new Point(326, 391);
             applyButton.Name = "applyButton";
             applyButton.Size = new Size(94, 29);
             applyButton.TabIndex = 1;
             applyButton.Text = "Apply";
-            applyButton.UseVisualStyleBackColor = true;
+            applyButton.UseVisualStyleBackColor = false;
             applyButton.Click += applyButton_Click;
             // 
             // okayButton
             // 
-            okayButton.Location = new Point(365, 391);
+            okayButton.BackColor = Color.Teal;
+            okayButton.ForeColor = SystemColors.ButtonHighlight;
+            okayButton.Location = new Point(1545, 391);
             okayButton.Name = "okayButton";
             okayButton.Size = new Size(94, 29);
             okayButton.TabIndex = 2;
             okayButton.Text = "Okay";
-            okayButton.UseVisualStyleBackColor = true;
+            okayButton.UseVisualStyleBackColor = false;
             okayButton.Click += okayButton_Click;
             // 
             // listBox1
@@ -97,6 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1673, 450);
             Controls.Add(path);
             Controls.Add(fileName);
