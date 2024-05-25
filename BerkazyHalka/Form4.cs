@@ -136,14 +136,34 @@ namespace BerkazyHalka
 
             MessageBox.Show(inputFile + "\n" + outputFile + "\n" + compilerPath + "\n" + language + "\n" + studentCount);
 
+
+            Thread[] threads = new Thread[studentCount];
+
             for (int i = 0; i < studentCount; i++)
+            {
+                int index = i; // Capturing the current value of i in a local variable
+                threads[i] = new Thread(() =>
+                {
+                    string message = trueLie.trueFalse(inputFile, outputFile, studentFiles[index], compilerPath, language);
+                    UpdateStudentResult(Form_HomePage.currentAssignID, message, studentFiles[index]);
+                });
+                threads[i].Start();
+            }
+
+            // Wait for all threads to finish
+            foreach (Thread thread in threads)
+            {
+                thread.Join();
+            }
+
+            /*for (int i = 0; i < studentCount; i++)
             {
                 String message;
                 message = trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
                 UpdateStudentResult(Form_HomePage.currentAssignID, message, studentFiles[i]);
 
 
-            }
+            }*/
             this.Close();
             Form4 form = new Form4();
             form.Show();

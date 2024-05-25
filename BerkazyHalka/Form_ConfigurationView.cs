@@ -212,33 +212,108 @@ namespace BerkazyHalka
 
         private void ımportButton_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            ImportAndExport processor = new ImportAndExport();
+            processor.ImportJsonFile();
+            RefreshDataGridView();
+        }
+
+        private void selectConfiuration_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                openFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
-                openFileDialog.Title = "Open JSON File";
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                int selectedId = Convert.ToInt32(selectedRow.Cells[0].Value);
+                Form_HomePage.currentConfigID = selectedId;
+            }
+            else
+            {
+                MessageBox.Show("Please select a row.");
+            }
+        }
 
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = textBox1.Text.Trim();
+            if (dt != null)
+            {
+
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = $"name LIKE '%{searchText}%'";
+                dataGridView1.DataSource = dv.ToTable();
+            }
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                // Retrieve values from the selected row
+                string name = selectedRow.Cells["name"].Value.ToString();
+                string languageName = selectedRow.Cells["language_name"].Value.ToString();
+                string compilerPath = selectedRow.Cells["compiler_path"].Value.ToString();
+
+                // Create a Configuration object with the retrieved values
+                ImportAndExport.Configuration config = new ImportAndExport.Configuration
                 {
-                    try
-                    {
-                        string filePath = openFileDialog.FileName;
-                        string jsonContent = File.ReadAllText(filePath);
+                    Name = name,
+                    Language = languageName,
+                    CompilerPath = compilerPath
+                };
 
-                        // Parse JSON content
-                        JObject json = JObject.Parse(jsonContent);
-                        string formattedJson = json.ToString();
+                // Export the configuration to a JSON file
+                ImportAndExport processor = new ImportAndExport();
+                processor.ExportToJsonFile(config);
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to export.");
+            }
+        }
 
-                        // Display JSON content in a message box
-                        MessageBox.Show(formattedJson, "JSON Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
+
+
+        private ImportAndExport.Configuration GetConfigurationFromDatabase(int id)
+        {
+            try
+            {
+                using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
+                {
+                    string query = "SELECT name, language_name, compiler_path FROM configuration WHERE id = @id";
+                    using (var command = new SQLiteCommand(query, connection))
                     {
-                        MessageBox.Show("Error reading file: " + ex.Message);
+                        command.Parameters.AddWithValue("@id", id);
+                        connection.Open();
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return new ImportAndExport.Configuration
+                                {
+                                    Name = reader["name"].ToString(),
+                                    Language = reader["language_name"].ToString(),
+                                    CompilerPath = reader["compiler_path"].ToString()
+                                };
+                            }
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving configuration from database: " + ex.Message);
+            }
+
+            return null;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
-
 }
+
+
     

@@ -33,11 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             selectAStudent = new Button();
-            openTheResults = new Button();
             testAll = new Button();
-            zipButton = new Button();
-            exButton = new Button();
-            button1 = new Button();
             dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -46,7 +42,7 @@
             // 
             currentText.Location = new Point(500, 44);
             currentText.Name = "currentText";
-            currentText.Size = new Size(447, 203);
+            currentText.Size = new Size(447, 514);
             currentText.TabIndex = 0;
             currentText.Text = "";
             // 
@@ -82,71 +78,36 @@
             // 
             // selectAStudent
             // 
-            selectAStudent.Location = new Point(1037, 148);
+            selectAStudent.BackColor = Color.Thistle;
+            selectAStudent.Font = new Font("Segoe UI", 12F);
+            selectAStudent.Location = new Point(978, 44);
             selectAStudent.Name = "selectAStudent";
-            selectAStudent.Size = new Size(188, 29);
+            selectAStudent.Size = new Size(207, 49);
             selectAStudent.TabIndex = 4;
-            selectAStudent.Text = "Choose Students";
-            selectAStudent.UseVisualStyleBackColor = true;
+            selectAStudent.Text = "Choose Students Zip";
+            selectAStudent.UseVisualStyleBackColor = false;
             selectAStudent.Click += selectAStudent_Click;
-            // 
-            // openTheResults
-            // 
-            openTheResults.Location = new Point(1037, 183);
-            openTheResults.Name = "openTheResults";
-            openTheResults.Size = new Size(188, 29);
-            openTheResults.TabIndex = 5;
-            openTheResults.Text = "Open The Result(Coming soon)";
-            openTheResults.UseVisualStyleBackColor = true;
-            openTheResults.Click += openTheResults_Click;
             // 
             // testAll
             // 
-            testAll.Location = new Point(1037, 218);
+            testAll.BackColor = Color.Teal;
+            testAll.Font = new Font("Segoe UI", 12F);
+            testAll.ForeColor = SystemColors.Control;
+            testAll.Location = new Point(978, 99);
             testAll.Name = "testAll";
-            testAll.Size = new Size(188, 29);
+            testAll.Size = new Size(207, 47);
             testAll.TabIndex = 6;
             testAll.Text = "Test All The Students\r\n";
-            testAll.UseVisualStyleBackColor = true;
+            testAll.UseVisualStyleBackColor = false;
             testAll.Click += testAll_Click;
-            // 
-            // zipButton
-            // 
-            zipButton.Location = new Point(1037, 78);
-            zipButton.Name = "zipButton";
-            zipButton.Size = new Size(188, 29);
-            zipButton.TabIndex = 11;
-            zipButton.Text = "Coming soon";
-            zipButton.UseVisualStyleBackColor = true;
-            zipButton.Click += zipButton_Click;
-            // 
-            // exButton
-            // 
-            exButton.Location = new Point(1037, 113);
-            exButton.Name = "exButton";
-            exButton.Size = new Size(188, 29);
-            exButton.TabIndex = 12;
-            exButton.Text = "Extreact Button";
-            exButton.UseVisualStyleBackColor = true;
-            exButton.Click += exButton_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(1037, 43);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 29);
-            button1.TabIndex = 13;
-            button1.Text = "Coming soon";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(500, 280);
+            dataGridView1.Location = new Point(977, 252);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(837, 278);
+            dataGridView1.Size = new Size(837, 306);
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -155,13 +116,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1410, 577);
+            ClientSize = new Size(1926, 585);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(exButton);
-            Controls.Add(zipButton);
             Controls.Add(testAll);
-            Controls.Add(openTheResults);
             Controls.Add(selectAStudent);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -181,11 +138,7 @@
         private Label label1;
         private Label label2;
         private Button selectAStudent;
-        private Button openTheResults;
         private Button testAll;
-        private Button zipButton;
-        private Button exButton;
-        private Button button1;
         private DataGridView dataGridView1;
     }
 }
