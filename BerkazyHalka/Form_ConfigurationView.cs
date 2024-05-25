@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace BerkazyHalka
 {
@@ -211,7 +212,8 @@ namespace BerkazyHalka
 
         private void ımportButton_Click(object sender, EventArgs e)
         {
-
+            ImportAndExport processor = new ImportAndExport();
+            processor.ImportJsonFile();
         }
 
         private void selectConfiuration_Click(object sender, EventArgs e)
@@ -228,4 +230,6 @@ namespace BerkazyHalka
             }
         }
     }
+
 }
+    

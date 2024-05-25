@@ -118,6 +118,47 @@ namespace BerkazyHalka
             }
         }
 
+        public static string pythonProject(string pythonFilePath, string pythonInterpreterPath, string input)
+        {
+            string interpreterPath = pythonInterpreterPath;
+            string executeCommand = $"{interpreterPath} {pythonFilePath}";
+            MessageBox.Show("Execute Command: " + executeCommand);
+
+            // EXECUTE
+            Process executeProcess = new Process();
+            executeProcess.StartInfo.FileName = "cmd.exe";
+            executeProcess.StartInfo.Arguments = $"/c {executeCommand}";
+            executeProcess.StartInfo.UseShellExecute = false;
+            executeProcess.StartInfo.RedirectStandardInput = true;
+            executeProcess.StartInfo.RedirectStandardOutput = true;
+            executeProcess.StartInfo.RedirectStandardError = true;
+
+            executeProcess.Start();
+
+            // PASS THE INPUT
+            if (!string.IsNullOrEmpty(input))
+            {
+                executeProcess.StandardInput.WriteLine(input);
+                executeProcess.StandardInput.Flush();
+            }
+
+            // CAPTURE OUTPUT
+            string pyOutput = executeProcess.StandardOutput.ReadToEnd();
+            executeProcess.WaitForExit();
+
+            if (executeProcess.ExitCode == 0)
+            {
+                // DISPLAY OUTPUT
+                MessageBox.Show("Output: " + pyOutput, "Python Output (STUDENT)");
+                return pyOutput;
+            }
+            else
+            {
+                MessageBox.Show("Execution failed:\n" + executeProcess.StandardError.ReadToEnd());
+                return "This Student's Script Could Not Be Executed";
+            }
+        }
+
         public static string tırnakEkleBoslukVarsa(string path)
         {
             return !string.IsNullOrWhiteSpace(path) ?
