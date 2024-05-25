@@ -214,6 +214,7 @@ namespace BerkazyHalka
         {
             ImportAndExport processor = new ImportAndExport();
             processor.ImportJsonFile();
+            RefreshDataGridView();
         }
 
         private void selectConfiuration_Click(object sender, EventArgs e)
