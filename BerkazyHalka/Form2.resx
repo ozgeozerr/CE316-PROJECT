@@ -125,9 +125,11 @@
 2.1) When you press create configuration it pops up a new page that will make you create an configuration.
 2.3) After filling every space you are going to be directed at main page.
 3) As we talked about before you are going to select a row and after that press create a new assignment button.
+When entering an input, make sure to type -!- in between values!
 4) In this page we have some buttons;
  4.1) Choose Students:  This button pops up a new screen to select zip files and extract them, but in the new page after selecting the zip files (You can add more than one at the same time by choosing the files while pressing "ctrl" or "shift") you need to press apply to confirm and press okay to return back to the assignment.
 4.2) Test All Students: This button tests all the student files that are chosen for that assignment.
-4.3) You can see the results in the bottom left table.</value>
+4.3) You can see the results in the bottom left table.
+</value>
   </data>
 </root>

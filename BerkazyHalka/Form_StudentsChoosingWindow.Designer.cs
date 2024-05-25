@@ -39,7 +39,7 @@
             // chooseAllStudents
             // 
             chooseAllStudents.BackColor = Color.Thistle;
-            chooseAllStudents.Location = new Point(71, 391);
+            chooseAllStudents.Location = new Point(61, 386);
             chooseAllStudents.Name = "chooseAllStudents";
             chooseAllStudents.Size = new Size(188, 29);
             chooseAllStudents.TabIndex = 0;
@@ -50,7 +50,7 @@
             // applyButton
             // 
             applyButton.BackColor = Color.Thistle;
-            applyButton.Location = new Point(326, 391);
+            applyButton.Location = new Point(255, 386);
             applyButton.Name = "applyButton";
             applyButton.Size = new Size(94, 29);
             applyButton.TabIndex = 1;
@@ -60,13 +60,14 @@
             // 
             // okayButton
             // 
-            okayButton.BackColor = Color.Teal;
-            okayButton.ForeColor = SystemColors.ButtonHighlight;
-            okayButton.Location = new Point(1545, 391);
+            okayButton.BackColor = Color.WhiteSmoke;
+            okayButton.Font = new Font("Segoe UI", 10F);
+            okayButton.ForeColor = Color.Black;
+            okayButton.Location = new Point(1545, 379);
             okayButton.Name = "okayButton";
-            okayButton.Size = new Size(94, 29);
+            okayButton.Size = new Size(94, 41);
             okayButton.TabIndex = 2;
-            okayButton.Text = "Okay";
+            okayButton.Text = "Done";
             okayButton.UseVisualStyleBackColor = false;
             okayButton.Click += okayButton_Click;
             // 

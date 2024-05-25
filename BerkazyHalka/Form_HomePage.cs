@@ -19,7 +19,7 @@ namespace BerkazyHalka
         public static int currentConfigID;
         public static string connectionPath = $"Data Source={Application.StartupPath}\\assignment.db;Version=3;";
 
-    public Form_HomePage()
+        public Form_HomePage()
         {
             InitializeComponent();
             instance = this;
@@ -187,6 +187,11 @@ namespace BerkazyHalka
         {
             Form2 form2 = new Form2();
             form2.ShowDialog();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 

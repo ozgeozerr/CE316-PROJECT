@@ -41,7 +41,7 @@
             richTextBox1.Location = new Point(12, 72);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(907, 584);
+            richTextBox1.Size = new Size(987, 788);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = resources.GetString("richTextBox1.Text");
             richTextBox1.TextChanged += richTextBox1_TextChanged;
@@ -62,7 +62,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(931, 668);
+            ClientSize = new Size(1013, 736);
             Controls.Add(label1);
             Controls.Add(richTextBox1);
             Name = "Form2";

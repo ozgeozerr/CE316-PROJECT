@@ -42,57 +42,56 @@
             saveInput = new Button();
             saveOutput = new Button();
             backButton = new Button();
-            label6 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label1.Font = new Font("Cambria", 12F);
             label1.ForeColor = Color.White;
             label1.Location = new Point(28, 67);
             label1.Name = "label1";
-            label1.Size = new Size(145, 21);
+            label1.Size = new Size(161, 23);
             label1.TabIndex = 16;
             label1.Text = "Assigment Name:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label2.Font = new Font("Cambria", 12F);
             label2.ForeColor = Color.White;
             label2.Location = new Point(28, 286);
             label2.Name = "label2";
-            label2.Size = new Size(271, 21);
+            label2.Size = new Size(214, 23);
             label2.TabIndex = 17;
-            label2.Text = "Choose an Existing Configuration:";
+            label2.Text = "Manage Configurations:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label3.Font = new Font("Cambria", 12F);
             label3.ForeColor = Color.White;
             label3.Location = new Point(28, 212);
             label3.Name = "label3";
-            label3.Size = new Size(287, 21);
+            label3.Size = new Size(316, 23);
             label3.TabIndex = 18;
             label3.Text = "Select a Folder for Expected Output:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label4.Font = new Font("Cambria", 12F);
             label4.ForeColor = Color.White;
             label4.Location = new Point(28, 139);
             label4.Name = "label4";
-            label4.Size = new Size(208, 21);
+            label4.Size = new Size(227, 23);
             label4.TabIndex = 19;
             label4.Text = "Select a Folder for Inputs:";
             // 
             // textb_assignName
             // 
             textb_assignName.BackColor = Color.GhostWhite;
-            textb_assignName.Location = new Point(332, 67);
+            textb_assignName.Location = new Point(374, 63);
             textb_assignName.Name = "textb_assignName";
             textb_assignName.Size = new Size(204, 27);
             textb_assignName.TabIndex = 20;
@@ -101,7 +100,7 @@
             // browseFile1
             // 
             browseFile1.BackColor = Color.Thistle;
-            browseFile1.Location = new Point(551, 136);
+            browseFile1.Location = new Point(584, 138);
             browseFile1.Name = "browseFile1";
             browseFile1.Size = new Size(204, 29);
             browseFile1.TabIndex = 21;
@@ -112,7 +111,7 @@
             // browseFile
             // 
             browseFile.BackColor = Color.Thistle;
-            browseFile.Location = new Point(551, 209);
+            browseFile.Location = new Point(584, 212);
             browseFile.Name = "browseFile";
             browseFile.Size = new Size(204, 29);
             browseFile.TabIndex = 22;
@@ -122,33 +121,34 @@
             // 
             // createNewConfig
             // 
-            createNewConfig.BackColor = Color.Thistle;
-            createNewConfig.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            createNewConfig.Location = new Point(332, 282);
+            createNewConfig.BackColor = Color.FromArgb(192, 192, 255);
+            createNewConfig.Font = new Font("Cambria", 10.8F);
+            createNewConfig.ForeColor = Color.Black;
+            createNewConfig.Location = new Point(374, 280);
             createNewConfig.Name = "createNewConfig";
-            createNewConfig.Size = new Size(218, 29);
+            createNewConfig.Size = new Size(204, 29);
             createNewConfig.TabIndex = 23;
-            createNewConfig.Text = "Create New Configuration";
+            createNewConfig.Text = "  Go to Configurations";
             createNewConfig.TextAlign = ContentAlignment.MiddleLeft;
             createNewConfig.UseVisualStyleBackColor = false;
             createNewConfig.Click += createNewConfig_Click;
             // 
             // saveAssignment
             // 
-            saveAssignment.BackColor = Color.Teal;
+            saveAssignment.BackColor = Color.WhiteSmoke;
             saveAssignment.Font = new Font("Cambria", 12F);
-            saveAssignment.ForeColor = Color.White;
-            saveAssignment.Location = new Point(332, 421);
+            saveAssignment.ForeColor = Color.Black;
+            saveAssignment.Location = new Point(725, 363);
             saveAssignment.Name = "saveAssignment";
-            saveAssignment.Size = new Size(312, 45);
+            saveAssignment.Size = new Size(163, 45);
             saveAssignment.TabIndex = 24;
-            saveAssignment.Text = "Save and Create the Assignment";
+            saveAssignment.Text = "Save and Create ";
             saveAssignment.UseVisualStyleBackColor = false;
             saveAssignment.Click += saveAssignment_Click;
             // 
             // textb_inputFolder
             // 
-            textb_inputFolder.Location = new Point(332, 137);
+            textb_inputFolder.Location = new Point(374, 139);
             textb_inputFolder.Name = "textb_inputFolder";
             textb_inputFolder.Size = new Size(204, 27);
             textb_inputFolder.TabIndex = 27;
@@ -156,7 +156,7 @@
             // 
             // textb_expectedFolder
             // 
-            textb_expectedFolder.Location = new Point(332, 211);
+            textb_expectedFolder.Location = new Point(374, 214);
             textb_expectedFolder.Name = "textb_expectedFolder";
             textb_expectedFolder.Size = new Size(204, 27);
             textb_expectedFolder.TabIndex = 28;
@@ -164,8 +164,8 @@
             // 
             // saveInput
             // 
-            saveInput.BackColor = Color.FromArgb(192, 192, 255);
-            saveInput.Location = new Point(761, 135);
+            saveInput.BackColor = Color.WhiteSmoke;
+            saveInput.Location = new Point(794, 138);
             saveInput.Name = "saveInput";
             saveInput.Size = new Size(94, 29);
             saveInput.TabIndex = 29;
@@ -175,8 +175,8 @@
             // 
             // saveOutput
             // 
-            saveOutput.BackColor = Color.FromArgb(192, 192, 255);
-            saveOutput.Location = new Point(761, 209);
+            saveOutput.BackColor = Color.WhiteSmoke;
+            saveOutput.Location = new Point(794, 212);
             saveOutput.Name = "saveOutput";
             saveOutput.Size = new Size(94, 29);
             saveOutput.TabIndex = 30;
@@ -186,35 +186,23 @@
             // 
             // backButton
             // 
-            backButton.BackColor = Color.Black;
-            backButton.ForeColor = SystemColors.ButtonHighlight;
-            backButton.Location = new Point(12, 437);
+            backButton.BackColor = Color.WhiteSmoke;
+            backButton.Font = new Font("Segoe UI", 10F);
+            backButton.ForeColor = Color.Black;
+            backButton.Location = new Point(28, 363);
             backButton.Name = "backButton";
-            backButton.Size = new Size(94, 29);
+            backButton.Size = new Size(124, 45);
             backButton.TabIndex = 15;
             backButton.Text = "Go Back";
             backButton.UseVisualStyleBackColor = false;
             backButton.Click += backButton_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(556, 286);
-            label6.Name = "label6";
-            label6.Size = new Size(174, 21);
-            label6.TabIndex = 31;
-            label6.Text = "Configuration Name: ";
-            label6.Click += label6_Click;
             // 
             // Form_CreatingNewAssignment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(915, 493);
-            Controls.Add(label6);
+            ClientSize = new Size(915, 464);
             Controls.Add(saveOutput);
             Controls.Add(saveInput);
             Controls.Add(textb_expectedFolder);
@@ -252,6 +240,5 @@
         private Button saveInput;
         private Button saveOutput;
         private Button backButton;
-        private Label label6;
     }
 }
