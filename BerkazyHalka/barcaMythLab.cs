@@ -40,63 +40,67 @@ public class barcaMythLab
         executeProcess.Dispose();
     }
 
-    public static string CompileAndExecuteCpp(string cppFilePath, string cppCompilerPath, string input)
-{
-    string compilerPath = cppCompilerPath;
-    string compileCommand = $"{compilerPath} {cppFilePath} -o output";
-
-    Console.WriteLine("Compile Command: " + compileCommand);
-
-    // Compile
-    Process compileProcess = new Process();
-    compileProcess.StartInfo.FileName = "cmd.exe";
-    compileProcess.StartInfo.Arguments = $"/c {compileCommand}";
-    compileProcess.StartInfo.UseShellExecute = false;
-    compileProcess.StartInfo.RedirectStandardOutput = true;
-    compileProcess.StartInfo.RedirectStandardError = true;
-
-    compileProcess.Start();
-    compileProcess.WaitForExit();
-
-    if (compileProcess.ExitCode == 0)
+    public static string cppProject(string cppFilePath, string cppCompilerPath, string input)
     {
-        Console.WriteLine("Compilation successful!");
+        string compilerPath = cppCompilerPath;
+        string compileCommand = $"{compilerPath} {cppFilePath} -o output.exe";
+        MessageBox.Show("Compile Command: " + compileCommand);
 
-        // Execute
-        Process executeProcess = new Process();
-        executeProcess.StartInfo.FileName = "output.exe"; // Assuming output file is named 'output.exe'
-        executeProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(cppFilePath);
-        executeProcess.StartInfo.UseShellExecute = false;
-        executeProcess.StartInfo.RedirectStandardInput = true;
-        executeProcess.StartInfo.RedirectStandardOutput = true;
+        // COMPILE
+        Process compileProcess = new Process();
+        compileProcess.StartInfo.FileName = "cmd.exe";
+        compileProcess.StartInfo.Arguments = $"/c {compileCommand}";
+        compileProcess.StartInfo.UseShellExecute = false;
+        compileProcess.StartInfo.RedirectStandardOutput = true;
+        compileProcess.StartInfo.RedirectStandardError = true;
 
-        executeProcess.Start();
+        compileProcess.Start();
+        compileProcess.WaitForExit();
 
-        // Pass the input
-        if (!string.IsNullOrEmpty(input))
+        if (compileProcess.ExitCode == 0)
         {
-            executeProcess.StandardInput.WriteLine(input);
-            executeProcess.StandardInput.Flush();
+            MessageBox.Show("Compilation successful!");
+
+            // EXECUTE
+            Process executeProcess = new Process();
+            executeProcess.StartInfo.FileName = "output.exe";
+            executeProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(cppFilePath);
+            executeProcess.StartInfo.UseShellExecute = false;
+            executeProcess.StartInfo.RedirectStandardInput = true;
+            executeProcess.StartInfo.RedirectStandardOutput = true;
+
+            executeProcess.Start();
+
+            // PASS THE INPUT
+            if (!string.IsNullOrEmpty(input))
+            {
+                string[] inputs = input.Split(' ');
+                foreach (string inputVar in inputs)
+                {
+                    executeProcess.StandardInput.WriteLine(inputVar);
+                }
+                executeProcess.StandardInput.Flush();
+                executeProcess.StandardInput.Close();
+            }
+            else
+            {
+                return "EMPTY LINE";
+            }
+
+            // CAPTURE OUTPUT
+            string cppOutput = executeProcess.StandardOutput.ReadToEnd();
+            executeProcess.WaitForExit();
+
+            // DISPLAY OUTPUT
+            MessageBox.Show("Output: " + cppOutput, "C++ Output (STUDENT)");
+            return cppOutput;
         }
         else
         {
-            return "EMPTY LINE";
+            MessageBox.Show("Compilation failed:\n" + compileProcess.StandardError.ReadToEnd());
+            return "This Student's File Could Not Be Compiled";
         }
-
-        // Capture output
-        string output = executeProcess.StandardOutput.ReadToEnd();
-        executeProcess.WaitForExit();
-
-        // Display output
-        Console.WriteLine("Output: " + output);
-        return output;
     }
-    else
-    {
-        Console.WriteLine("Compilation failed:\n" + compileProcess.StandardError.ReadToEnd());
-        return "Compilation failed";
-    }
-}
 
     public static string pythonProjectMyth(string pythonFilePath, string pythonInterpreterPath, string input)
     {
