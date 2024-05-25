@@ -14,10 +14,20 @@ namespace BerkazyHalka
     public partial class Form_CreatingNewAssignment : Form
     {
         DateTime currentDateTime = DateTime.Now;
-        
+
         public Form_CreatingNewAssignment()
         {
+
             InitializeComponent();
+            if (Form_HomePage.currentConfigID > 0) // Check if it has a valid value
+            {
+                label6.Text = "Configuration Name : " + Form_HomePage.currentConfigID;
+            }
+            else {
+                label6.Text = "No Config.";
+            }
+
+
         }
         private string selectedFilePath;
         private string selectedFilePathForOutput;
@@ -67,7 +77,7 @@ namespace BerkazyHalka
                     {
                         connection.Open();
                         Form_HomePage.currentAssignID = Convert.ToInt32(insertData.ExecuteScalar());
-                        MessageBox.Show("Added to SQL successfully!"+Form_HomePage.currentAssignID);
+                        MessageBox.Show("Added to SQL successfully!" + Form_HomePage.currentAssignID);
                     }
                     catch (Exception err)
                     {
@@ -93,12 +103,12 @@ namespace BerkazyHalka
             if (ValidateInputs())
             {
                 MessageBox.Show(textb_assignName.Text);
-                 insertDatabase();
-                Form_HomePage form=new Form_HomePage();
+                insertDatabase();
+                Form4 form = new Form4();
                 form.Show();
                 this.Close();
             }
-          
+
 
         }
 
@@ -143,13 +153,13 @@ namespace BerkazyHalka
             }
 
         }
-        private Form_Configuration configurationForm;
+        private Form_ConfigurationView configurationForm;
 
         private void createNewConfig_Click(object sender, EventArgs e)
         {
             if (configurationForm == null || configurationForm.Visible == false)
             {
-                configurationForm = new Form_Configuration();
+                configurationForm = new Form_ConfigurationView();
                 configurationForm.FormClosed += ConfigurationForm_FormClosed;
                 this.Enabled = false;
                 configurationForm.Show();
@@ -158,7 +168,21 @@ namespace BerkazyHalka
 
         private void ConfigurationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (Form_HomePage.currentConfigID > 0) // Check if it has a valid value
+            {
+                label6.Text = "Configuration Name : " + Form_HomePage.currentConfigID;
+            }
+            else
+            {
+                label6.Text = "No Config.";
+            }
+
             this.Enabled = true;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

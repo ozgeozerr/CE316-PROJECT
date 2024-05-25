@@ -37,12 +37,12 @@
             browseFile = new Button();
             createNewConfig = new Button();
             saveAssignment = new Button();
-            label5 = new Label();
             textb_inputFolder = new TextBox();
             textb_expectedFolder = new TextBox();
             saveInput = new Button();
             saveOutput = new Button();
             backButton = new Button();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -124,7 +124,7 @@
             // 
             createNewConfig.BackColor = Color.Thistle;
             createNewConfig.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            createNewConfig.Location = new Point(332, 346);
+            createNewConfig.Location = new Point(332, 282);
             createNewConfig.Name = "createNewConfig";
             createNewConfig.Size = new Size(218, 29);
             createNewConfig.TabIndex = 23;
@@ -145,17 +145,6 @@
             saveAssignment.Text = "Save and Create the Assignment";
             saveAssignment.UseVisualStyleBackColor = false;
             saveAssignment.Click += saveAssignment_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(28, 350);
-            label5.Name = "label5";
-            label5.Size = new Size(214, 21);
-            label5.TabIndex = 26;
-            label5.Text = "Create New Configuration:";
             // 
             // textb_inputFolder
             // 
@@ -207,17 +196,29 @@
             backButton.UseVisualStyleBackColor = false;
             backButton.Click += backButton_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(556, 286);
+            label6.Name = "label6";
+            label6.Size = new Size(174, 21);
+            label6.TabIndex = 31;
+            label6.Text = "Configuration Name: ";
+            label6.Click += label6_Click;
+            // 
             // Form_CreatingNewAssignment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(915, 493);
+            Controls.Add(label6);
             Controls.Add(saveOutput);
             Controls.Add(saveInput);
             Controls.Add(textb_expectedFolder);
             Controls.Add(textb_inputFolder);
-            Controls.Add(label5);
             Controls.Add(saveAssignment);
             Controls.Add(createNewConfig);
             Controls.Add(browseFile);
@@ -251,5 +252,6 @@
         private Button saveInput;
         private Button saveOutput;
         private Button backButton;
+        private Label label6;
     }
 }

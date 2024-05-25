@@ -213,5 +213,19 @@ namespace BerkazyHalka
         {
 
         }
+
+        private void selectConfiuration_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                int selectedId = Convert.ToInt32(selectedRow.Cells[0].Value);
+                Form_HomePage.currentConfigID = selectedId;
+            }
+            else
+            {
+                MessageBox.Show("Please select a row.");
+            }
+        }
     }
 }
