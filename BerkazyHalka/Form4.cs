@@ -171,7 +171,7 @@ namespace BerkazyHalka
             {
                 thread.Join();
             }
-            MessageBox.Show("Sucessfull Tests!","Sucessfull");
+            MessageBox.Show("Sucessfull Tests!", "Sucessfull");
             // Refresh student list
             listStudents();
         }
@@ -299,7 +299,7 @@ namespace BerkazyHalka
                 if (File.Exists(selectedPath))
                 {
                     string fileContent = File.ReadAllText(selectedPath);
-                    excText.Text = fileContent;
+                    solText.Text = fileContent;
                     MessageBox.Show(selectedPath);
                 }
                 else
@@ -312,8 +312,6 @@ namespace BerkazyHalka
                 MessageBox.Show("Please select a row to view assignment.");
             }
         }
-
-        private void currentText_TextChanged(object sender, EventArgs e) { }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -329,22 +327,22 @@ namespace BerkazyHalka
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-            
+
             saveFileDialog.DefaultExt = ".txt";
             saveFileDialog.Filter = "Text files (*.txt)|*.txt";
 
-            
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                
+
                 string fileName = saveFileDialog.FileName;
 
                 try
                 {
-                    
+
                     File.WriteAllText(fileName, currentText.Text);
                     MessageBox.Show("Text saved successfully!");
                 }
@@ -355,5 +353,31 @@ namespace BerkazyHalka
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+
+            saveFileDialog.DefaultExt = ".txt";
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt";
+
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string fileName = saveFileDialog.FileName;
+
+                try
+                {
+
+                    File.WriteAllText(fileName, solText.Text);
+                    MessageBox.Show("Text saved successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving text: " + ex.Message);
+                }
+            }
+        }
     }
 }
