@@ -35,6 +35,7 @@
             selectAStudent = new Button();
             testAll = new Button();
             dataGridView1 = new DataGridView();
+            homePageButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -111,12 +112,24 @@
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // homePageButton
+            // 
+            homePageButton.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            homePageButton.Location = new Point(977, 152);
+            homePageButton.Name = "homePageButton";
+            homePageButton.Size = new Size(208, 37);
+            homePageButton.TabIndex = 15;
+            homePageButton.Text = "Go To Homepage";
+            homePageButton.UseVisualStyleBackColor = true;
+            homePageButton.Click += homePageButton_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
             ClientSize = new Size(1926, 585);
+            Controls.Add(homePageButton);
             Controls.Add(dataGridView1);
             Controls.Add(testAll);
             Controls.Add(selectAStudent);
@@ -141,5 +154,6 @@
         private Button selectAStudent;
         private Button testAll;
         private DataGridView dataGridView1;
+        private Button homePageButton;
     }
 }

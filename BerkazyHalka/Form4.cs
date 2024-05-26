@@ -119,7 +119,7 @@ namespace BerkazyHalka
                         using (var reader = command.ExecuteReader())
                         {
                             int i = 0;
-                            studentFiles = new string[studentCount]; 
+                            studentFiles = new string[studentCount];
 
                             while (reader.Read() && i < studentCount)
                             {
@@ -142,7 +142,7 @@ namespace BerkazyHalka
 
             for (int i = 0; i < studentCount; i++)
             {
-                int index = i; 
+                int index = i;
                 threads[i] = new Thread(() =>
                 {
                     string message = trueLie.trueFalse(inputFile, outputFile, studentFiles[index], compilerPath, language);
@@ -289,6 +289,13 @@ namespace BerkazyHalka
         private void Form4_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void homePageButton_Click(object sender, EventArgs e)
+        {
+            Form_HomePage form=new Form_HomePage();
+            form.Show();
+            this.Close();
         }
     }
 }
