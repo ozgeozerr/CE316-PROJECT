@@ -211,6 +211,7 @@
             Controls.Add(dataGridView1);
             Name = "Form_ConfigurationView";
             Text = "EasyAssign";
+            Load += Form_ConfigurationView_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

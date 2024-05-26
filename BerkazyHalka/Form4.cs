@@ -105,6 +105,7 @@ namespace BerkazyHalka
                 }
             }
 
+
             string[] studentFiles = new string[studentCount];
             using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
@@ -118,7 +119,7 @@ namespace BerkazyHalka
                         using (var reader = command.ExecuteReader())
                         {
                             int i = 0;
-                            studentFiles = new string[studentCount]; // Initialize the array with the correct size
+                            studentFiles = new string[studentCount]; 
 
                             while (reader.Read() && i < studentCount)
                             {
@@ -141,7 +142,7 @@ namespace BerkazyHalka
 
             for (int i = 0; i < studentCount; i++)
             {
-                int index = i; // Capturing the current value of i in a local variable
+                int index = i; 
                 threads[i] = new Thread(() =>
                 {
                     string message = trueLie.trueFalse(inputFile, outputFile, studentFiles[index], compilerPath, language);
@@ -220,19 +221,7 @@ namespace BerkazyHalka
 
         }
 
-        private void exButton_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
-            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-            {
-                string extractPath = folderBrowserDialog.SelectedPath;
-                MessageBox.Show(extractPath);
-
-                zipExtractor zipper = new zipExtractor();
-                zipper.Extract(selectedFileForZipEx, extractPath);
-            }
-        }
 
         private Form_StudentsChoosingWindow StudentsChoosingWindow;
 
@@ -296,9 +285,12 @@ namespace BerkazyHalka
         {
 
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
 
-
-//oldu mu?

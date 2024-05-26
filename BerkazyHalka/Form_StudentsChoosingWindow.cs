@@ -32,7 +32,7 @@ namespace BerkazyHalka
                 foreach (string file in openFileDialog.FileNames)
                 {
                     ExtractFilesFromZip(file);
-                   
+
                 }
 
                 MessageBox.Show("Contents of selected zip files added to the list.");
@@ -42,7 +42,7 @@ namespace BerkazyHalka
         {
 
         }
-       
+
         String folder_nameDb;
         private void ExtractFilesFromZip(string zipFilePath)
         {
@@ -50,7 +50,7 @@ namespace BerkazyHalka
             {
                 string extractPath = Path.Combine(Path.GetTempPath(), Path.GetFileNameWithoutExtension(zipFilePath));
                 string folderName = Path.GetFileNameWithoutExtension(zipFilePath);
-              
+
 
                 ZipFile.ExtractToDirectory(zipFilePath, extractPath);
 
@@ -160,6 +160,11 @@ namespace BerkazyHalka
             Form4 form = new Form4();
             form.Show();
             this.Hide();
+        }
+
+        private void Form_StudentsChoosingWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -112,6 +112,7 @@
             Controls.Add(chooseAllStudents);
             Name = "Form_StudentsChoosingWindow";
             Text = "Form_StudentsChoosingWindow";
+            Load += Form_StudentsChoosingWindow_Load;
             ResumeLayout(false);
         }
 

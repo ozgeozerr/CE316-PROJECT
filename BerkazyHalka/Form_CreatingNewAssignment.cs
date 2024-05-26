@@ -19,7 +19,7 @@ namespace BerkazyHalka
         {
 
             InitializeComponent();
-            if (Form_HomePage.currentConfigID > 0) // Check if it has a valid value
+            if (Form_HomePage.currentConfigID > 0) 
             {
                 
             }
@@ -168,7 +168,7 @@ namespace BerkazyHalka
 
         private void ConfigurationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form_HomePage.currentConfigID > 0) // Check if it has a valid value
+            if (Form_HomePage.currentConfigID > 0) 
             {
                
             }

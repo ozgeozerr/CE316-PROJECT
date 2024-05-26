@@ -126,6 +126,7 @@
             Controls.Add(currentText);
             Name = "Form4";
             Text = "EasyAssign";
+            Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

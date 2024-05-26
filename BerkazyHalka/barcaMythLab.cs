@@ -5,7 +5,7 @@ public class barcaMythLab
 {
     public static void javaProjectMyth(string javaFilePath)
     {
-        string javaPath = @"C:\Users\barca\.jdks\openjdk-20\bin\java.exe"; // Change this path as per your Java installation
+        string javaPath = @"C:\Users\barca\.jdks\openjdk-20\bin\java.exe"; 
 
         // COMPILE
         Process compileProcess = new Process();
