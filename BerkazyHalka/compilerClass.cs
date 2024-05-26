@@ -51,7 +51,7 @@ namespace BerkazyHalka
                 executeProcess.WaitForExit();
 
                 // DISPLAY OUTPUT
-                MessageBox.Show("Output: " + javaOutput, "Java Output (STUDENT)");
+                
 
                 compileProcess.Dispose();
                 executeProcess.Dispose();
@@ -117,7 +117,7 @@ namespace BerkazyHalka
                 executeProcess.WaitForExit();
 
                 // DISPLAY OUTPUT
-                MessageBox.Show("Output: " + cOutput, "C Output (STUDENT)");
+                
                 return cOutput;
             }
             else
@@ -167,7 +167,7 @@ namespace BerkazyHalka
             if (executeProcess.ExitCode == 0)
             {
                 // DISPLAY OUTPUT
-                MessageBox.Show("Output: " + pyOutput, "Python Output (STUDENT)");
+                
                 return pyOutput;
             }
             else
@@ -229,7 +229,7 @@ namespace BerkazyHalka
                 executeProcess.WaitForExit();
 
                 // DISPLAY OUTPUT
-                MessageBox.Show("Output: " + cppOutput, "C++ Output (STUDENT)");
+                
                 return cppOutput;
             }
             else
