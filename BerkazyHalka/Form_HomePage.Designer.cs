@@ -55,7 +55,7 @@
             helpToolStripMenuItem.ForeColor = Color.White;
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             helpToolStripMenuItem.ShowShortcutKeys = false;
-            helpToolStripMenuItem.Size = new Size(57, 24);
+            helpToolStripMenuItem.Size = new Size(48, 20);
             helpToolStripMenuItem.Text = "Help";
             helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
             // 
@@ -66,7 +66,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1395, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(1221, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "helpMenuStrip";
             // 
@@ -76,9 +77,9 @@
             WelcomeText.BackColor = Color.FromArgb(36, 36, 36);
             WelcomeText.Font = new Font("Cambria", 16.8000011F, FontStyle.Italic, GraphicsUnit.Point, 0);
             WelcomeText.ForeColor = Color.White;
-            WelcomeText.Location = new Point(12, 63);
+            WelcomeText.Location = new Point(10, 47);
             WelcomeText.Name = "WelcomeText";
-            WelcomeText.Size = new Size(300, 34);
+            WelcomeText.Size = new Size(242, 27);
             WelcomeText.TabIndex = 1;
             WelcomeText.Text = "Welcome to EasyAssign.";
             // 
@@ -86,9 +87,9 @@
             // 
             homeScreenInstructions.AutoSize = true;
             homeScreenInstructions.Font = new Font("Cambria", 12F);
-            homeScreenInstructions.Location = new Point(12, 208);
+            homeScreenInstructions.Location = new Point(10, 156);
             homeScreenInstructions.Name = "homeScreenInstructions";
-            homeScreenInstructions.Size = new Size(333, 23);
+            homeScreenInstructions.Size = new Size(273, 19);
             homeScreenInstructions.TabIndex = 2;
             homeScreenInstructions.Text = "Here are some operations you can do.";
             homeScreenInstructions.Click += homeScreenInstructions_Click;
@@ -97,9 +98,9 @@
             // 
             homeScreenInstructions2.AutoSize = true;
             homeScreenInstructions2.Font = new Font("Cambria", 11F);
-            homeScreenInstructions2.Location = new Point(12, 117);
+            homeScreenInstructions2.Location = new Point(10, 88);
             homeScreenInstructions2.Name = "homeScreenInstructions2";
-            homeScreenInstructions2.Size = new Size(458, 22);
+            homeScreenInstructions2.Size = new Size(359, 17);
             homeScreenInstructions2.TabIndex = 3;
             homeScreenInstructions2.Text = "For further help, click on the 'Help' button at the top left.";
             homeScreenInstructions2.Click += label1_Click;
@@ -108,9 +109,9 @@
             // 
             labelPastAssignments.AutoSize = true;
             labelPastAssignments.Font = new Font("Cambria", 15F);
-            labelPastAssignments.Location = new Point(12, 36);
+            labelPastAssignments.Location = new Point(10, 27);
             labelPastAssignments.Name = "labelPastAssignments";
-            labelPastAssignments.Size = new Size(184, 30);
+            labelPastAssignments.Size = new Size(149, 23);
             labelPastAssignments.TabIndex = 6;
             labelPastAssignments.Text = "Assignment List";
             labelPastAssignments.Click += labelPastAssignments_Click;
@@ -120,9 +121,10 @@
             createNewAssignmentButton.BackColor = Color.FromArgb(192, 192, 255);
             createNewAssignmentButton.Font = new Font("Cambria", 12F, FontStyle.Bold);
             createNewAssignmentButton.ForeColor = SystemColors.ActiveCaptionText;
-            createNewAssignmentButton.Location = new Point(12, 259);
+            createNewAssignmentButton.Location = new Point(10, 194);
+            createNewAssignmentButton.Margin = new Padding(3, 2, 3, 2);
             createNewAssignmentButton.Name = "createNewAssignmentButton";
-            createNewAssignmentButton.Size = new Size(255, 49);
+            createNewAssignmentButton.Size = new Size(223, 37);
             createNewAssignmentButton.TabIndex = 7;
             createNewAssignmentButton.Text = "Create New Assignment";
             createNewAssignmentButton.UseVisualStyleBackColor = false;
@@ -133,9 +135,10 @@
             viewTheAssignmentButton.BackColor = Color.WhiteSmoke;
             viewTheAssignmentButton.Font = new Font("Cambria", 12F, FontStyle.Bold);
             viewTheAssignmentButton.ForeColor = Color.Black;
-            viewTheAssignmentButton.Location = new Point(865, 534);
+            viewTheAssignmentButton.Location = new Point(718, 393);
+            viewTheAssignmentButton.Margin = new Padding(3, 2, 3, 2);
             viewTheAssignmentButton.Name = "viewTheAssignmentButton";
-            viewTheAssignmentButton.Size = new Size(240, 37);
+            viewTheAssignmentButton.Size = new Size(210, 28);
             viewTheAssignmentButton.TabIndex = 9;
             viewTheAssignmentButton.Text = "View The Assignment";
             viewTheAssignmentButton.UseVisualStyleBackColor = false;
@@ -146,9 +149,10 @@
             viewConfigurationsButton.BackColor = Color.Thistle;
             viewConfigurationsButton.Font = new Font("Cambria", 12F, FontStyle.Bold);
             viewConfigurationsButton.ForeColor = SystemColors.ActiveCaptionText;
-            viewConfigurationsButton.Location = new Point(12, 347);
+            viewConfigurationsButton.Location = new Point(10, 260);
+            viewConfigurationsButton.Margin = new Padding(3, 2, 3, 2);
             viewConfigurationsButton.Name = "viewConfigurationsButton";
-            viewConfigurationsButton.Size = new Size(255, 48);
+            viewConfigurationsButton.Size = new Size(223, 36);
             viewConfigurationsButton.TabIndex = 10;
             viewConfigurationsButton.Text = "View Configurations";
             viewConfigurationsButton.UseVisualStyleBackColor = false;
@@ -167,14 +171,15 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.GridColor = SystemColors.ControlDarkDark;
-            dataGridView1.Location = new Point(12, 108);
+            dataGridView1.Location = new Point(10, 81);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Size = new Size(842, 368);
+            dataGridView1.Size = new Size(737, 276);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -185,9 +190,10 @@
             backgroundPanelForListView.Controls.Add(textBox1);
             backgroundPanelForListView.Controls.Add(dataGridView1);
             backgroundPanelForListView.Controls.Add(labelPastAssignments);
-            backgroundPanelForListView.Location = new Point(511, 31);
+            backgroundPanelForListView.Location = new Point(447, 23);
+            backgroundPanelForListView.Margin = new Padding(3, 2, 3, 2);
             backgroundPanelForListView.Name = "backgroundPanelForListView";
-            backgroundPanelForListView.Size = new Size(866, 488);
+            backgroundPanelForListView.Size = new Size(758, 366);
             backgroundPanelForListView.TabIndex = 5;
             backgroundPanelForListView.Paint += backgroundPanelForListView_Paint;
             // 
@@ -195,27 +201,29 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Cambria", 12F);
-            label1.Location = new Point(617, 49);
+            label1.Location = new Point(288, 31);
             label1.Name = "label1";
-            label1.Size = new Size(207, 23);
+            label1.Size = new Size(168, 19);
             label1.TabIndex = 8;
             label1.Text = "Search For Assignment";
             label1.Click += label1_Click_1;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(617, 75);
+            textBox1.Location = new Point(271, 52);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(237, 27);
+            textBox1.Size = new Size(210, 23);
             textBox1.TabIndex = 7;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Form_HomePage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1395, 594);
+            ClientSize = new Size(1221, 446);
             Controls.Add(viewConfigurationsButton);
             Controls.Add(viewTheAssignmentButton);
             Controls.Add(createNewAssignmentButton);
@@ -226,6 +234,7 @@
             Controls.Add(menuStrip1);
             ForeColor = SystemColors.ButtonFace;
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form_HomePage";
             Text = "EasyAssign";
             Load += Form2_Load;

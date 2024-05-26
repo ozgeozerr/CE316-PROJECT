@@ -147,10 +147,10 @@ namespace BerkazyHalka
                 {
                     (string message, string[] listedStudentOutputs) = trueLie.trueFalse(inputFile, outputFile, studentFiles[index], compilerPath, language);
                     UpdateStudentResult(Form_HomePage.currentAssignID, message, studentFiles[index]);
-                    studentTextBox.BeginInvoke(new Action(() =>
+                    currentText.BeginInvoke(new Action(() =>
                     {
-                        studentTextBox.AppendText("Student Name: " + index + "\n" + message + "\n" + string.Join("\n", listedStudentOutputs) + "\n");
-                        studentTextBox.AppendText("-------------------------------------------------------------------\n");
+                        currentText.AppendText("Student Name: " + index + "\n" + message + "\n" + string.Join("\n", listedStudentOutputs) + "\n");
+                        currentText.AppendText("-------------------------------------------------------------------\n");
                     }));
                 });
                 threads[i].Start();
@@ -297,7 +297,7 @@ namespace BerkazyHalka
 
         private void excText_TextChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -309,16 +309,16 @@ namespace BerkazyHalka
 
                 string selectedPath = selectedRow.Cells[3].Value.ToString();
 
-                
+
                 if (File.Exists(selectedPath))
                 {
-                   
+
                     string fileContent = File.ReadAllText(selectedPath);
 
-                    
+
                     excText.Text = fileContent;
 
-                   
+
                     MessageBox.Show(selectedPath);
                 }
                 else

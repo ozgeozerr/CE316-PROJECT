@@ -81,6 +81,8 @@ namespace BerkazyHalka
                 string sourceCode = row.Cells["sourcecode"].Value != null ? row.Cells["sourcecode"].Value.ToString() : "";
                 UpdateRowInDatabase(id, name, languageName, compilerPath, sourceCode);
             }
+            MessageBox.Show("Succesfully Saved","SAVED");
+            this.Close();
 
         }
         private void UpdateRowInDatabase(int id, string name, string languageName, string compilerPath, string sourceCode)

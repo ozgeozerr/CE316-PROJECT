@@ -38,10 +38,11 @@
             richTextBox1.BackColor = Color.FromArgb(38, 38, 38);
             richTextBox1.Font = new Font("Cambria", 14F, FontStyle.Regular, GraphicsUnit.Point, 162);
             richTextBox1.ForeColor = Color.White;
-            richTextBox1.Location = new Point(12, 72);
+            richTextBox1.Location = new Point(10, 54);
+            richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(987, 788);
+            richTextBox1.Size = new Size(864, 592);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = resources.GetString("richTextBox1.Text");
             richTextBox1.TextChanged += richTextBox1_TextChanged;
@@ -51,20 +52,22 @@
             label1.AutoSize = true;
             label1.Font = new Font("Cambria", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(292, 26);
+            label1.Location = new Point(256, 20);
             label1.Name = "label1";
-            label1.Size = new Size(304, 33);
+            label1.Size = new Size(238, 26);
             label1.TabIndex = 1;
             label1.Text = "How to Use EasyAssign?";
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1013, 736);
+            ClientSize = new Size(886, 552);
             Controls.Add(label1);
             Controls.Add(richTextBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form2";
             Text = "EasyAssign";
             ResumeLayout(false);
