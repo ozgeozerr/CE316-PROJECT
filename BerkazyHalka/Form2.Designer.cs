@@ -67,6 +67,7 @@
             ClientSize = new Size(886, 552);
             Controls.Add(label1);
             Controls.Add(richTextBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form2";
             Text = "EasyAssign";

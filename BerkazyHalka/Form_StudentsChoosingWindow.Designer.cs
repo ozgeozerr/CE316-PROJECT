@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_StudentsChoosingWindow));
             chooseAllStudents = new Button();
             applyButton = new Button();
             okayButton = new Button();
@@ -120,6 +121,7 @@
             Controls.Add(okayButton);
             Controls.Add(applyButton);
             Controls.Add(chooseAllStudents);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form_StudentsChoosingWindow";
             Text = "Form_StudentsChoosingWindow";

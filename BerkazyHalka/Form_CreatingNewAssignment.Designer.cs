@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CreatingNewAssignment));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -228,6 +229,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(backButton);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form_CreatingNewAssignment";
             Text = " EasyAssign";

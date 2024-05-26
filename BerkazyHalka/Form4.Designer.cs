@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             currentText = new RichTextBox();
             label1 = new Label();
             label2 = new Label();
@@ -199,6 +200,7 @@
             Controls.Add(label1);
             Controls.Add(solText);
             Controls.Add(currentText);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form4";
             Text = "EasyAssign";

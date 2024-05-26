@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Configuration));
             label2 = new Label();
             label3 = new Label();
             saveConfig = new Button();
@@ -258,6 +259,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form_Configuration";
             Text = "EasyAssign";

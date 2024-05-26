@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_HomePage));
             helpToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             WelcomeText = new Label();
@@ -233,6 +234,7 @@
             Controls.Add(WelcomeText);
             Controls.Add(menuStrip1);
             ForeColor = SystemColors.ButtonFace;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form_HomePage";
