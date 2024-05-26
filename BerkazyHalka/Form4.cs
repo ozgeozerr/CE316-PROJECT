@@ -118,7 +118,7 @@ namespace BerkazyHalka
                         using (var reader = command.ExecuteReader())
                         {
                             int i = 0;
-                            studentFiles = new string[studentCount]; // Initialize the array with the correct size
+                            studentFiles = new string[studentCount];
 
                             while (reader.Read() && i < studentCount)
                             {
@@ -141,29 +141,26 @@ namespace BerkazyHalka
 
             for (int i = 0; i < studentCount; i++)
             {
-                int index = i; // Capturing the current value of i in a local variable
+                int index = i;
                 threads[i] = new Thread(() =>
                 {
-                    string message = trueLie.trueFalse(inputFile, outputFile, studentFiles[index], compilerPath, language);
+                    (string message, string[] listedStudentOutputs) = trueLie.trueFalse(inputFile, outputFile, studentFiles[index], compilerPath, language);
                     UpdateStudentResult(Form_HomePage.currentAssignID, message, studentFiles[index]);
+                    studentTextBox.BeginInvoke(new Action(() =>
+                    {
+                        studentTextBox.AppendText("Student Name: " + index + "\n" + message + "\n" + string.Join("\n", listedStudentOutputs) + "\n");
+                        studentTextBox.AppendText("-------------------------------------------------------------------\n");
+                    }));
                 });
                 threads[i].Start();
             }
 
-            // Wait for all threads to finish
+            // Wait for all threads
             foreach (Thread thread in threads)
             {
                 thread.Join();
             }
-
-            /*for (int i = 0; i < studentCount; i++)
-            {
-                String message;
-                message = trueLie.trueFalse(inputFile, outputFile, studentFiles[i], compilerPath, language); // Bu Database Kısmına Kaç Doğru Y da Çalışıyor mu Onu Gönderecek
-                UpdateStudentResult(Form_HomePage.currentAssignID, message, studentFiles[i]);
-
-
-            }*/
+            //Formu Aç Kapa Database Update Halledilince Silinecek
             this.Close();
             Form4 form = new Form4();
             form.Show();

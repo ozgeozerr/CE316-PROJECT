@@ -67,7 +67,7 @@ namespace BerkazyHalka
 
         public static string cProject(string cFilePath, string cCompilerPath, string input)
         {
-            string compilerPath = cCompilerPath; // Replace this with the actual path to your compiler
+            string compilerPath = cCompilerPath;
             string compileCommand = $"{compilerPath} {cFilePath} -o output";
             MessageBox.Show("Compile Command: " + compileCommand);
 
@@ -89,7 +89,7 @@ namespace BerkazyHalka
                 // EXECUTE
                 Process executeProcess = new Process();
                 executeProcess.StartInfo.FileName = "output.exe";
-                executeProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(cFilePath); // Set the working directory
+                executeProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(cFilePath);
                 executeProcess.StartInfo.UseShellExecute = false;
                 executeProcess.StartInfo.RedirectStandardInput = true;
                 executeProcess.StartInfo.RedirectStandardOutput = true;

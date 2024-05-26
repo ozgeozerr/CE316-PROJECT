@@ -10,13 +10,14 @@ namespace BerkazyHalka
 {
     internal class trueLie
     {
-        public static string trueFalse(string inputFilePath, string expectedOutputFilePath, string filePath, string compilerPath, string lang)
+        public static (string, string[]) trueFalse(string inputFilePath, string expectedOutputFilePath, string filePath, string compilerPath, string lang)
         {
             string[] inputsFromTeacher = File.ReadAllLines(inputFilePath);
             string[] expectedOutputs = ReadUntilDelimiter(expectedOutputFilePath, "-!-");
 
             string[] outputsFromStudent = new string[inputsFromTeacher.Length];
             string errorMsg = "This Student's File Could Not Be Compiled";
+            string[] errorArray = { "No Outputs Due To Error" };
             int correct = 0;
 
             for (int i = 0; i < inputsFromTeacher.Length; i++)
@@ -27,7 +28,7 @@ namespace BerkazyHalka
 
                     if (outputsFromStudent[i].Equals(errorMsg))
                     {
-                        return errorMsg;
+                        return (errorMsg,errorArray);
                     }
                 }
                 else if (lang == "C" || lang == "c")
@@ -36,7 +37,7 @@ namespace BerkazyHalka
 
                     if (outputsFromStudent[i].Equals(errorMsg))
                     {
-                        return errorMsg;
+                        return (errorMsg, errorArray);
                     }
                 }
                 else if (lang == "Python" || lang == "python")
@@ -45,7 +46,7 @@ namespace BerkazyHalka
 
                     if (outputsFromStudent[i].Equals(errorMsg))
                     {
-                        return errorMsg;
+                        return (errorMsg, errorArray);
                     }
                 }
                 else if (lang == "C++" || lang == "c++")
@@ -54,7 +55,7 @@ namespace BerkazyHalka
 
                     if (outputsFromStudent[i].Equals(errorMsg))
                     {
-                        return errorMsg;
+                        return (errorMsg, errorArray);
                     }
                 }
 
@@ -63,8 +64,14 @@ namespace BerkazyHalka
                     correct++;
                 }
             }
+            outputLister(outputsFromStudent);
             string errorNumbers = correct + " Out of " + inputsFromTeacher.Length + " Are Correct";
-            return errorNumbers;
+            return (errorNumbers,outputsFromStudent);
+        } 
+
+        public static string[] outputLister(string[] outputList)
+        {
+            return outputList;
         }
 
         private static string[] ReadUntilDelimiter(string filePath, string delimiter)
