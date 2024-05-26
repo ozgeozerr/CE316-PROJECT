@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             currentText = new RichTextBox();
-            excText = new RichTextBox();
             label1 = new Label();
             label2 = new Label();
             selectAStudent = new Button();
             testAll = new Button();
             dataGridView1 = new DataGridView();
             homePageButton = new Button();
+            excText = new RichTextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,14 +47,6 @@
             currentText.Size = new Size(447, 514);
             currentText.TabIndex = 0;
             currentText.Text = "";
-            // 
-            // excText
-            // 
-            excText.Location = new Point(55, 43);
-            excText.Name = "excText";
-            excText.Size = new Size(414, 515);
-            excText.TabIndex = 1;
-            excText.Text = "";
             // 
             // label1
             // 
@@ -123,12 +116,32 @@
             homePageButton.UseVisualStyleBackColor = true;
             homePageButton.Click += homePageButton_Click;
             // 
+            // excText
+            // 
+            excText.Location = new Point(55, 43);
+            excText.Name = "excText";
+            excText.Size = new Size(414, 515);
+            excText.TabIndex = 1;
+            excText.Text = "";
+            excText.TextChanged += excText_TextChanged;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(978, 212);
+            button1.Name = "button1";
+            button1.Size = new Size(131, 34);
+            button1.TabIndex = 16;
+            button1.Text = "Display Code";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1926, 585);
+            ClientSize = new Size(1924, 585);
+            Controls.Add(button1);
             Controls.Add(homePageButton);
             Controls.Add(dataGridView1);
             Controls.Add(testAll);
@@ -148,12 +161,14 @@
         #endregion
 
         private RichTextBox currentText;
-        private RichTextBox excText;
         private Label label1;
         private Label label2;
         private Button selectAStudent;
         private Button testAll;
         private DataGridView dataGridView1;
         private Button homePageButton;
+        private TextBox textBox1;
+        private RichTextBox excText;
+        private Button button1;
     }
 }
