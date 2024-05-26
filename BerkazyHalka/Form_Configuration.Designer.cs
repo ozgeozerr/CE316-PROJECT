@@ -73,19 +73,7 @@
             label3.TabIndex = 2;
             label3.Text = "Select Compiler Path:";
             // 
-            // saveConfig
-            // 
-            saveConfig.BackColor = Color.Thistle;
-            saveConfig.Font = new Font("Cambria", 9F, FontStyle.Bold);
-            saveConfig.ForeColor = Color.Black;
-            saveConfig.Location = new Point(23, 351);
-            saveConfig.Name = "saveConfig";
-            saveConfig.Size = new Size(283, 36);
-            saveConfig.TabIndex = 8;
-            saveConfig.Text = "Export Configuration (Coming Soon)";
-            saveConfig.UseVisualStyleBackColor = false;
-            saveConfig.Click += saveConfig_Click;
-            // 
+            
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(32, 32, 32);
@@ -130,7 +118,7 @@
             // browseFiles_button
             // 
             browseFiles_button.BackColor = Color.Thistle;
-            browseFiles_button.Font = new Font("Calisto MT", 10F);
+            browseFiles_button.Font = new Font("Microsoft Sans Serif", 10F);
             browseFiles_button.Location = new Point(601, 215);
             browseFiles_button.Name = "browseFiles_button";
             browseFiles_button.Size = new Size(141, 29);
@@ -146,12 +134,14 @@
             // 
             // cbo
             // 
+            cbo.ForeColor = SystemColors.WindowFrame;
             cbo.FormattingEnabled = true;
-            cbo.Items.AddRange(new object[] { "C", "Java" });
+            cbo.Items.AddRange(new object[] { "C", "C++", "Java", "Python" });
             cbo.Location = new Point(334, 151);
             cbo.Name = "cbo";
             cbo.Size = new Size(245, 28);
             cbo.TabIndex = 20;
+            cbo.Text = "Select Language";
             cbo.SelectedIndexChanged += cbo_SelectedIndexChanged;
             // 
             // textBox3
@@ -208,7 +198,7 @@
             // browseButtonnn
             // 
             browseButtonnn.BackColor = Color.Thistle;
-            browseButtonnn.Font = new Font("Calisto MT", 10F);
+            browseButtonnn.Font = new Font("Microsoft Sans Serif", 10F);
             browseButtonnn.Location = new Point(601, 279);
             browseButtonnn.Name = "browseButtonnn";
             browseButtonnn.Size = new Size(141, 29);

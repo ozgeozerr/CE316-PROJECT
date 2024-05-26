@@ -48,10 +48,7 @@ namespace BerkazyHalka
 
 
 
-                        MessageBox.Show(config.Name);
-                        MessageBox.Show(config.Language);
-                      
-                        MessageBox.Show(config.CompilerPath);
+                       
                         using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
                         {
                             using (var insertData = new SQLiteCommand($"INSERT INTO configuration(name,language_name,compiler_path,sourcecode) VALUES ('{config.Name}', '{config.Language}','{config.CompilerPath}','{config.CompilerPath}');SELECT last_insert_rowid();", connection))
@@ -60,7 +57,7 @@ namespace BerkazyHalka
                                 {
                                     connection.Open();
                                     Form_HomePage.currentConfigID = Convert.ToInt32(insertData.ExecuteScalar());
-                                    MessageBox.Show("Added to SQL successfully!" + Form_HomePage.currentConfigID);
+                                   
                                 }
                                 catch (Exception err)
                                 {
@@ -107,9 +104,7 @@ namespace BerkazyHalka
                         Console.WriteLine($"Language: {importedConfig.Language}");
                         Console.WriteLine($"CompilerPath: {importedConfig.CompilerPath}");
 
-                        MessageBox.Show(importedConfig.Name);
-                        MessageBox.Show(importedConfig.Language);
-                        MessageBox.Show(importedConfig.CompilerPath);
+                   
 
                        
                     }

@@ -19,12 +19,12 @@ namespace BerkazyHalka
         {
 
             InitializeComponent();
-            if (Form_HomePage.currentConfigID > 0) // Check if it has a valid value
+            if (Form_HomePage.currentConfigID > 0) 
             {
-                label6.Text = "Configuration Name : " + Form_HomePage.currentConfigID;
+                
             }
             else {
-                label6.Text = "No Config.";
+                
             }
 
 
@@ -168,21 +168,18 @@ namespace BerkazyHalka
 
         private void ConfigurationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form_HomePage.currentConfigID > 0) // Check if it has a valid value
+            if (Form_HomePage.currentConfigID > 0) 
             {
-                label6.Text = "Configuration Name : " + Form_HomePage.currentConfigID;
+               
             }
             else
             {
-                label6.Text = "No Config.";
+                
             }
 
             this.Enabled = true;
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

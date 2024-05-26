@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            studentTextBox = new RichTextBox();
-            excText = new RichTextBox();
+            currentText = new RichTextBox();
             label1 = new Label();
             label2 = new Label();
             selectAStudent = new Button();
             testAll = new Button();
             dataGridView1 = new DataGridView();
+            homePageButton = new Button();
+            excText = new RichTextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,15 +48,6 @@
             studentTextBox.Size = new Size(392, 386);
             studentTextBox.TabIndex = 0;
             studentTextBox.Text = "";
-            // 
-            // excText
-            // 
-            excText.Location = new Point(48, 32);
-            excText.Margin = new Padding(3, 2, 3, 2);
-            excText.Name = "excText";
-            excText.Size = new Size(363, 387);
-            excText.TabIndex = 1;
-            excText.Text = "";
             // 
             // label1
             // 
@@ -116,12 +109,44 @@
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // homePageButton
+            // 
+            homePageButton.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            homePageButton.Location = new Point(977, 152);
+            homePageButton.Name = "homePageButton";
+            homePageButton.Size = new Size(208, 37);
+            homePageButton.TabIndex = 15;
+            homePageButton.Text = "Go To Homepage";
+            homePageButton.UseVisualStyleBackColor = true;
+            homePageButton.Click += homePageButton_Click;
+            // 
+            // excText
+            // 
+            excText.Location = new Point(55, 43);
+            excText.Name = "excText";
+            excText.Size = new Size(414, 515);
+            excText.TabIndex = 1;
+            excText.Text = "";
+            excText.TextChanged += excText_TextChanged;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(978, 212);
+            button1.Name = "button1";
+            button1.Size = new Size(131, 34);
+            button1.TabIndex = 16;
+            button1.Text = "Display Code";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(38, 38, 38);
-            ClientSize = new Size(1684, 439);
+            ClientSize = new Size(1924, 585);
+            Controls.Add(button1);
+            Controls.Add(homePageButton);
             Controls.Add(dataGridView1);
             Controls.Add(testAll);
             Controls.Add(selectAStudent);
@@ -132,6 +157,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form4";
             Text = "EasyAssign";
+            Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -139,12 +165,15 @@
 
         #endregion
 
-        private RichTextBox studentTextBox;
-        private RichTextBox excText;
+        private RichTextBox currentText;
         private Label label1;
         private Label label2;
         public Button selectAStudent;
         private Button testAll;
         private DataGridView dataGridView1;
+        private Button homePageButton;
+        private TextBox textBox1;
+        private RichTextBox excText;
+        private Button button1;
     }
 }

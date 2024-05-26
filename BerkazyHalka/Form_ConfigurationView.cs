@@ -249,12 +249,12 @@ namespace BerkazyHalka
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
-                // Retrieve values from the selected row
+               
                 string name = selectedRow.Cells["name"].Value.ToString();
                 string languageName = selectedRow.Cells["language_name"].Value.ToString();
                 string compilerPath = selectedRow.Cells["compiler_path"].Value.ToString();
 
-                // Create a Configuration object with the retrieved values
+                
                 ImportAndExport.Configuration config = new ImportAndExport.Configuration
                 {
                     Name = name,
@@ -262,7 +262,7 @@ namespace BerkazyHalka
                     CompilerPath = compilerPath
                 };
 
-                // Export the configuration to a JSON file
+                
                 ImportAndExport processor = new ImportAndExport();
                 processor.ExportToJsonFile(config);
             }
@@ -309,6 +309,17 @@ namespace BerkazyHalka
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void go_back2_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+        }
+
+        private void Form_ConfigurationView_Load(object sender, EventArgs e)
         {
 
         }

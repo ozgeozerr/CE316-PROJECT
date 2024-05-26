@@ -105,6 +105,7 @@ namespace BerkazyHalka
                 }
             }
 
+
             string[] studentFiles = new string[studentCount];
             using (var connection = new SQLiteConnection(Form_HomePage.connectionPath))
             {
@@ -217,19 +218,7 @@ namespace BerkazyHalka
 
         }
 
-        private void exButton_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
-            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-            {
-                string extractPath = folderBrowserDialog.SelectedPath;
-                MessageBox.Show(extractPath);
-
-                zipExtractor zipper = new zipExtractor();
-                zipper.Extract(selectedFileForZipEx, extractPath);
-            }
-        }
 
         private Form_StudentsChoosingWindow StudentsChoosingWindow;
 
@@ -293,9 +282,56 @@ namespace BerkazyHalka
         {
 
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homePageButton_Click(object sender, EventArgs e)
+        {
+            Form_HomePage form = new Form_HomePage();
+            form.Show();
+            this.Close();
+        }
+
+        private void excText_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                string selectedPath = selectedRow.Cells[3].Value.ToString();
+
+                
+                if (File.Exists(selectedPath))
+                {
+                   
+                    string fileContent = File.ReadAllText(selectedPath);
+
+                    
+                    excText.Text = fileContent;
+
+                   
+                    MessageBox.Show(selectedPath);
+                }
+                else
+                {
+                    MessageBox.Show("File does not exist at the specified path.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to view assignment.");
+            }
+        }
     }
 }
 
 
-
-//oldu mu?
